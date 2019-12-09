@@ -20,13 +20,27 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: npm install, build, deploy
+    - name: npm install
       run:
         npm install
-        hexo generate
-        hexo deploy
       env:
         ACCESS_TOKEN: ${{ secrets.Token }}
         BRANCH: master
-        BUILD_SCRIPT: npm install &&  build && deploy
+        BUILD_SCRIPT: npm install
         CI: true
+    - name: npm build
+        run:
+          npm build
+        env:
+          ACCESS_TOKEN: ${{ secrets.Token }}
+          BRANCH: master
+          BUILD_SCRIPT: npm build
+          CI: true
+    - name: npm deploy
+        run:
+          npm deploy
+        env:
+          ACCESS_TOKEN: ${{ secrets.Token }}
+          BRANCH: master
+          BUILD_SCRIPT: npm deploy
+          CI: true
