@@ -94,7 +94,6 @@ ignore:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: hexo-theme-aero-dual
-startyear: 2019
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
