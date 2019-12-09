@@ -26,4 +26,7 @@ jobs:
         yarn build
         yarn deploy
       env:
+        ACCESS_TOKEN: ${{ secrets.Token }}
+        BRANCH: master
+        BUILD_SCRIPT: npm install &&  build && deploy
         CI: true
