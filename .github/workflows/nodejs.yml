@@ -12,11 +12,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
 
-      - name: Build and Deploy
+      - name: Deploy
         uses: peaceiris/actions-gh-pages@v2.5.0
         env:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BASE_BRANCH: dev
-          BRANCH: master
-          FOLDER: public
-          BUILD_SCRIPT: npm i -g hexo && npm install && hexo generate && hexo deploy
+          ACTIONS_DEPLOY_KEY: ${{ secrets.ACCESS_TOKEN }}
+          PUBLISH_BRANCH: dev
+          PUBLISH_DIR: ./public
+          SCRIPT_MODE: true
+          run: |
+            wget https://raw.githubusercontent.com/peaceiris/actions-gh-pages/v2/entrypoint.sh
+            bash ./entrypoint.sh
