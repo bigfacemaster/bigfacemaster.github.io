@@ -23,8 +23,8 @@ jobs:
     - name: npm install, build, deploy
       run:
         npm install
-        npm build
-        npm deploy
+        hexo generate
+        hexo deploy
       env:
         ACCESS_TOKEN: ${{ secrets.Token }}
         BRANCH: master
