@@ -20,27 +20,13 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: npm install
+    - name: NPM CI/CD
       run:
         npm install
+        npm build
+        npm deploy
       env:
         ACCESS_TOKEN: ${{ secrets.Token }}
         BRANCH: master
-        BUILD_SCRIPT: npm install
+        BUILD_SCRIPT: npm install && npm build && npm deploy
         CI: true
-    - name: npm build
-        run:
-          npm build
-        env:
-          ACCESS_TOKEN: ${{ secrets.Token }}
-          BRANCH: master
-          BUILD_SCRIPT: npm build
-          CI: true
-    - name: npm deploy
-        run:
-          npm deploy
-        env:
-          ACCESS_TOKEN: ${{ secrets.Token }}
-          BRANCH: master
-          BUILD_SCRIPT: npm deploy
-          CI: true
