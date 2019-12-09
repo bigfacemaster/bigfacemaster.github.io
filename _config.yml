@@ -100,4 +100,4 @@ theme: hexo-theme-aero-dual
 deploy:
   type: git
   repo: git@github.com:BigFaceMaster/BigFaceMaster.github.io.git
-  branch: gh-pages
+  branch: master
