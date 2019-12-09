@@ -22,6 +22,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: npm install, build, and deploy
       run: |
+        npm iinstall
         npm run build --if-present
         npm deploy
       env:
