@@ -3,30 +3,20 @@ name: Node CI
 on:
   push:
     branches:
-      - master
+      - hexo
 
 jobs:
-  build:
-
+  build-and-deploy:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [12.x]
-
     steps:
-    - uses: actions/checkout@v1
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - name: NPM CI/CD
-      run:
-        npm install
-        npm build
-        npm deploy
-      env:
-        ACCESS_TOKEN: ${{ secrets.Token }}
-        BRANCH: master
-        BUILD_SCRIPT: npm install && npm build && npm deploy
-        CI: true
+      - name: Checkout
+        uses: actions/checkout@master
+
+      - name: Build and Deploy
+        uses: JamesIves/github-pages-deploy-action@master
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          BASE_BRANCH: dev
+          BRANCH: master
+          FOLDER: public
+          BUILD_SCRIPT: npm i -g hexo && npm install && hexo generate
