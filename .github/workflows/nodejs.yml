@@ -13,10 +13,10 @@ jobs:
         uses: actions/checkout@master
 
       - name: Build and Deploy
-        uses: JamesIves/github-pages-deploy-action@master
+        uses: peaceiris/actions-gh-pages@v2.5.0
         env:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BASE_BRANCH: dev
           BRANCH: master
           FOLDER: public
-          BUILD_SCRIPT: npm i -g hexo && npm install && hexo generate
+          BUILD_SCRIPT: npm i -g hexo && npm install && hexo generate && hexo deploy
