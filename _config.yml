@@ -4,7 +4,7 @@
 
 # Site
 title: 🤡大花脸🤡
-subtitle: 有所敬畏，无所畏惧；认真生活，努力工作。
+subtitle: 有所敬畏，无所畏惧；认真生活，努力工作。erloren sei uns der Tag, wo nicht ein Mal getanzt wurde! Und falsch heißt uns jede Wahrheit, bei der es nicht ein Gelächter gab! And we should consider every day lost on which we have not danced at least once.And we should call every truth false which was not accompanied by at least one laugh!每一个不能起舞的日子都是辜负，每一个谮夺欢笑的真实叫它错谬！
 description: 一个前端的探索之路，不局限于技术：web前端，移动端，小程序，后端数据库，算法，等等
 keywords: 前端, web
 author: BigFaceMaster
@@ -49,7 +49,7 @@ future: true
 highlight:
   enable: true
   line_number: true
-  auto_detect: false
+  auto_detect: true
   tab_replace: ''
 
 # Home page setting
@@ -58,7 +58,7 @@ highlight:
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
   path: ''
-  per_page: 10
+  per_page: 12
   order_by: -date
 
 # Category & Tag
@@ -81,7 +81,7 @@ use_date_for_updated: false
 
 # Pagination
 ## Set per_page to 0 to disable pagination
-per_page: 10
+per_page: 12
 pagination_dir: page
 
 # Include / Exclude file(s)
@@ -99,5 +99,5 @@ theme: hexo-theme-aero-dual
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/BigFaceMaster/BigFaceMaster.github.io
+  repo: git@github.com:BigFaceMaster/BigFaceMaster.github.io.git
   branch: gh-pages
