@@ -9,9 +9,6 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@hexo
-
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v2.5.0
         env:
