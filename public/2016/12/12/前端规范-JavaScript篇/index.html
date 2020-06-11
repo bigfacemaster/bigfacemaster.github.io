@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="BigFaceMaster">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="前端规范-JavaScript篇"/>
+  <meta property="og:description" content="一个前端的探索之路，不局限于技术：web前端，移动端，小程序，后端数据库，算法，等等" />
+  <meta property="og:site_name" content="🤡大花脸🤡"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="http://yoursite.com"/>
+  
+    <link rel="alternate" href="/atom.xml" title="🤡大花脸🤡" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="🤡">
+  
+
+  <!-- Site Title -->
+  <title>🤡大花脸🤡</title>
+
+  <!-- Bootstrap CSS -->
+  
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  
+  
+<link rel="stylesheet" href="/css/style.dark.css">
+
+
+  <!-- Google Analytics -->
+  
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-154123333-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/stars.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">前端规范-JavaScript篇</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                  Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://github.com/BigFaceMaster" target="_blank" rel="noopener">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="mailto:bigfacemaster@gmail.com">
+                  
+                  Email
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By BigFaceMaster</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2016-12-12</span>
+            <span class="time">12:21:42</span>
+          </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
+
+<a href="/categories/code/">code</a>
+</span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/%E5%89%8D%E7%AB%AF%E8%A7%84%E8%8C%83/">#前端规范</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <h1 id="通用约定"><a href="#通用约定" class="headerlink" title="通用约定"></a>通用约定</h1><h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><h3 id="原则"><a href="#原则" class="headerlink" title="原则"></a>原则</h3><p>As short as possible：如果不是非要不要注释，必须注释，比如函数功能，参数传入说明，etc，提高代码本身的清晰度与可读性；<br/><br>As long as necessary: 必须严格的将注释写清楚；</p>
+<h3 id="单行注释"><a href="#单行注释" class="headerlink" title="单行注释"></a>单行注释</h3><p>必须独占一行。 // 后面加上一个空格，其缩进方式以下一行被说明的对象保持一直。</p>
+<h3 id="多行注释"><a href="#多行注释" class="headerlink" title="多行注释"></a>多行注释</h3><p>采用多个单行注释构成 //</p>
+<h3 id="函数-方法注释"><a href="#函数-方法注释" class="headerlink" title="函数/方法注释"></a>函数/方法注释</h3><ul>
+<li>函数/方法注释必须包含函数说明，有参数和返回值时必须使用注释标识；</li>
+<li>参数和方绘制必须包含类型信息和说明；</li>
+<li>当函数是内部函数，外部不可访问时，可以使用@inner标识；<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 函数描述</span></span><br><span class="line"><span class="comment">* 作用</span></span><br><span class="line"><span class="comment">* 名称</span></span><br><span class="line"><span class="comment">* <span class="doctag">@param</span> &#123;string&#125; p1 参数1的说明</span></span><br><span class="line"><span class="comment">* <span class="doctag">@return</span> &#123;Object&#125; 返回值描述</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">example</span><span class="params">( a, b, c)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> ...;</span><br><span class="line">  <span class="keyword">return</span> ....</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="命名规范"><a href="#命名规范" class="headerlink" title="命名规范"></a>命名规范</h3>类命：使用名称;</br><br>函数名： 使用动宾短语；</br><br>boolean类型的变量使用is或has开头；</br><br>Promise 对象用动宾短语的进行时表达：var  gettingCanvas = ….；<h3 id="接口命名规范"><a href="#接口命名规范" class="headerlink" title="接口命名规范"></a>接口命名规范</h3></li>
+</ul>
+<ol>
+<li>可读性，见名知义；</li>
+<li>不要与采用的框架冲突；</li>
+<li>尽量写完全，不要采用缩写；<h3 id="True-amp-amp-False-布尔表达式"><a href="#True-amp-amp-False-布尔表达式" class="headerlink" title="True &amp;&amp; False 布尔表达式"></a>True &amp;&amp; False 布尔表达式</h3>类型检测优先使用 typeof,对象类型检测使用instanceof。<h3 id="不要在Array上使用-for-in-循环"><a href="#不要在Array上使用-for-in-循环" class="headerlink" title="不要在Array上使用 for-in 循环"></a>不要在Array上使用 for-in 循环</h3>for-in 循环只用于 <code>object/map/hash/</code> 的遍历，对 <code>Array</code> 用for-in循环有时会出错，并不是从0 —- length - 1；进行遍历，而是所有出现在对象及其原型链的键值；<h3 id="二元和三元操作符"><a href="#二元和三元操作符" class="headerlink" title="二元和三元操作符"></a>二元和三元操作符</h3>操作符始终写在前一行，以免分号的隐式插入产生预想不到的问题；<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">var x</span> = a ? b : c;</span><br><span class="line"><span class="attribute">var test</span> = test1 ?</span><br><span class="line">           test2 : test3;</span><br></pre></td></tr></table></figure>
+<h3 id="条件-三元-操作符"><a href="#条件-三元-操作符" class="headerlink" title="条件(三元)操作符 (?:)"></a>条件(三元)操作符 (?:)</h3>三元操作符用于替代if条件判断语句。<figure class="highlight ceylon"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> var ? <span class="keyword">function</span><span class="number">1</span>() : <span class="keyword">function</span><span class="number">2</span>();</span><br></pre></td></tr></table></figure>
+<h3 id="amp-amp-和"><a href="#amp-amp-和" class="headerlink" title="&amp;&amp; 和 ||"></a>&amp;&amp; 和 ||</h3>二元布尔操作符是可以短路的，只有在必要时才会计算到最后一项；<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"> param</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> params = param || <span class="built_in">window</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h2 id="jQuery-规范"><a href="#jQuery-规范" class="headerlink" title="jQuery 规范"></a>jQuery 规范</h2><h3 id="jQuery-Variables"><a href="#jQuery-Variables" class="headerlink" title="jQuery Variables"></a>jQuery Variables</h3><ul>
+<li>存放jQuery对象的变量以<code>$</code>开头；</li>
+</ul>
+<ol start="2">
+<li><p>将jQuery选择器返回的对象缓存到本地变量中反复使用；</p>
+</li>
+<li><p>使用驼峰法命名变量(ex:id);</p>
+<figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="symbol">$map</span> = $(<span class="string">"#myMap"</span>);</span><br><span class="line"><span class="symbol">$map</span>.bind();</span><br></pre></td></tr></table></figure>
+<h3 id="Selectors"><a href="#Selectors" class="headerlink" title="Selectors"></a>Selectors</h3></li>
+<li><p>尽可能的使用id选择器，因为调用的是浏览器原生的方法 document.getElementById,提高性能；id具有唯一的标识性；</p>
+</li>
+<li><p>在父元素中选子元素使用<code>.find()</code>方法性能较好；</p>
+<figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="symbol">$result</span> = $(<span class="string">"#parentId"</span>).find(<span class="string">".child"</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="DOM-Manipulation"><a href="#DOM-Manipulation" class="headerlink" title="DOM Manipulation"></a>DOM Manipulation</h3></li>
+<li><p>操作DOM元素的时候，尽量将其分离节点，操作结束后，再插入节点；</p>
+</li>
+<li><p>使用字符串连接或<code>array.join</code>要比<code>.append()</code>性能好；</p>
+<figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="symbol">$co</span>ntent = $(<span class="string">"#content"</span>);</span><br><span class="line"><span class="symbol">$co</span>ntent += <span class="string">"&lt;div&gt;"</span> + text + <span class="string">"&lt;/div&gt;"</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="Events"><a href="#Events" class="headerlink" title="Events"></a>Events</h3></li>
+<li><p>如果需要，对事件使用自定义的 <code>namespace</code>这样容易解绑特定的事件，而不会影响到对此元素的其他事件的监听；</p>
+</li>
+<li><p>对Ajax加载的DOM元素绑定事件时尽量使用事件委托。事件委托允许在父元素绑定事件，子代元素可以可以响应事件，也包括Ajax加载后子代元素；</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"#testClick"</span>).<span class="keyword">on</span><span class="params">(<span class="string">"click"</span>, eventFunction<span class="params">()</span> &#123;&#125;)</span>;</span><br><span class="line">$(<span class="string">"#testClick"</span>).unbind(<span class="string">"click"</span>);</span><br><span class="line">$(<span class="string">"#childClick"</span>).<span class="keyword">on</span><span class="params">(<span class="string">"click"</span>,<span class="string">"button"</span>, eventFunction<span class="params">()</span> &#123;&#125;)</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="链式写法"><a href="#链式写法" class="headerlink" title="链式写法"></a>链式写法</h3></li>
+<li><p>尽量采用链式写法而不是用变量缓存或者多次调用选择器方法；</p>
+</li>
+<li><p>当链式写法超过三个Or事件绑定变得复杂后，使用换行和缩进保存代码的可读性；</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"#ex"</span>).attr(<span class="string">"flag"</span>, <span class="string">"edit"</span>).show();</span><br><span class="line">$(<span class="string">"#ex"</span>).attr(<span class="string">"flag"</span>, <span class="string">"edit"</span>)</span><br><span class="line">        .<span class="keyword">on</span><span class="params">(<span class="string">"click"</span>,funciton<span class="params">()</span>&#123;&#125;)</span></span><br><span class="line">        .<span class="keyword">on</span><span class="params">(<span class="string">"mouseover"</span>, function<span class="params">()</span>&#123;&#125;)</span></span><br><span class="line">        .show();</span><br></pre></td></tr></table></figure>
+<h3 id="Miscellaneous-混合型"><a href="#Miscellaneous-混合型" class="headerlink" title="Miscellaneous 混合型"></a>Miscellaneous 混合型</h3></li>
+<li><p>多个参数使用对象字面量存储；</p>
+</li>
+<li><p>不要将CSS写在jQuery里面；</p>
+</li>
+<li><p>正则表达式最只使用.test() &amp;&amp; .exec().尽量避免”string”.match();</p>
+<h2 id="性能优化"><a href="#性能优化" class="headerlink" title="性能优化"></a>性能优化</h2><h3 id="避免不必要的DOM操作"><a href="#避免不必要的DOM操作" class="headerlink" title="避免不必要的DOM操作"></a>避免不必要的DOM操作</h3><p>浏览器遍历DOM元素对性能有很大影响。最好的方便就是一个元素需要多次使用的时候，将其保存在一个变量中，可以避免多次查询DOM树了。</br><br>谨记：能够在HTML中完成的就一定要在HTML完成，能够在CSS中完成的一定要在CSS中完成。</p>
+<h3 id="缓存数组长度"><a href="#缓存数组长度" class="headerlink" title="缓存数组长度"></a>缓存数组长度</h3><p>将数组的长度存在一个变量当中，可以避免每次循环的时候都去重新计算数组的长度；</p>
+<h3 id="异步加载第三方内容"><a href="#异步加载第三方内容" class="headerlink" title="异步加载第三方内容"></a>异步加载第三方内容</h3><h3 id="避免使用jQuery实现动画"><a href="#避免使用jQuery实现动画" class="headerlink" title="避免使用jQuery实现动画"></a>避免使用jQuery实现动画</h3></li>
+</ol>
+<ul>
+<li>禁止使用 slideUp/Down, fadeIn/fadeOut等方法；</li>
+<li>尽量不适用animate() 方法；</li>
+<li></li>
+</ul>
+<h1 id="参考极客学院前端规范指南"><a href="#参考极客学院前端规范指南" class="headerlink" title="参考极客学院前端规范指南"></a>参考极客学院前端规范指南</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          <div style="width:300px;margin:0 auto; padding:20px 0;">
+              <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51012202000601" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">川公网安备 51012202000601号</p></a>
+          </div>
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+
+<script src="/js/highlight.pack.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="BigFaceMaster">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="前端规范-HTML篇"/>
+  <meta property="og:description" content="一个前端的探索之路，不局限于技术：web前端，移动端，小程序，后端数据库，算法，等等" />
+  <meta property="og:site_name" content="🤡大花脸🤡"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="http://yoursite.com"/>
+  
+    <link rel="alternate" href="/atom.xml" title="🤡大花脸🤡" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="🤡">
+  
+
+  <!-- Site Title -->
+  <title>🤡大花脸🤡</title>
+
+  <!-- Bootstrap CSS -->
+  
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  
+  
+<link rel="stylesheet" href="/css/style.dark.css">
+
+
+  <!-- Google Analytics -->
+  
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-154123333-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/stars.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">前端规范-HTML篇</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                  Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://github.com/BigFaceMaster" target="_blank" rel="noopener">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="mailto:bigfacemaster@gmail.com">
+                  
+                  Email
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By BigFaceMaster</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2016-12-07</span>
+            <span class="time">12:21:42</span>
+          </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
+
+<a href="/categories/code/">code</a>
+</span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/%E5%89%8D%E7%AB%AF%E8%A7%84%E8%8C%83/">#前端规范</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <h1 id="基本原则"><a href="#基本原则" class="headerlink" title="基本原则"></a>基本原则</h1><p>A、结构(HTML)、样式(CSS)、行为分离(JavaScript): 尽量保证HTML文件只有HMTL，CSS文件只有样式表，JavaScript文件放到单独的JavaScrip脚本中；<br/><br>B、缩进：统一使用相同的缩进，两个空格或者四个，不要使用Tab或者Tab与空格混合，不同的编辑器对Tab的定义不同；<br/><br>C、文件编码：编码格式统一采用UTF-8进行编码；<br/><br>D、一律采用小写字母；<br/><br>E、省略外部资源链接URL中的http/https协议，使得URL成为相对地址，避免Mixed Content问题，减少文件字节数，其他的协议URL不省略；<br/><br>F、统一注释规则；<br/><br>G:代码验证(W3C HTML &amp;&amp; CSS Validator);</br></p>
+<h1 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h1><p>** 在实用性的基础上尽量遵循HTML标准和语义 **</p>
+<h2 id="通用约定"><a href="#通用约定" class="headerlink" title="通用约定"></a>通用约定</h2><h3 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h3><p>A、自闭和(self-closing)标签，无需闭合；<br/><br>B、可选的闭合标签(closing tag), 需要闭合；<br/><br>C、尽量减少标签数量；</p>
+<h3 id="class-amp-amp-id"><a href="#class-amp-amp-id" class="headerlink" title="class &amp;&amp; id"></a>class &amp;&amp; id</h3><p>A、class应该以功能或者内容命名，不应以表现形式命名；<br/><br>B、class与id单词字母小写，多个单词组成时，采用中划线“-”分隔，不推荐采用驼峰法，或者下划线 “_; </br><br>C、使用唯一的id作为JavaScript hook， 同时避免创建无样式信息的class；</br></p>
+<h3 id="属性顺序"><a href="#属性顺序" class="headerlink" title="属性顺序"></a>属性顺序</h3><p>HTML 属性应该按照特定的顺序出现保证易读性： id、class、name、data-xxx、（src、for、type、href）、(title、alt)、（aria-xxx、role）；</p>
+<h3 id="引号"><a href="#引号" class="headerlink" title="引号"></a>引号</h3><p>属性的定义，统一采用双引号</p>
+<h3 id="b嵌套"><a href="#b嵌套" class="headerlink" title="b嵌套"></a>b嵌套</h3><p>a标签中不允许嵌套div，a标签中也不允许嵌套a，语义嵌套规范；&lt;/br/&gt;</p>
+<h4 id="语气嵌套规范"><a href="#语气嵌套规范" class="headerlink" title="语气嵌套规范"></a>语气嵌套规范</h4><p>A、li、用于ul、ol、中;<br/><br>B、dd、dt用于dl中；<br/><br>C、thead、tbody、tfoot、tr、td用于table中；</p>
+<h4 id="严格嵌套规范"><a href="#严格嵌套规范" class="headerlink" title="严格嵌套规范"></a>严格嵌套规范</h4><p>A、inline-level元素，只能包含文本或者其他的inline-level元素;<br/><br>B、a标签里面不可以嵌套交互式元素a、button、select、etc.;<br/><br>C、p标签里面不可以嵌套块级元素div、h1~h6、ul、ol、li、dl、dd、dt、form，etc.;</p>
+<h4 id="布尔值属性"><a href="#布尔值属性" class="headerlink" title="布尔值属性"></a>布尔值属性</h4><p>在HTML5中，disabled/checked/selected/等属性不用设置值；</p>
+<h4 id="语义化"><a href="#语义化" class="headerlink" title="语义化"></a>语义化</h4><p>p–&gt; 段落；<br/><br>h1~h6 –&gt; 标题；<br/><br>ul –&gt; 无序列表；<br/><br>ol –&gt; 有序列表； <br/><br>blockquote –&gt; 大段引用； <br/><br>cite –&gt; 一般引用； <br/><br>b –&gt; 为样式加粗而加粗；<br/><br>strong –&gt; 为强调内容而加粗；<br/><br>i –&gt; 为样式倾斜而倾斜；<br/><br>em –&gt; 为了强调内容而倾斜；<br/><br>code –&gt; 代码标识；<br/><br>abbr –&gt; 缩写；</p>
+<h2 id="HEAD"><a href="#HEAD" class="headerlink" title="HEAD"></a>HEAD</h2><h3 id="文档类型"><a href="#文档类型" class="headerlink" title="文档类型"></a>文档类型</h3><p>统一采用HTML5文档类型标识:<br/><br><!DOCTYPE html></p>
+<h3 id="语义属性"><a href="#语义属性" class="headerlink" title="语义属性"></a>语义属性</h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;html <span class="attribute">lang</span>=<span class="string">"zh-Hans"</span>&gt;&lt;br/&gt;</span><br><span class="line">&lt;html <span class="attribute">lang</span>=<span class="string">"en"</span>&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="字符编码"><a href="#字符编码" class="headerlink" title="字符编码"></a>字符编码</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></span><br><span class="line">    ....</span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="SEO-优化"><a href="#SEO-优化" class="headerlink" title="SEO 优化"></a>SEO 优化</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"IE=edge,chrome=1"</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- SEO --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Style Guide<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"keywords"</span> <span class="attr">content</span>=<span class="string">"your keywords"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"description"</span> <span class="attr">content</span>=<span class="string">"your description"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"author"</span> <span class="attr">content</span>=<span class="string">"author,email address"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="viewport"><a href="#viewport" class="headerlink" title="viewport"></a>viewport</h3><p>viewport: 指浏览器可视区域大小；<br/><br>width: 浏览器宽度；<br/><br>device-width: 设备分辨率宽度，输出设备的屏幕可见宽度；<br/><br>initial-scale: 初始缩放比例；<br/><br>maximum-scale: 最大缩放比例；<br/></p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta <span class="attribute">name</span>=<span class="string">"viewport"</span> <span class="attribute">content</span>=<span class="string">"width=device-width, initial-scale=1.0"</span>&gt;</span><br></pre></td></tr></table></figure>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          <div style="width:300px;margin:0 auto; padding:20px 0;">
+              <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51012202000601" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">川公网安备 51012202000601号</p></a>
+          </div>
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+
+<script src="/js/highlight.pack.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+

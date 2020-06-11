@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="BigFaceMaster">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="ESLint 简要说明"/>
+  <meta property="og:description" content="一个前端的探索之路，不局限于技术：web前端，移动端，小程序，后端数据库，算法，等等" />
+  <meta property="og:site_name" content="🤡大花脸🤡"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="http://yoursite.com"/>
+  
+    <link rel="alternate" href="/atom.xml" title="🤡大花脸🤡" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="🤡">
+  
+
+  <!-- Site Title -->
+  <title>🤡大花脸🤡</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  
+  <link rel="stylesheet" href="/css/style.dark.css">
+
+  <!-- Google Analytics -->
+  
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-154123333-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+
+</head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/stars.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">ESLint 简要说明</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                  Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://github.com/BigFaceMaster" target="_blank" rel="noopener">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="mailto:bigfacemaster@gmail.com" target="_blank" rel="noopener">
+                  
+                  Email
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By BigFaceMaster</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2018-06-15</span>
+            <span class="time">14:13:50</span>
+          </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
+
+<a href="/categories/Tool/">Tool</a>
+</span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/ESLint/">#ESLint</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <h1 id="ESLint-简要说明"><a href="#ESLint-简要说明" class="headerlink" title="ESLint 简要说明"></a>ESLint 简要说明</h1><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>ESLint 具有高可配置性，这意味着你可以根据需求添加需要的代码检验规则，让它符合你的需求。ESLint 的配置方式可以有以下两种形式：</p>
+<ul>
+<li><p>在注释中配置：使用 JavaScript 文件中使用注释包裹配置内容</p>
+</li>
+<li><p>在配置文件中配置：使用单独的文件来进行配置，这个文件可以是 JavaScript, JSON, YAML，文件名为 <code>.eslintrc.*</code> （添加文件类型的后缀），或者在 package.json 的 eslintConfig 字段进行配置，ESLint 会自动地去寻找这些配置文件，你也可以在命令行中指定配置文件。</p>
+</li>
+</ul>
+<h2 id="解析器选项"><a href="#解析器选项" class="headerlink" title="解析器选项"></a>解析器选项</h2><p>ESLint 默认按照 ES5 的语法来解析，你可以在这里指定期望的 JavaScript 语法版本，在配置文件中可以使用 <code>parserOptions</code> 字段来配置：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    <span class="string">"parserOptions"</span>: &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">        <span class="string">"ecmaVersion"</span>: <span class="number">6</span>, <span class="comment">// JavaScript 版本，3, 5 (default), 6 (2015), 7 (2016)</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">        <span class="string">"sourceType"</span>: <span class="string">"module"</span>, <span class="comment">// "script" (default) 或者 "module"，说明你的代码是否是 ECMAScript 模块。</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">        <span class="string">"ecmaFeatures"</span>: &#123; <span class="comment">// 其他的一些语法特性的配置</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">            <span class="string">"jsx"</span>: <span class="literal">true</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr></table></figure>
+
+<h2 id="解析器"><a href="#解析器" class="headerlink" title="解析器"></a>解析器</h2><p>指定语法解析器，ESLint 默认使用 Espree，你也可以指定其他的语法解析器，比如 <a href="https://www.npmjs.com/package/babel-eslint" target="_blank" rel="noopener">babel-eslint</a></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    <span class="string">"parser"</span>: <span class="string">"babel-eslint"</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p>不同的环境可能有不同的全局变量，比如使用 amd 环境，就会有 require 和 define 两个函数。这里有详细的可选环境 <a href="https://eslint.org/docs/user-guide/configuring#specifying-environments" target="_blank" rel="noopener">Specifying Environments</a>，常见的环境有：</p>
+<ul>
+<li>browser</li>
+<li>node</li>
+<li>es6</li>
+<li>commonjs</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">  <span class="string">"env"</span> : &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    <span class="string">"browser"</span>: <span class="literal">true</span>,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    <span class="string">"node"</span>: <span class="literal">true</span>,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">  &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<p>一个工程中可能有不同的文件会运行在不同的环境下，这个时候可以在文件内使用注释来指定环境 <code>/* eslint-env node, mocha */</code></p>
+<h2 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h2><p>ESLint 支持使用第三方的插件，这些插件应该是使用 npm 安装的，插件的名字通常形如 <code>eslint-plugin-xxx</code>，在配置插件的时候可以忽略 <code>eslint-plugin-</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    <span class="string">"plugins"</span>: [</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">        <span class="string">"plugin1"</span>,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">        <span class="string">"eslint-plugin-plugin2"</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">    ]</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<h2 id="规则"><a href="#规则" class="headerlink" title="规则"></a>规则</h2><p>ESLint 包含大量的规则，你可以选择自己需要的规则进行配置，配置的方式如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    <span class="string">"rules"</span>: &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">        <span class="string">"eqeqeq"</span>: <span class="string">"off"</span>,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">        <span class="string">"curly"</span>: <span class="string">"error"</span>,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">        <span class="string">"quotes"</span>: [<span class="string">"error"</span>, <span class="string">"double"</span>]</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+<p>每个规则可以取以下三类值：</p>
+<ul>
+<li>“off” or 0 - 关闭该规则</li>
+<li>“warn” or 1 - 违反该规则的时候给出警告</li>
+<li>“error” or 2 - 违反该规则的时候报错<br>有时候某个规则可能包含选项，比如代码缩进，你需要指定缩进的空格数，这个参数可以以这种方式传入：<code>&quot;intend&quot;:[&quot;error&quot;, 4]</code>，即，使用括号将参数传进去，三个或四个参数依然使用这种方式传入，把参数都放在括号里就好了。</li>
+</ul>
+<p>要想重新设置某个插件定义的 rule ，需要按如下方式设置：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    <span class="string">"rules"</span>: &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">        <span class="string">"react/self-closing-comp"</span>: <span class="number">1</span>,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">        <span class="string">"react/wrap-multilines"</span>: <span class="number">0</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<h2 id="使用注释关闭规则"><a href="#使用注释关闭规则" class="headerlink" title="使用注释关闭规则"></a>使用注释关闭规则</h2><p>在代码中可能有某些场景不得不违反某个规则，这个时候可以使用注释来针对性地关闭规则。</p>
+<blockquote>
+<p>关闭某块代码的检验:</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="comment">/* eslint-disable */</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">alert(<span class="string">'foo'</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="comment">/* eslint-enable */</span></span></pre></td></tr></table></figure>
+
+<blockquote>
+<p>关闭代码块某些规则的检验</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="comment">/* eslint-disable no-alert, no-console */</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">alert(<span class="string">'foo'</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">'bar'</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"><span class="comment">/* eslint-enable no-alert, no-console */</span></span></pre></td></tr></table></figure>
+
+<blockquote>
+<p>彻底关闭对某个文件的检验</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="comment">/* eslint-disable */</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">alert(<span class="string">'foo'</span>);</span></pre></td></tr></table></figure>
+
+<blockquote>
+<p>关闭对某行代码的检验</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">alert(<span class="string">'foo'</span>); <span class="comment">// eslint-disable-line</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="comment">// 或者</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="comment">// eslint-disable-next-line</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">alert(<span class="string">'foo'</span>);</span></pre></td></tr></table></figure>
+
+<h2 id="配置文件的寻找和运用规则"><a href="#配置文件的寻找和运用规则" class="headerlink" title="配置文件的寻找和运用规则"></a>配置文件的寻找和运用规则</h2><p>子级的配置文件中的规则最优先，如果父级目录也就 eslint 的配置文件，其规则会追加进来。如果根目录下同时存在 eslintrc 以及 package.json 中的 eslintConfig 字段，会忽略 package.json 中的配置。</p>
+<p>如果在 root 目录下存在一个 eslint 的配置文件，那么它只会在项目中没有找到任何配置文件的时候才会被应用。eslint 默认会不断向上寻找 eslintrc 知道根目录，你可以阻止它这么做通过在某个配置文件中写入 <code>&quot;root&quot;: true</code>。</p>
+<p>使用不同方式配置的配置信息有不同的优先级，具体表现为：</p>
+<p>行内注释中的配置的优先级 &gt; 通过命令行传入 &gt; 配置文件</p>
+<h2 id="扩展配置文件"><a href="#扩展配置文件" class="headerlink" title="扩展配置文件"></a>扩展配置文件</h2><p>使用 <code>extends</code> 字段可以来扩展一些现有的配置文件，比如可以使用开源社区发布的一些可共享的配置文件包.</p>
+<h2 id="More"><a href="#More" class="headerlink" title="More"></a>More</h2><p><a href="https://eslint.org/docs/" target="_blank" rel="noopener">more</a></p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+<script src="/js/highlight.pack.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+
