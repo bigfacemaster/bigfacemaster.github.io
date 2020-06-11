@@ -1,8 +1,8 @@
 ---
 title: Daily-Algorithm-2020-06-11
 date: 2020-06-11 11:04:43
-tags: Algorithm, 算法
-category: Algorithm, 算法
+tags: [Algorithm, 算法]
+category: [Algorithm, 算法]
 ---
 
 
