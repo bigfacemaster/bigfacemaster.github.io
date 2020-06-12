@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="BigFaceMaster">
   <!-- Open Graph Data -->
-  <meta property="og:title" content="webStorm快捷方式"/>
+  <meta property="og:title" content="Daily-Algorithm-2020-06-12"/>
   <meta property="og:description" content="一个前端的探索之路，不局限于技术：web前端，移动端，小程序，后端数据库，算法，等等" />
   <meta property="og:site_name" content="🤡大花脸🤡"/>
   <meta property="og:type" content="article" />
@@ -57,7 +57,7 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="page-title with-background-image">
-          <p class="title">webStorm快捷方式</p>
+          <p class="title">Daily-Algorithm-2020-06-12</p>
           <p class="subtitle"></p>
         </div>
         <div class="site-menu with-background-image">
@@ -113,14 +113,14 @@
           
           <!-- Date -->
           <span class="date-time info">On
-            <span class="date">2017-12-29</span>
+            <span class="date">2020-06-12</span>
             <span class="time">10:59:50</span>
           </span>
           
           <!--  Categories  -->
             <span class="categories info">Under 
 
-<a href="/categories/tools/">tools</a>
+<a href="/categories/Algorithm/">Algorithm</a> / <a href="/categories/Algorithm/%E7%AE%97%E6%B3%95/">算法</a>
 </span>
           
         </div>
@@ -129,18 +129,17 @@
           <div class="post-tags text-muted">
             Tags: 
 
-<a class="tag" href="/tags/webstrom%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8F/">#webstrom快捷方式</a>
+<a class="tag" href="/tags/Algorithm/">#Algorithm</a> <a class="tag" href="/tags/%E7%AE%97%E6%B3%95/">#算法</a>
 
 
           </div>
         
         <!-- Post Main Content -->
         <div class="post-content">
-          <h1 id="Mac版的WebStorm的快捷方式"><a href="#Mac版的WebStorm的快捷方式" class="headerlink" title="Mac版的WebStorm的快捷方式"></a>Mac版的WebStorm的快捷方式</h1><p>command + d 副本当前行或选中的区块<br>command + f 查找当前文档<br>command + g 跳转到文档的某一行某一列<br>command + p 显示参数信息<br>command + r 替换当前文档<br>command + w 选中当前单词、行、区块等<br>command + y 删除整行<br>command + mouseover 显示主要信息<br>command + [ 移动光标到代码块前<br>command + ] 移动光标到代码块尾<br>command + + 折叠区块<br>command + - 展开区块<br>command + -&gt; 光标移到行尾<br>command + &lt;- 光标移到行头</p>
-<p>command + option + t 将代码以某种格式包括起来<br>command + option + l 将代码格式化</p>
-<p>command + shift + u 切换大小写<br>command + shift + [ 选中到代码块前<br>command + shift + ] 选中到代码块尾<br>command + shift + + 折叠所有区块<br>command + shift + - 展开所有区块</p>
-<p>shift + return 在任意位置换行<br>shift + F6 高级修改，可快速修改光标所在的标签、变量、函数等<br>control + shift + f find in path<br>control + shift + j 合并行<br>control + shift + r replace in path</p>
-<p>option + delete delete to word start<br>option + fn + delete delete to word end<br>option + -&gt; 以单词为单位移动光标<br>option + &lt;- 以单词为单位移动光标</p>
+          <h1 id="最长公共前缀"><a href="#最长公共前缀" class="headerlink" title="最长公共前缀"></a><a href="https://leetcode-cn.com/problems/roman-to-integer/" target="_blank" rel="noopener"><a href="https://leetcode-cn.com/problems/longest-common-prefix/" target="_blank" rel="noopener">最长公共前缀</a></a></h1><h2 id="Desc"><a href="#Desc" class="headerlink" title="Desc"></a>Desc</h2><p>编写一个函数来查找字符串数组中的最长公共前缀。</p>
+<p>如果不存在公共前缀，返回空字符串 <code>&quot;&quot;</code>。</p>
+<h2 id="题解-JS"><a href="#题解-JS" class="headerlink" title="题解(JS)"></a>题解(JS)</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> longestCommonPrefix = <span class="function"><span class="keyword">function</span>(<span class="params">strs</span>) </span>&#123;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">let</span> result = strs[<span class="number">0</span>] ? strs[<span class="number">0</span>]:<span class="string">''</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">1</span>; i &lt; strs.length; i ++) &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> regex = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">'^'</span> + result);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (!regex.test(strs[i]) &amp;&amp; result.length) &#123;</span><br><span class="line">      result = result.slice(<span class="number">0</span>, result.length - <span class="number">1</span>);</span><br><span class="line">      regex = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">'^'</span> + result)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> result;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
 
         </div>
       </div>
