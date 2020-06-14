@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="BigFaceMaster">
   <!-- Open Graph Data -->
-  <meta property="og:title" content="Markdown语法"/>
+  <meta property="og:title" content="Daily-Algorithm-2020-06-13"/>
   <meta property="og:description" content="一个前端的探索之路，不局限于技术：web前端，移动端，小程序，后端数据库，算法，等等" />
   <meta property="og:site_name" content="🤡大花脸🤡"/>
   <meta property="og:type" content="article" />
@@ -57,7 +57,7 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="page-title with-background-image">
-          <p class="title">Markdown语法</p>
+          <p class="title">Daily-Algorithm-2020-06-13</p>
           <p class="subtitle"></p>
         </div>
         <div class="site-menu with-background-image">
@@ -113,14 +113,14 @@
           
           <!-- Date -->
           <span class="date-time info">On
-            <span class="date">2017-06-09</span>
+            <span class="date">2020-06-14</span>
             <span class="time">15:30:42</span>
           </span>
           
           <!--  Categories  -->
             <span class="categories info">Under 
 
-<a href="/categories/code/">code</a>
+<a href="/categories/Algorithm/">Algorithm</a> / <a href="/categories/Algorithm/%E7%AE%97%E6%B3%95/">算法</a>
 </span>
           
         </div>
@@ -129,45 +129,18 @@
           <div class="post-tags text-muted">
             Tags: 
 
-<a class="tag" href="/tags/Markdown/">#Markdown</a>
+<a class="tag" href="/tags/Algorithm/">#Algorithm</a> <a class="tag" href="/tags/%E7%AE%97%E6%B3%95/">#算法</a>
 
 
           </div>
         
         <!-- Post Main Content -->
         <div class="post-content">
-          <h1 id="Markdown的基本语法"><a href="#Markdown的基本语法" class="headerlink" title="Markdown的基本语法"></a>Markdown的基本语法</h1><ol>
-<li><p>分段： 两个回车</p>
-</li>
-<li><p>换行 两个空格 + 回车</p>
-</li>
-<li><p>标题 #~###### 井号的个数表示几级标题，即Markdown可以表示一级标题到六级标题</p>
-</li>
-<li><p>代码区块 四个空格开头</p>
-</li>
-<li><p>链接 <a href="链接地址">文字</a></p>
-</li>
-<li><p>图片 <img src="%E5%9B%BE%E7%89%87%E5%9C%B0%E5%9D%80" alt="图片说明">，图片地址可以是本地路劲，也可以是网络地址</p>
-</li>
-<li><p>强调 <strong>文字</strong>，<strong>文字</strong>，_文字_，<em>文字</em></p>
-</li>
-<li><p>代码 ``` This is code ```</p>
-</li>
-<li><p>引用：　每行的最前面加上 &gt;</p>
-</li>
-<li><p>无序列表使用星号、加号或是减号作为列表标记</p>
-</li>
-<li><p>有序列表则使用数字接着一个英文句点</p>
-</li>
-<li><p>你可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西</p>
-</li>
-<li><p>使用星号（*）和底线（_）作为标记强调字词的符号，被 * 或 _ 包围的字词会被转成用 &lt;\em&gt; 标签包围，用两个 * 或 _ 包起来的话，则会被转成 &lt;\strong&gt;</p>
-</li>
-<li><p>当你需要在编辑器中插入数学公式时，可以使用两个美元符 $$ 包裹 TeX 或 LaTeX 格式的数学公式来实现。提交后，问答和文章页会根据需要加载 Mathjax 对数学公式进行渲染</p>
-</li>
-<li><p>未完待续</p>
-</li>
-</ol>
+          <h1 id="整数反转"><a href="#整数反转" class="headerlink" title="整数反转"></a><a href="https://leetcode-cn.com/problems/reverse-integer/" target="_blank" rel="noopener">整数反转</a></h1><h2 id="Desc"><a href="#Desc" class="headerlink" title="Desc"></a>Desc</h2><p>给出一个 32 位的有符号整数，你需要将这个整数中每位上的数字进行反转。</p>
+<p>注意:</p>
+<p>假设我们的环境只能存储得下 32 位的有符号整数，则其数值范围为 [−231,  231 − 1]。请根据这个假设，如果反转后整数溢出那么就返回 0。</p>
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reverse = <span class="function"><span class="keyword">function</span>(<span class="params">x</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> result = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">if</span> (-<span class="built_in">Math</span>.pow(<span class="number">2</span>, <span class="number">31</span>)  &lt;= x &amp;&amp; x &lt;= (<span class="built_in">Math</span>.pow(<span class="number">2</span>, <span class="number">31</span>) - <span class="number">1</span>) ) &#123;</span><br><span class="line">    <span class="keyword">if</span>(x &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">      result = <span class="built_in">Number</span>((x).toString().split(<span class="string">''</span>).reverse().join(<span class="string">''</span>));</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      result = -<span class="built_in">Number</span>((-x).toString().split(<span class="string">''</span>).reverse().join(<span class="string">''</span>));</span><br><span class="line">    &#125;</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    result = <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span>( -<span class="built_in">Math</span>.pow(<span class="number">2</span>, <span class="number">31</span>)  &lt;= result &amp;&amp; result &lt;= (<span class="built_in">Math</span>.pow(<span class="number">2</span>, <span class="number">31</span>) - <span class="number">1</span>)) &#123;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">  &#125; <span class="keyword">else</span>  &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
 
         </div>
       </div>
