@@ -30,7 +30,7 @@ category: [Algorithm, 算法]
 
 
 ```js
-var reverse = function(x) {
+const reverse = function(x) {
   let result = 0;
   if (-Math.pow(2, 31)  <= x && x <= (Math.pow(2, 31) - 1) ) {
     if(x >= 0) {

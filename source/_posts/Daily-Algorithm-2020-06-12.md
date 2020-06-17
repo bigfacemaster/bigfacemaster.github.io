@@ -26,7 +26,7 @@ category: [Algorithm, 算法]
 
 
 ```js
-var longestCommonPrefix = function(strs) {
+const longestCommonPrefix = function(strs) {
   
   let result = strs[0] ? strs[0]:'';
 

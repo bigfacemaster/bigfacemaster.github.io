@@ -24,7 +24,7 @@ F(N) = F(N - 1) + F(N - 2), 其中 N > 1.
 ## Code
 
 ```js
-var fib = function(N) {
+const fib = function(N) {
   if(N < 2)  {
     return N;
   } else {

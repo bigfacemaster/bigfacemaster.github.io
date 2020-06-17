@@ -29,7 +29,7 @@ category: [Algorithm, 算法]
 ## Code
 
 ```js
-var detectCapitalUse = function(word) {
+const detectCapitalUse = function(word) {
   return /^[A-Z]+$/.test(word) || /^[A-Z][a-z]{1,}$/.test(word) || /^[a-z]+$/.test(word)
 };
 ```

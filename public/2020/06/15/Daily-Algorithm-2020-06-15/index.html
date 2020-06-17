@@ -114,7 +114,7 @@
           <!-- Date -->
           <span class="date-time info">On
             <span class="date">2020-06-15</span>
-            <span class="time">10:05:35</span>
+            <span class="time">22:38:10</span>
           </span>
           
           <!--  Categories  -->
@@ -140,7 +140,7 @@
 <p>我们定义，在以下情况时，单词的大写用法是正确的：</p>
 <p>全部字母都是大写，比如”USA”。<br>单词中所有字母都不是大写，比如”leetcode”。<br>如果单词不只含有一个字母，只有首字母大写， 比如 “Google”。<br>否则，我们定义这个单词没有正确使用大写字母。</p>
 <p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/detect-capital" target="_blank" rel="noopener">https://leetcode-cn.com/problems/detect-capital</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
-<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> detectCapitalUse = <span class="function"><span class="keyword">function</span>(<span class="params">word</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="regexp">/^[A-Z]+$/</span>.test(word) || <span class="regexp">/^[A-Z][a-z]&#123;1,&#125;$/</span>.test(word) || <span class="regexp">/^[a-z]+$/</span>.test(word)</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> detectCapitalUse = <span class="function"><span class="keyword">function</span>(<span class="params">word</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="regexp">/^[A-Z]+$/</span>.test(word) || <span class="regexp">/^[A-Z][a-z]&#123;1,&#125;$/</span>.test(word) || <span class="regexp">/^[a-z]+$/</span>.test(word)</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
 
         </div>

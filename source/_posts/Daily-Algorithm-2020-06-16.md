@@ -26,7 +26,7 @@ category: [Algorithm, 算法]
 ## Code
 
 ```js
-var mySqrt = function(x) {
+const mySqrt = function(x) {
   return Math.floor(Math.sqrt(x))
 };
 ```
