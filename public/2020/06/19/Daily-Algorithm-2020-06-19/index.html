@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="BigFaceMaster">
   <!-- Open Graph Data -->
-  <meta property="og:title" content="Daily-Algorithm-2020-06-11"/>
+  <meta property="og:title" content="Daily-Algorithm-2020-06-19"/>
   <meta property="og:description" content="一个前端的探索之路，不局限于技术：web前端，移动端，小程序，后端数据库，算法，等等" />
   <meta property="og:site_name" content="🤡大花脸🤡"/>
   <meta property="og:type" content="article" />
@@ -57,7 +57,7 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="page-title with-background-image">
-          <p class="title">Daily-Algorithm-2020-06-11</p>
+          <p class="title">Daily-Algorithm-2020-06-19</p>
           <p class="subtitle"></p>
         </div>
         <div class="site-menu with-background-image">
@@ -113,7 +113,7 @@
           
           <!-- Date -->
           <span class="date-time info">On
-            <span class="date">2020-06-11</span>
+            <span class="date">2020-06-19</span>
             <span class="time">11:12:02</span>
           </span>
           
@@ -136,18 +136,9 @@
         
         <!-- Post Main Content -->
         <div class="post-content">
-          <h1 id="罗马数字转整数"><a href="#罗马数字转整数" class="headerlink" title="罗马数字转整数"></a><a href="https://leetcode-cn.com/problems/roman-to-integer/" target="_blank" rel="noopener">罗马数字转整数</a></h1><h2 id="Desc"><a href="#Desc" class="headerlink" title="Desc"></a>Desc</h2><p>罗马数字包含以下七种字符: <code>I</code>， <code>V</code>， <code>X</code>， <code>L</code>，<code>C</code>，<code>D</code> 和 <code>M</code>。</p>
-<p>字符          数值<br>I             1<br>V             5<br>X             10<br>L             50<br>C             100<br>D             500<br>M             1000</p>
-<p>通常情况下，罗马数字中小的数字在大的数字的右边。但也存在特例，例如 4 不写做 IIII，而是 IV。数字 1 在数字 5 的左边，所表示的数等于大数 5 减小数 1 得到的数值 4 。同样地，数字 9 表示为 IX。这个特殊的规则只适用于以下六种情况：</p>
-<p>I 可以放在 V (5) 和 X (10) 的左边，来表示 4 和 9。<br>X 可以放在 L (50) 和 C (100) 的左边，来表示 40 和 90。<br>C 可以放在 D (500) 和 M (1000) 的左边，来表示 400 和 900。<br>给定一个罗马数字，将其转换成整数。输入确保在 1 到 3999 的范围内。</p>
-<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/detect-capital" target="_blank" rel="noopener">https://leetcode-cn.com/problems/detect-capital</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
-<h2 id="题解-JS"><a href="#题解-JS" class="headerlink" title="题解(JS)"></a>题解(JS)</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> romanToInt = <span class="function"><span class="params">s</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> roman = &#123;</span><br><span class="line">    I: <span class="number">1</span>,</span><br><span class="line">    V: <span class="number">5</span>,</span><br><span class="line">    X: <span class="number">10</span>,</span><br><span class="line">    L: <span class="number">50</span>,</span><br><span class="line">    C: <span class="number">100</span>,</span><br><span class="line">    D: <span class="number">500</span>,</span><br><span class="line">    M: <span class="number">1000</span>,</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">let</span> result = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">const</span> sArr = s.split(<span class="string">''</span>);</span><br><span class="line">  sArr.forEach(<span class="function">(<span class="params">v, k </span>)=&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span>(k &gt; <span class="number">0</span>) &#123;</span><br><span class="line">      <span class="keyword">if</span>(roman[v] &lt;= roman[sArr[k<span class="number">-1</span>]]) &#123;</span><br><span class="line">        result += roman[v];</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        result -= roman[sArr[k<span class="number">-1</span>]];</span><br><span class="line">        result += (roman[v] - roman[sArr[k<span class="number">-1</span>]])</span><br><span class="line">      &#125;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      result += roman[v];</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="keyword">return</span> result;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">romanToInt(<span class="string">"III"</span>) <span class="comment">// 3</span></span><br><span class="line">romanToInt(<span class="string">"IX"</span>)  <span class="comment">// 9</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
+          <h1 id="验证回文串"><a href="#验证回文串" class="headerlink" title="验证回文串"></a><a href="https://leetcode-cn.com/problems/valid-palindrome/" target="_blank" rel="noopener">验证回文串</a></h1><h2 id="Desc"><a href="#Desc" class="headerlink" title="Desc"></a>Desc</h2><p>给定一个字符串，验证它是否是回文串，只考虑字母和数字字符，可以忽略字母的大小写。</p>
+<p><strong>说明：</strong>本题中，我们将空字符串定义为有效的回文串。</p>
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> isPalindrome = <span class="function">(<span class="params">s</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> pureString = s.replace(<span class="regexp">/[^A-Za-z0-9]/g</span>, <span class="string">''</span>).toLocaleLowerCase();</span><br><span class="line">  <span class="keyword">let</span> reverseStr = pureString.split(<span class="string">''</span>).reverse().join(<span class="string">''</span>);</span><br><span class="line">  <span class="keyword">return</span> pureString == reverseStr;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
 
         </div>
