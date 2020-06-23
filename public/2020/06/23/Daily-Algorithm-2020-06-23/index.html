@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="BigFaceMaster">
   <!-- Open Graph Data -->
-  <meta property="og:title" content="JavaScript一些注意点"/>
+  <meta property="og:title" content="Daily-Algorithm-2020-06-23"/>
   <meta property="og:description" content="一个前端的探索之路，不局限于技术：web前端，移动端，小程序，后端数据库，算法，等等" />
   <meta property="og:site_name" content="🤡大花脸🤡"/>
   <meta property="og:type" content="article" />
@@ -57,7 +57,7 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="page-title with-background-image">
-          <p class="title">JavaScript一些注意点</p>
+          <p class="title">Daily-Algorithm-2020-06-23</p>
           <p class="subtitle"></p>
         </div>
         <div class="site-menu with-background-image">
@@ -113,14 +113,14 @@
           
           <!-- Date -->
           <span class="date-time info">On
-            <span class="date">2016-12-22</span>
+            <span class="date">2020-06-23</span>
             <span class="time">10:34:44</span>
           </span>
           
           <!--  Categories  -->
             <span class="categories info">Under 
 
-<a href="/categories/code/">code</a>
+<a href="/categories/Algorithm/">Algorithm</a> / <a href="/categories/Algorithm/%E7%AE%97%E6%B3%95/">算法</a>
 </span>
           
         </div>
@@ -129,25 +129,18 @@
           <div class="post-tags text-muted">
             Tags: 
 
-<a class="tag" href="/tags/JavaScript/">#JavaScript</a> <a class="tag" href="/tags/JS/">#JS</a>
+<a class="tag" href="/tags/Algorithm/">#Algorithm</a> <a class="tag" href="/tags/%E7%AE%97%E6%B3%95/">#算法</a>
 
 
           </div>
         
         <!-- Post Main Content -->
         <div class="post-content">
-          <h1 id="变量声明提前-var-hoisting"><a href="#变量声明提前-var-hoisting" class="headerlink" title="变量声明提前 ( var hoisting)"></a>变量声明提前 ( var hoisting)</h1><p>由于变量声明总是在<em>任意代码执行之前处理的</em>，所以在代码中的任意位置声明变量总是等效于在代码开头声明，说明，变量可以再声明之前使用，这就是声明提前(hoisting)；</p>
-<figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">a</span> = <span class="number">2</span><span class="comment">;</span></span><br><span class="line">var a<span class="comment">;</span></span><br><span class="line">==&gt;</span><br><span class="line">var a <span class="comment">;</span></span><br><span class="line"><span class="attribute">a</span> = <span class="number">2</span><span class="comment">;</span></span><br></pre></td></tr></table></figure>
-<h1 id="let"><a href="#let" class="headerlink" title="let"></a>let</h1><p>let 声明了贵块级域的局部变量，，并且可以给他一个初始值；同时把变量的作用域限制在块级域当中，其作用域包含定义它的块以及任何包含的子块中。var 则是全局或者函数级。</br><br>Attention:</p>
-<ul>
-<li>在同一个函数或同一个作用域中用let重复定义一个变量将引起TypeError；<h1 id="const"><a href="#const" class="headerlink" title="const"></a>const</h1>创建一个只读的常量，只能赋值一次。<h1 id="数据结构和类型"><a href="#数据结构和类型" class="headerlink" title="数据结构和类型"></a>数据结构和类型</h1><h2 id="六种原型数据类型"><a href="#六种原型数据类型" class="headerlink" title="六种原型数据类型"></a>六种原型数据类型</h2></li>
-<li>Boolean，布尔值，true &amp;&amp; flase；</li>
-<li>null，一个表明null值的特殊关键字，JavaScript是大小写敏感的，null与Null和NULL或其他的变量完全不同；</li>
-<li>undefined，变量未定义时的属性；</li>
-<li>Number，表示数字；</li>
-<li>String，表示字符串；</li>
-<li>Symbol，一种数据类型，他的实例是唯一且不可改变的。<h2 id="Object对象"><a href="#Object对象" class="headerlink" title="Object对象"></a>Object对象</h2></li>
-</ul>
+          <p>#<a href="https://leetcode-cn.com/problems/add-binary/" target="_blank" rel="noopener">二进制求和</a></p>
+<h2 id="Desc"><a href="#Desc" class="headerlink" title="Desc"></a>Desc</h2><p>给你两个二进制字符串，返回它们的和（用二进制表示）。</p>
+<p>输入为 <strong>非空</strong> 字符串且只包含数字 <code>1</code> 和 <code>0</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> addBinary = <span class="function"><span class="keyword">function</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> intA = BigInt(<span class="string">`0b<span class="subst">$&#123;a&#125;</span>`</span>, <span class="number">2</span>);</span><br><span class="line">    <span class="keyword">const</span> intB = BigInt(<span class="string">`0b<span class="subst">$&#123;b&#125;</span>`</span>, <span class="number">2</span>);</span><br><span class="line">    <span class="keyword">const</span> result = intA + intB;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> result.toString(<span class="number">2</span>);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
 
         </div>
       </div>
