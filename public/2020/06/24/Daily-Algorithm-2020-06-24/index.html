@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="BigFaceMaster">
   <!-- Open Graph Data -->
-  <meta property="og:title" content="Daily-Algorithm-2020-06-17"/>
+  <meta property="og:title" content="Daily-Algorithm-2020-06-24"/>
   <meta property="og:description" content="一个前端的探索之路，不局限于技术：web前端，移动端，小程序，后端数据库，算法，等等" />
   <meta property="og:site_name" content="🤡大花脸🤡"/>
   <meta property="og:type" content="article" />
@@ -57,7 +57,7 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="page-title with-background-image">
-          <p class="title">Daily-Algorithm-2020-06-17</p>
+          <p class="title">Daily-Algorithm-2020-06-24</p>
           <p class="subtitle"></p>
         </div>
         <div class="site-menu with-background-image">
@@ -113,7 +113,7 @@
           
           <!-- Date -->
           <span class="date-time info">On
-            <span class="date">2020-06-17</span>
+            <span class="date">2020-06-24</span>
             <span class="time">15:59:59</span>
           </span>
           
@@ -136,11 +136,8 @@
         
         <!-- Post Main Content -->
         <div class="post-content">
-          <h1 id="最佳观光组合"><a href="#最佳观光组合" class="headerlink" title="最佳观光组合"></a><a href="https://leetcode-cn.com/problems/best-sightseeing-pair/" target="_blank" rel="noopener">最佳观光组合</a></h1><h2 id="Desc"><a href="#Desc" class="headerlink" title="Desc"></a>Desc</h2><p>给定正整数数组 A，A[i] 表示第 i 个观光景点的评分，并且两个景点 i 和 j 之间的距离为 j - i。</p>
-<p>一对景点（i &lt; j）组成的观光组合的得分为（A[i] + A[j] + i - j）：景点的评分之和减去它们两者之间的距离。</p>
-<p>返回一对观光景点能取得的最高分。</p>
-<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/best-sightseeing-pair" target="_blank" rel="noopener">https://leetcode-cn.com/problems/best-sightseeing-pair</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
-<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> maxScoreSightseeingPair = <span class="function"><span class="keyword">function</span>(<span class="params">A</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// left = A[i] + i; right = A[j] - j; </span></span><br><span class="line">  <span class="keyword">let</span> left = A[<span class="number">0</span>] + <span class="number">0</span>; </span><br><span class="line">  <span class="keyword">let</span> result = -<span class="literal">Infinity</span>;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> next = <span class="number">1</span>; next &lt; A.length; next ++) &#123;</span><br><span class="line">    result = <span class="built_in">Math</span>.max(result, left + A[next] - next);</span><br><span class="line">    left = <span class="built_in">Math</span>.max(left, A[next] + next);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> result;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+          <h1 id="统计位数为偶数的数字"><a href="#统计位数为偶数的数字" class="headerlink" title="统计位数为偶数的数字"></a><a href="https://leetcode-cn.com/problems/find-numbers-with-even-number-of-digits/" target="_blank" rel="noopener">统计位数为偶数的数字</a></h1><h2 id="Desc"><a href="#Desc" class="headerlink" title="Desc"></a>Desc</h2><p>给你一个整数数组 <code>nums</code>，请你返回其中位数为 <strong>偶数</strong> 的数字的个数。</p>
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> findNumbers = <span class="function"><span class="keyword">function</span>(<span class="params">nums</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> total = <span class="number">0</span>;</span><br><span class="line">  nums.forEach(<span class="function"><span class="params">v</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> str = <span class="string">`<span class="subst">$&#123;v&#125;</span>`</span>;</span><br><span class="line">    <span class="keyword">if</span>(str.length % <span class="number">2</span> === <span class="number">0</span>) &#123;</span><br><span class="line">      total += <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">  <span class="keyword">return</span> total;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
 
         </div>
