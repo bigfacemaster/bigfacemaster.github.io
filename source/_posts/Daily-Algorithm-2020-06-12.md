@@ -7,7 +7,7 @@ category: [Algorithm, 算法]
 
 
 
-# [[最长公共前缀](https://leetcode-cn.com/problems/longest-common-prefix/)](https://leetcode-cn.com/problems/roman-to-integer/)
+# [[最长公共前缀](https://leetcode-cn.com/problems/longest-common-prefix/)]
 
 ## Desc
 

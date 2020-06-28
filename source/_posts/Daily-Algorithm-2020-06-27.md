@@ -2,7 +2,7 @@
 title: Daily-Algorithm-2020-06-27
 date: 2020-06-27 15:38:51
 tags: [Algorithm, 算法]
-category: [Algorithm, 算法
+category: [Algorithm, 算法]
 ---
 
 # [两个数组的交集](https://leetcode-cn.com/problems/intersection-of-two-arrays/)
