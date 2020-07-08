@@ -34,5 +34,11 @@ var maxProduct = function(nums) {
   }
   return Math.max(...result);
 };
+
+const maxProductSort = (nums) => {
+  const newNums = nums.sort((a,b) => a - b);
+  const lng = newNums.length;
+  return (newNums[lng - 1] - 1) * (newNums[lng - 2] - 1)
+}
 ```
 
