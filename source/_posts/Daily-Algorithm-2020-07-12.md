@@ -34,7 +34,7 @@ var reformatDate = function(date) {
   const dateArr = date.split(" ");
   const year = dateArr[2];
   const mon = Month[dateArr[1]];
-  let day = dateArr[0].replace(/st|nd|rd/g, '');
+  let day = dateArr[0].replace(/st|nd|rd|th/g, '');
   if( Number(day) < 10) {
     day = `0${day}`;
   }
