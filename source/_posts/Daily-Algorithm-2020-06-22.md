@@ -15,6 +15,10 @@ category: [Algorithm, 算法]
 
 
 
+## Code
+
+
+
 ```js
 const rotate = (nums, k) => nums.splice(0,0,...nums.splice(nums.length-k))
 ```
