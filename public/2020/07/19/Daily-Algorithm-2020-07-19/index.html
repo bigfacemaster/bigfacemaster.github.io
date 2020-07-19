@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="BigFaceMaster">
   <!-- Open Graph Data -->
-  <meta property="og:title" content="Daily-Algorithm-2020-06-25"/>
+  <meta property="og:title" content="Daily-Algorithm-2020-07-19"/>
   <meta property="og:description" content="一个前端的探索之路，不局限于技术：web前端，移动端，小程序，后端数据库，算法，等等" />
   <meta property="og:site_name" content="🤡大花脸🤡"/>
   <meta property="og:type" content="article" />
@@ -57,7 +57,7 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="page-title with-background-image">
-          <p class="title">Daily-Algorithm-2020-06-25</p>
+          <p class="title">Daily-Algorithm-2020-07-19</p>
           <p class="subtitle"></p>
         </div>
         <div class="site-menu with-background-image">
@@ -113,7 +113,7 @@
           
           <!-- Date -->
           <span class="date-time info">On
-            <span class="date">2020-06-25</span>
+            <span class="date">2020-07-19</span>
             <span class="time">09:29:22</span>
           </span>
           
@@ -136,8 +136,11 @@
         
         <!-- Post Main Content -->
         <div class="post-content">
-          <h1 id="2的幂"><a href="#2的幂" class="headerlink" title="2的幂"></a><a href="https://leetcode-cn.com/problems/power-of-two/" target="_blank" rel="noopener">2的幂</a></h1><h2 id="Desc"><a href="#Desc" class="headerlink" title="Desc"></a>Desc</h2><p>给定一个整数，编写一个函数来判断它是否是 2 的幂次方。</p>
-<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> isPowerOfTwo = <span class="function"><span class="keyword">function</span>(<span class="params">n</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(n !== <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> result = <span class="built_in">Math</span>.log2(n);</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Math</span>.ceil(result) === result;</span><br><span class="line">  &#125; </span><br><span class="line">  <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+          <h1 id="最后一块石头的重量"><a href="#最后一块石头的重量" class="headerlink" title="最后一块石头的重量"></a><a href="https://leetcode-cn.com/problems/last-stone-weight/" target="_blank" rel="noopener">最后一块石头的重量</a></h1><h2 id="Desc"><a href="#Desc" class="headerlink" title="Desc"></a>Desc</h2><p>有一堆石头，每块石头的重量都是正整数。</p>
+<p>每一回合，从中选出两块 最重的 石头，然后将它们一起粉碎。假设石头的重量分别为 x 和 y，且 x &lt;= y。那么粉碎的可能结果如下：</p>
+<p>如果 x == y，那么两块石头都会被完全粉碎；<br>如果 x != y，那么重量为 x 的石头将会完全粉碎，而重量为 y 的石头新重量为 y-x。<br>最后，最多只会剩下一块石头。返回此石头的重量。如果没有石头剩下，就返回 0。</p>
+<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/last-stone-weight" target="_blank" rel="noopener">https://leetcode-cn.com/problems/last-stone-weight</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> lastStoneWeight = <span class="function"><span class="keyword">function</span>(<span class="params">stones</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> sorted = stones.sort(<span class="function">(<span class="params">a, b</span>) =&gt;</span> b - a);</span><br><span class="line">  <span class="keyword">if</span>(sorted.length &gt; <span class="number">1</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> difference = sorted[<span class="number">0</span>] - sorted[<span class="number">1</span>];</span><br><span class="line">    <span class="keyword">const</span> temp = sorted.slice(<span class="number">2</span>) || [<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">if</span>(difference) &#123;</span><br><span class="line">      temp.push(difference);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> lastStoneWeight(temp);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> sorted[<span class="number">0</span>] || <span class="number">0</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
 
         </div>
