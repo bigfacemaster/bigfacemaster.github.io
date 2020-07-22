@@ -114,15 +114,37 @@
           <!-- Date -->
           <span class="date-time info">On
             <span class="date">2020-07-21</span>
-            <span class="time">13:41:06</span>
+            <span class="time">16:49:36</span>
           </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
+
+<a href="/categories/Algorithm/">Algorithm</a> / <a href="/categories/Algorithm/%E7%AE%97%E6%B3%95/">算法</a>
+</span>
           
         </div>
         <!-- Tags -->
         
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/Algorithm/">#Algorithm</a> <a class="tag" href="/tags/%E7%AE%97%E6%B3%95/">#算法</a>
+
+
+          </div>
+        
         <!-- Post Main Content -->
         <div class="post-content">
-          
+          <h1 id="有多少小于当前数字的数字"><a href="#有多少小于当前数字的数字" class="headerlink" title="有多少小于当前数字的数字"></a><a href="https://leetcode-cn.com/problems/how-many-numbers-are-smaller-than-the-current-number/" target="_blank" rel="noopener">有多少小于当前数字的数字</a></h1><h2 id="Desc"><a href="#Desc" class="headerlink" title="Desc"></a>Desc</h2><p>给你一个数组 nums，对于其中每个元素 nums[i]，请你统计数组中比它小的所有数字的数目。</p>
+<p>换而言之，对于每个 nums[i] 你必须计算出有效的 j 的数量，其中 j 满足 j != i 且 nums[j] &lt; nums[i] 。</p>
+<p>以数组形式返回答案。</p>
+<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/how-many-numbers-are-smaller-than-the-current-number" target="_blank" rel="noopener">https://leetcode-cn.com/problems/how-many-numbers-are-smaller-than-the-current-number</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> smallerNumbersThanCurrent = <span class="function"><span class="keyword">function</span>(<span class="params">nums</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> result = [];</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> n <span class="keyword">of</span> nums) &#123;</span><br><span class="line">    <span class="keyword">const</span> temp = nums.filter(<span class="function"><span class="params">v</span> =&gt;</span> v &lt; n) || [];</span><br><span class="line">    result.push(temp.length);</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">return</span> result;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+
+
         </div>
       </div>
     </div>
