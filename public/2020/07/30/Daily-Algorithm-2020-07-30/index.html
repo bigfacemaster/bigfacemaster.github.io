@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="BigFaceMaster">
   <!-- Open Graph Data -->
-  <meta property="og:title" content="Daily-Algorithm-2020-07-09"/>
+  <meta property="og:title" content="Daily-Algorithm-2020-07-30"/>
   <meta property="og:description" content="一个前端的探索之路，不局限于技术：web前端，移动端，小程序，后端数据库，算法，等等" />
   <meta property="og:site_name" content="🤡大花脸🤡"/>
   <meta property="og:type" content="article" />
@@ -57,7 +57,7 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="page-title with-background-image">
-          <p class="title">Daily-Algorithm-2020-07-09</p>
+          <p class="title">Daily-Algorithm-2020-07-30</p>
           <p class="subtitle"></p>
         </div>
         <div class="site-menu with-background-image">
@@ -113,7 +113,7 @@
           
           <!-- Date -->
           <span class="date-time info">On
-            <span class="date">2020-07-09</span>
+            <span class="date">2020-07-30</span>
             <span class="time">15:21:23</span>
           </span>
           
@@ -136,11 +136,10 @@
         
         <!-- Post Main Content -->
         <div class="post-content">
-          <h1 id="一周中的第几天"><a href="#一周中的第几天" class="headerlink" title="一周中的第几天"></a><a href="https://leetcode-cn.com/problems/day-of-the-week/" target="_blank" rel="noopener">一周中的第几天</a></h1><h2 id="Desc"><a href="#Desc" class="headerlink" title="Desc"></a>Desc</h2><p>给你一个日期，请你设计一个算法来判断它是对应一周中的哪一天。</p>
-<p>输入为三个整数：day、month 和 year，分别表示日、月、年。</p>
-<p>您返回的结果必须是这几个值中的一个 {“Sunday”, “Monday”, “Tuesday”, “Wednesday”, “Thursday”, “Friday”, “Saturday”}。</p>
-<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/day-of-the-week" target="_blank" rel="noopener">https://leetcode-cn.com/problems/day-of-the-week</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
-<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> dayOfTheWeek = <span class="function"><span class="keyword">function</span>(<span class="params">day, month, year</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> objs = [<span class="string">"Sunday"</span>, <span class="string">"Monday"</span>, <span class="string">"Tuesday"</span>, <span class="string">"Wednesday"</span>, <span class="string">"Thursday"</span>, <span class="string">"Friday"</span>, <span class="string">"Saturday"</span>];</span><br><span class="line">  <span class="keyword">const</span> date = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">`<span class="subst">$&#123;year&#125;</span>-<span class="subst">$&#123;month&#125;</span>-<span class="subst">$&#123;day&#125;</span>`</span>).getDay();</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> objs[date];</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+          <h1 id="K-次取反后最大化的数组和"><a href="#K-次取反后最大化的数组和" class="headerlink" title="K 次取反后最大化的数组和"></a><a href="https://leetcode-cn.com/problems/maximize-sum-of-array-after-k-negations/" target="_blank" rel="noopener">K 次取反后最大化的数组和</a></h1><h2 id="Desc"><a href="#Desc" class="headerlink" title="Desc"></a>Desc</h2><p>给定一个整数数组 A，我们只能用以下方法修改该数组：我们选择某个索引 i 并将 A[i] 替换为 -A[i]，然后总共重复这个过程 K 次。（我们可以多次选择同一个索引 i。）</p>
+<p>以这种方式修改数组后，返回数组可能的最大和。</p>
+<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/maximize-sum-of-array-after-k-negations" target="_blank" rel="noopener">https://leetcode-cn.com/problems/maximize-sum-of-array-after-k-negations</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> largestSumAfterKNegations = <span class="function"><span class="keyword">function</span>(<span class="params">A, K</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// for(let i = 0; i &lt; K; i++) &#123;</span></span><br><span class="line">  <span class="comment">//   const index = A.findIndex(v =&gt; v === Math.min(...A));</span></span><br><span class="line">  <span class="comment">//   A[index] = A[index] * (-1);</span></span><br><span class="line">  <span class="comment">// &#125;</span></span><br><span class="line">  <span class="comment">// let result = 0;</span></span><br><span class="line">  <span class="comment">// A.forEach(v =&gt; result += v);</span></span><br><span class="line">  <span class="comment">// return result;</span></span><br><span class="line">  <span class="keyword">let</span> sorted = A.sort(<span class="function">(<span class="params">a, b</span>) =&gt;</span> a - b);</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; K; i++) &#123;</span><br><span class="line">    sorted[<span class="number">0</span>] = sorted[<span class="number">0</span>] * (<span class="number">-1</span>);</span><br><span class="line">    sorted = sorted.sort(<span class="function">(<span class="params">a, b</span>) =&gt;</span> a - b);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">let</span> result = <span class="number">0</span>;</span><br><span class="line">  sorted.forEach(<span class="function"><span class="params">v</span> =&gt;</span> result += v);</span><br><span class="line">  <span class="keyword">return</span> result;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
 
         </div>
