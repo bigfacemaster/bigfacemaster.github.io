@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="BigFaceMaster">
   <!-- Open Graph Data -->
-  <meta property="og:title" content="Daily-Algorithm-2020-06-18"/>
+  <meta property="og:title" content="Daily-Algorithm-2020-08-01"/>
   <meta property="og:description" content="一个前端的探索之路，不局限于技术：web前端，移动端，小程序，后端数据库，算法，等等" />
   <meta property="og:site_name" content="🤡大花脸🤡"/>
   <meta property="og:type" content="article" />
@@ -57,7 +57,7 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="page-title with-background-image">
-          <p class="title">Daily-Algorithm-2020-06-18</p>
+          <p class="title">Daily-Algorithm-2020-08-01</p>
           <p class="subtitle"></p>
         </div>
         <div class="site-menu with-background-image">
@@ -113,7 +113,7 @@
           
           <!-- Date -->
           <span class="date-time info">On
-            <span class="date">2020-06-18</span>
+            <span class="date">2020-08-01</span>
             <span class="time">21:28:07</span>
           </span>
           
@@ -136,11 +136,11 @@
         
         <!-- Post Main Content -->
         <div class="post-content">
-          <h1 id="移除元素"><a href="#移除元素" class="headerlink" title="移除元素"></a><a href="https://leetcode-cn.com/problems/remove-element/" target="_blank" rel="noopener">移除元素</a></h1><h2 id="Desc"><a href="#Desc" class="headerlink" title="Desc"></a>Desc</h2><p>给你一个数组 nums 和一个值 val，你需要 原地 移除所有数值等于 val 的元素，并返回移除后数组的新长度。</p>
-<p>不要使用额外的数组空间，你必须仅使用 O(1) 额外空间并 原地 修改输入数组。</p>
-<p>元素的顺序可以改变。你不需要考虑数组中超出新长度后面的元素。</p>
-<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/remove-element" target="_blank" rel="noopener">https://leetcode-cn.com/problems/remove-element</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
-<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> removeElement = <span class="function"><span class="keyword">function</span>(<span class="params">nums, val</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span>(nums[i] === val) &#123;</span><br><span class="line">      nums.splice(i, <span class="number">1</span>);</span><br><span class="line">      i--;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> nums.length;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+          <h1 id="寻找比目标字母大的最小字母"><a href="#寻找比目标字母大的最小字母" class="headerlink" title="寻找比目标字母大的最小字母"></a><a href="https://leetcode-cn.com/problems/find-smallest-letter-greater-than-target/" target="_blank" rel="noopener">寻找比目标字母大的最小字母</a></h1><h2 id="Desc"><a href="#Desc" class="headerlink" title="Desc"></a>Desc</h2><p>给你一个排序后的字符列表 letters ，列表中只包含小写英文字母。另给出一个目标字母 target，请你寻找在这一有序列表里比目标字母大的最小字母。</p>
+<p>在比较时，字母是依序循环出现的。举个例子：</p>
+<p>如果目标字母 target = ‘z’ 并且字符列表为 letters = [‘a’, ‘b’]，则答案返回 ‘a’</p>
+<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/find-smallest-letter-greater-than-target" target="_blank" rel="noopener">https://leetcode-cn.com/problems/find-smallest-letter-greater-than-target</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> nextGreatestLetter = <span class="function"><span class="keyword">function</span>(<span class="params">letters, target</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> result = comapre(letters, target);</span><br><span class="line">  <span class="keyword">return</span> result || letters[<span class="number">0</span>];</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> comapre  = <span class="function">(<span class="params">letters, target</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> alphabet = &#123;</span><br><span class="line">    a:<span class="number">1</span>, <span class="attr">b</span>: <span class="number">2</span>, <span class="attr">c</span>: <span class="number">3</span>, <span class="attr">d</span>:<span class="number">4</span>, <span class="attr">e</span>:<span class="number">5</span>, <span class="attr">f</span>:<span class="number">6</span>, <span class="attr">g</span>:<span class="number">7</span>, <span class="attr">h</span>:<span class="number">8</span>, <span class="attr">i</span>:<span class="number">9</span>, <span class="attr">j</span>: <span class="number">10</span>, <span class="attr">k</span>: <span class="number">11</span>, <span class="attr">l</span>: <span class="number">12</span>, <span class="attr">m</span>: <span class="number">13</span>, <span class="attr">n</span>: <span class="number">14</span>, <span class="attr">o</span>: <span class="number">15</span>, <span class="attr">p</span>: <span class="number">16</span>, <span class="attr">q</span>: <span class="number">17</span>, <span class="attr">r</span>: <span class="number">18</span>, <span class="attr">s</span>: <span class="number">19</span>, <span class="attr">t</span>: <span class="number">20</span>, <span class="attr">u</span>: <span class="number">21</span>, <span class="attr">v</span>: <span class="number">22</span>,  <span class="attr">w</span>: <span class="number">23</span>, <span class="attr">x</span>: <span class="number">24</span>, <span class="attr">y</span> : <span class="number">25</span>,  <span class="attr">z</span>: <span class="number">26</span></span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; letters.length; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span>(alphabet[letters[i]] &gt; alphabet[target]) &#123;</span><br><span class="line">      <span class="keyword">return</span> letters[i];</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
         </div>
