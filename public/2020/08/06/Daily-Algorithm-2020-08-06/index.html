@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="BigFaceMaster">
   <!-- Open Graph Data -->
-  <meta property="og:title" content="Daily-Algorithm-2020-06-15"/>
+  <meta property="og:title" content="Daily-Algorithm-2020-08-06"/>
   <meta property="og:description" content="一个前端的探索之路，不局限于技术：web前端，移动端，小程序，后端数据库，算法，等等" />
   <meta property="og:site_name" content="🤡大花脸🤡"/>
   <meta property="og:type" content="article" />
@@ -57,7 +57,7 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="page-title with-background-image">
-          <p class="title">Daily-Algorithm-2020-06-15</p>
+          <p class="title">Daily-Algorithm-2020-08-06</p>
           <p class="subtitle"></p>
         </div>
         <div class="site-menu with-background-image">
@@ -113,7 +113,7 @@
           
           <!-- Date -->
           <span class="date-time info">On
-            <span class="date">2020-06-15</span>
+            <span class="date">2020-08-06</span>
             <span class="time">14:55:06</span>
           </span>
           
@@ -136,11 +136,8 @@
         
         <!-- Post Main Content -->
         <div class="post-content">
-          <h1 id="检测大写字母"><a href="#检测大写字母" class="headerlink" title="检测大写字母"></a><a href="https://leetcode-cn.com/problems/detect-capital/" target="_blank" rel="noopener">检测大写字母</a></h1><h2 id="Desc"><a href="#Desc" class="headerlink" title="Desc"></a>Desc</h2><p>给定一个单词，你需要判断单词的大写使用是否正确。</p>
-<p>我们定义，在以下情况时，单词的大写用法是正确的：</p>
-<p>全部字母都是大写，比如”USA”。<br>单词中所有字母都不是大写，比如”leetcode”。<br>如果单词不只含有一个字母，只有首字母大写， 比如 “Google”。<br>否则，我们定义这个单词没有正确使用大写字母。</p>
-<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/detect-capital" target="_blank" rel="noopener">https://leetcode-cn.com/problems/detect-capital</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
-<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> detectCapitalUse = <span class="function"><span class="keyword">function</span>(<span class="params">word</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="regexp">/^[A-Z]+$/</span>.test(word) || <span class="regexp">/^[A-Z][a-z]&#123;1,&#125;$/</span>.test(word) || <span class="regexp">/^[a-z]+$/</span>.test(word)</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+          <h1 id="整数的各位积和之差"><a href="#整数的各位积和之差" class="headerlink" title="整数的各位积和之差"></a><a href="https://leetcode-cn.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/" target="_blank" rel="noopener">整数的各位积和之差</a></h1><h2 id="Desc"><a href="#Desc" class="headerlink" title="Desc"></a>Desc</h2><p>给你一个整数 <code>n</code>，请你帮忙计算并返回该整数「各位数字之积」与「各位数字之和」的差。</p>
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> subtractProductAndSum = <span class="function"><span class="keyword">function</span>(<span class="params">n</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> arr = <span class="built_in">String</span>(n).split(<span class="string">''</span>);</span><br><span class="line">  <span class="keyword">let</span> product = <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">let</span> sum = <span class="number">0</span>;</span><br><span class="line">  <span class="built_in">console</span>.log(arr)</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> v <span class="keyword">of</span> arr) &#123;</span><br><span class="line"></span><br><span class="line">    product *= <span class="built_in">Number</span>(v);</span><br><span class="line">    sum += <span class="built_in">Number</span>(v);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> product - sum;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
 
         </div>
