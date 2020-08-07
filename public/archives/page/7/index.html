@@ -8,10 +8,10 @@
   <meta name="description" content="">
   <meta name="author" content="BigFaceMaster">
   <!-- Open Graph Data -->
-  <meta property="og:title" content="Daily-Algorithm-2020-06-19"/>
+  <meta property="og:title" content="🤡大花脸🤡"/>
   <meta property="og:description" content="一个前端的探索之路，不局限于技术：web前端，移动端，小程序，后端数据库，算法，等等" />
   <meta property="og:site_name" content="🤡大花脸🤡"/>
-  <meta property="og:type" content="article" />
+  <meta property="og:type" content="website" />
   <meta property="og:image" content="http://yoursite.com"/>
   
     <link rel="alternate" href="/atom.xml" title="🤡大花脸🤡" type="application/atom+xml">
@@ -49,7 +49,8 @@
 <meta name="generator" content="Hexo 4.2.1"></head>
 
   <body>
-    <!-- Page Header -->
+    <!-- Archive Header -->
+<!-- Page Header -->
 
 
 <header class="site-header header-background" style="background-image: url(/img/stars.jpg)">
@@ -57,7 +58,7 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="page-title with-background-image">
-          <p class="title">Daily-Algorithm-2020-06-19</p>
+          <p class="title">Blog Archives</p>
           <p class="subtitle"></p>
         </div>
         <div class="site-menu with-background-image">
@@ -102,50 +103,41 @@
   </div>
 </header>
 
-<article>
-  <div class="container typo">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <div class="post-info text-muted">
-          
-            <!-- Author -->
-            <span class="author info">By BigFaceMaster</span>
-          
-          <!-- Date -->
-          <span class="date-time info">On
-            <span class="date">2020-06-19</span>
-            <span class="time">10:29:23</span>
-          </span>
-          
-          <!--  Categories  -->
-            <span class="categories info">Under 
+<!-- Archive List -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      
+        <div class="archive-item">
+  <a href="/2016/12/06/%E5%9C%B0%E5%9B%BE%E4%B8%AD%E5%BF%83%E7%82%B9%E5%81%8F%E7%A7%BB/" class="post-title">
+    地图中心点偏移
+  </a>
+  <div class="date text-muted">Posted on 2016-12-06 12:56:43</div>
+</div>
 
-<a href="/categories/Algorithm/">Algorithm</a> / <a href="/categories/Algorithm/%E7%AE%97%E6%B3%95/">算法</a>
-</span>
-          
-        </div>
-        <!-- Tags -->
-        
-          <div class="post-tags text-muted">
-            Tags: 
+      
 
-<a class="tag" href="/tags/Algorithm/">#Algorithm</a> <a class="tag" href="/tags/%E7%AE%97%E6%B3%95/">#算法</a>
-
-
-          </div>
-        
-        <!-- Post Main Content -->
-        <div class="post-content">
-          <h1 id="验证回文串"><a href="#验证回文串" class="headerlink" title="验证回文串"></a><a href="https://leetcode-cn.com/problems/valid-palindrome/" target="_blank" rel="noopener">验证回文串</a></h1><h2 id="Desc"><a href="#Desc" class="headerlink" title="Desc"></a>Desc</h2><p>给定一个字符串，验证它是否是回文串，只考虑字母和数字字符，可以忽略字母的大小写。</p>
-<p><strong>说明：</strong>本题中，我们将空字符串定义为有效的回文串。</p>
-<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> isPalindrome = <span class="function">(<span class="params">s</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> pureString = s.replace(<span class="regexp">/[^A-Za-z0-9]/g</span>, <span class="string">''</span>).toLocaleLowerCase();</span><br><span class="line">  <span class="keyword">let</span> reverseStr = pureString.split(<span class="string">''</span>).reverse().join(<span class="string">''</span>);</span><br><span class="line">  <span class="keyword">return</span> pureString == reverseStr;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-
-        </div>
-      </div>
     </div>
   </div>
-</article>
+</div>
+<!-- Pagination -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-10 col-md-10 col-md-offset-1">
+      <ul class="pagination">
+          
+              <li class="previous">
+                <a href="/archives/page/6/">
+                  <span class="symbol-left">&lt;</span>
+                  <span>上一页</span>
+                </a>
+              </li>
+          
+          
+      </ul>
+    </div>
+  </div>
+</div>
 
 
 
