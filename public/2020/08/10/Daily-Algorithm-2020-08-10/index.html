@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="BigFaceMaster">
   <!-- Open Graph Data -->
-  <meta property="og:title" content="Daily-Algorithm-2020-07-13"/>
+  <meta property="og:title" content="Daily-Algorithm-2020-08-10"/>
   <meta property="og:description" content="一个前端的探索之路，不局限于技术：web前端，移动端，小程序，后端数据库，算法，等等" />
   <meta property="og:site_name" content="🤡大花脸🤡"/>
   <meta property="og:type" content="article" />
@@ -57,7 +57,7 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="page-title with-background-image">
-          <p class="title">Daily-Algorithm-2020-07-13</p>
+          <p class="title">Daily-Algorithm-2020-08-10</p>
           <p class="subtitle"></p>
         </div>
         <div class="site-menu with-background-image">
@@ -113,7 +113,7 @@
           
           <!-- Date -->
           <span class="date-time info">On
-            <span class="date">2020-07-13</span>
+            <span class="date">2020-08-10</span>
             <span class="time">10:06:12</span>
           </span>
           
@@ -136,10 +136,10 @@
         
         <!-- Post Main Content -->
         <div class="post-content">
-          <h1 id="判断能否形成等差数列"><a href="#判断能否形成等差数列" class="headerlink" title="判断能否形成等差数列"></a><a href="https://leetcode-cn.com/problems/can-make-arithmetic-progression-from-sequence/" target="_blank" rel="noopener">判断能否形成等差数列</a></h1><h2 id="Desc"><a href="#Desc" class="headerlink" title="Desc"></a>Desc</h2><p>给你一个数字数组 <code>arr</code> 。</p>
-<p>如果一个数列中，任意相邻两项的差总等于同一个常数，那么这个数列就称为 <strong>等差数列</strong> 。</p>
-<p>如果可以重新排列数组形成等差数列，请返回 <code>true</code> ；否则，返回 <code>false</code> 。</p>
-<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> canMakeArithmeticProgression = <span class="function"><span class="keyword">function</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> sortedArr = arr.sort(<span class="function">(<span class="params">a, b</span>) =&gt;</span> a - b );</span><br><span class="line">  <span class="keyword">const</span> difference = sortedArr[<span class="number">1</span>] - sortedArr[<span class="number">0</span>];</span><br><span class="line">  <span class="keyword">let</span> result = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">1</span>; i &lt; sortedArr.length; i++) &#123;</span><br><span class="line">    <span class="keyword">const</span> differ = sortedArr[i] - sortedArr[i<span class="number">-1</span>];</span><br><span class="line">    <span class="keyword">if</span>(differ !== difference) &#123;</span><br><span class="line">      result = <span class="literal">false</span>;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> result;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+          <h1 id="找不同"><a href="#找不同" class="headerlink" title="找不同"></a><a href="https://leetcode-cn.com/problems/find-the-difference/" target="_blank" rel="noopener">找不同</a></h1><h2 id="Desc"><a href="#Desc" class="headerlink" title="Desc"></a>Desc</h2><p>给定两个字符串 <strong><em>s</em></strong> 和 <strong><em>t</em></strong>，它们只包含小写字母。</p>
+<p>字符串 <strong><em>t\</em></strong> 由字符串 <strong><em>s\</em></strong> 随机重排，然后在随机位置添加一个字母。</p>
+<p>请找出在 <strong><em>t</em></strong> 中被添加的字母。</p>
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> findTheDifference = <span class="function"><span class="keyword">function</span>(<span class="params">s, t</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> item <span class="keyword">of</span> s)&#123;</span><br><span class="line">    t = t.replace(item, <span class="string">''</span>)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> t;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
 
         </div>
