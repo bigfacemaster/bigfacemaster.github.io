@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="BigFaceMaster">
   <!-- Open Graph Data -->
-  <meta property="og:title" content="Daily-Algorithm-2020-08-07"/>
+  <meta property="og:title" content="Daily-Algorithm-2020-08-17"/>
   <meta property="og:description" content="一个前端的探索之路，不局限于技术：web前端，移动端，小程序，后端数据库，算法，等等" />
   <meta property="og:site_name" content="🤡大花脸🤡"/>
   <meta property="og:type" content="article" />
@@ -57,7 +57,7 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="page-title with-background-image">
-          <p class="title">Daily-Algorithm-2020-08-07</p>
+          <p class="title">Daily-Algorithm-2020-08-17</p>
           <p class="subtitle"></p>
         </div>
         <div class="site-menu with-background-image">
@@ -113,7 +113,7 @@
           
           <!-- Date -->
           <span class="date-time info">On
-            <span class="date">2020-08-07</span>
+            <span class="date">2020-08-17</span>
             <span class="time">10:31:56</span>
           </span>
           
@@ -136,10 +136,12 @@
         
         <!-- Post Main Content -->
         <div class="post-content">
-          <h1 id="6-和-9-组成的最大数字"><a href="#6-和-9-组成的最大数字" class="headerlink" title="6 和 9 组成的最大数字"></a><a href="https://leetcode-cn.com/problems/maximum-69-number/" target="_blank" rel="noopener">6 和 9 组成的最大数字</a></h1><h2 id="Desc"><a href="#Desc" class="headerlink" title="Desc"></a>Desc</h2><p>给你一个仅由数字 6 和 9 组成的正整数 <code>num</code>。</p>
-<p>你最多只能翻转一位数字，将 6 变成 9，或者把 9 变成 6 。</p>
-<p>请返回你可以得到的最大数字。</p>
-<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> maximum69Number  = <span class="function"><span class="keyword">function</span>(<span class="params">num</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> +(num+<span class="string">''</span>).replace(<span class="string">"6"</span>, <span class="string">"9"</span>)</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+          <h1 id="公平的糖果交换"><a href="#公平的糖果交换" class="headerlink" title="公平的糖果交换"></a><a href="https://leetcode-cn.com/problems/fair-candy-swap/" target="_blank" rel="noopener">公平的糖果交换</a></h1><h2 id="Desc"><a href="#Desc" class="headerlink" title="Desc"></a>Desc</h2><p>爱丽丝和鲍勃有不同大小的糖果棒：A[i] 是爱丽丝拥有的第 i 块糖的大小，B[j] 是鲍勃拥有的第 j 块糖的大小。</p>
+<p>因为他们是朋友，所以他们想交换一个糖果棒，这样交换后，他们都有相同的糖果总量。（一个人拥有的糖果总量是他们拥有的糖果棒大小的总和。）</p>
+<p>返回一个整数数组 ans，其中 ans[0] 是爱丽丝必须交换的糖果棒的大小，ans[1] 是 Bob 必须交换的糖果棒的大小。</p>
+<p>如果有多个答案，你可以返回其中任何一个。保证答案存在。</p>
+<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/fair-candy-swap" target="_blank" rel="noopener">https://leetcode-cn.com/problems/fair-candy-swap</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fairCandySwap = <span class="function"><span class="keyword">function</span>(<span class="params">A, B</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> sum1 = A.reduce(<span class="function">(<span class="params">prev,next</span>) =&gt;</span> prev + next)</span><br><span class="line">  <span class="keyword">let</span> sum2 = B.reduce(<span class="function">(<span class="params">prev,next</span>) =&gt;</span> prev + next)</span><br><span class="line">  <span class="keyword">let</span> gap = (sum1 - sum2) / <span class="number">2</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; A.length; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span>(B.includes(A[i]-gap))&#123;</span><br><span class="line">      <span class="keyword">return</span> [A[i],A[i]-gap]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
 
         </div>
