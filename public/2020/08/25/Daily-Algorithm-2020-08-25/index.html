@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="BigFaceMaster">
   <!-- Open Graph Data -->
-  <meta property="og:title" content="Daily-Algorithm-2020-07-08"/>
+  <meta property="og:title" content="Daily-Algorithm-2020-08-25"/>
   <meta property="og:description" content="一个前端的探索之路，不局限于技术：web前端，移动端，小程序，后端数据库，算法，等等" />
   <meta property="og:site_name" content="🤡大花脸🤡"/>
   <meta property="og:type" content="article" />
@@ -57,7 +57,7 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="page-title with-background-image">
-          <p class="title">Daily-Algorithm-2020-07-08</p>
+          <p class="title">Daily-Algorithm-2020-08-25</p>
           <p class="subtitle"></p>
         </div>
         <div class="site-menu with-background-image">
@@ -113,7 +113,7 @@
           
           <!-- Date -->
           <span class="date-time info">On
-            <span class="date">2020-07-08</span>
+            <span class="date">2020-08-25</span>
             <span class="time">10:45:44</span>
           </span>
           
@@ -136,8 +136,11 @@
         
         <!-- Post Main Content -->
         <div class="post-content">
-          <h1 id="各位相加"><a href="#各位相加" class="headerlink" title="各位相加"></a><a href="https://leetcode-cn.com/problems/add-digits/" target="_blank" rel="noopener">各位相加</a></h1><h2 id="Desc"><a href="#Desc" class="headerlink" title="Desc"></a>Desc</h2><p>给定一个非负整数 <code>num</code>，反复将各个位上的数字相加，直到结果为一位数。</p>
-<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> addDigits = <span class="function"><span class="keyword">function</span>(<span class="params">num</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(num &lt; <span class="number">9</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> num</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> num % <span class="number">9</span> || <span class="number">9</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+          <h1 id="矩阵中的幸运数"><a href="#矩阵中的幸运数" class="headerlink" title=" 矩阵中的幸运数"></a><a href="https://leetcode-cn.com/problems/lucky-numbers-in-a-matrix/" target="_blank" rel="noopener"> 矩阵中的幸运数</a></h1><h2 id="Desc"><a href="#Desc" class="headerlink" title="Desc"></a>Desc</h2><p>给你一个 m * n 的矩阵，矩阵中的数字 各不相同 。请你按 任意 顺序返回矩阵中的所有幸运数。</p>
+<p>幸运数是指矩阵中满足同时下列两个条件的元素：</p>
+<p>在同一行的所有元素中最小<br>在同一列的所有元素中最大</p>
+<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/lucky-numbers-in-a-matrix" target="_blank" rel="noopener">https://leetcode-cn.com/problems/lucky-numbers-in-a-matrix</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> luckyNumbers  = <span class="function"><span class="keyword">function</span>(<span class="params">matrix</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> mins = matrix.map(<span class="function"><span class="params">row</span> =&gt;</span> <span class="built_in">Math</span>.min(...row));</span><br><span class="line">  <span class="keyword">const</span> maxs = matrix[<span class="number">0</span>].map(<span class="function">(<span class="params">item,col_index</span>) =&gt;</span> <span class="built_in">Math</span>.max(...matrix.map(<span class="function"><span class="params">row</span> =&gt;</span> row[col_index])));</span><br><span class="line">    <span class="keyword">return</span> maxs.filter(<span class="function"><span class="params">item</span> =&gt;</span> mins.includes(item));</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
 
         </div>
