@@ -29,6 +29,6 @@ var luckyNumbers  = function(matrix) {
   const mins = matrix.map(row => Math.min(...row));
   const maxs = matrix[0].map((item,col_index) => Math.max(...matrix.map(row => row[col_index])));
     return maxs.filter(item => mins.includes(item));
-};
+};	
 ```
 

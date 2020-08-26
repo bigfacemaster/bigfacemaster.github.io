@@ -8,10 +8,10 @@
   <meta name="description" content="">
   <meta name="author" content="BigFaceMaster">
   <!-- Open Graph Data -->
-  <meta property="og:title" content="🤡大花脸🤡"/>
+  <meta property="og:title" content="Daily-Algorithm-2020-08-26"/>
   <meta property="og:description" content="一个前端的探索之路，不局限于技术：web前端，移动端，小程序，后端数据库，算法，等等" />
   <meta property="og:site_name" content="🤡大花脸🤡"/>
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content="article" />
   <meta property="og:image" content="http://yoursite.com"/>
   
     <link rel="alternate" href="/atom.xml" title="🤡大花脸🤡" type="application/atom+xml">
@@ -49,8 +49,7 @@
 <meta name="generator" content="Hexo 4.2.1"></head>
 
   <body>
-    <!-- Archive Header -->
-<!-- Page Header -->
+    <!-- Page Header -->
 
 
 <header class="site-header header-background" style="background-image: url(/img/stars.jpg)">
@@ -58,7 +57,7 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="page-title with-background-image">
-          <p class="title">Blog Archives</p>
+          <p class="title">Daily-Algorithm-2020-08-26</p>
           <p class="subtitle"></p>
         </div>
         <div class="site-menu with-background-image">
@@ -103,49 +102,49 @@
   </div>
 </header>
 
-<!-- Archive List -->
-<div class="container">
-  <div class="row">
-    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-      
-        <div class="archive-item">
-  <a href="/2020/08/02/Daily-Algorithm-2020-08-02/" class="post-title">
-    Daily-Algorithm-2020-08-02
-  </a>
-  <div class="date text-muted">Posted on 2020-08-02 11:52:33</div>
-</div>
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By BigFaceMaster</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2020-08-26</span>
+            <span class="time">10:10:12</span>
+          </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
 
-      
-        <div class="archive-item">
-  <a href="/2020/08/01/Daily-Algorithm-2020-08-01/" class="post-title">
-    Daily-Algorithm-2020-08-01
-  </a>
-  <div class="date text-muted">Posted on 2020-08-01 19:51:39</div>
-</div>
+<a href="/categories/Algorithm/">Algorithm</a> / <a href="/categories/Algorithm/%E7%AE%97%E6%B3%95/">算法</a>
+</span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
 
-      
+<a class="tag" href="/tags/Algorithm/">#Algorithm</a> <a class="tag" href="/tags/%E7%AE%97%E6%B3%95/">#算法</a>
 
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <h1 id="在区间范围内统计奇数数目"><a href="#在区间范围内统计奇数数目" class="headerlink" title="在区间范围内统计奇数数目"></a><a href="https://leetcode-cn.com/problems/count-odd-numbers-in-an-interval-range/" target="_blank" rel="noopener">在区间范围内统计奇数数目</a></h1><h2 id="Desc"><a href="#Desc" class="headerlink" title="Desc"></a>Desc</h2><p>给你两个非负整数 <code>low</code> 和 <code>high</code> 。请你返回 <code>low</code> 和 <code>high</code> 之间（包括二者）奇数的数目。</p>
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> countOdds = <span class="function"><span class="keyword">function</span>(<span class="params">low, high</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> result = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> i = low; i &lt;= high; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span>(isOdd(i)) &#123;</span><br><span class="line">      result += <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> result;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> isOdd = <span class="function"><span class="params">v</span> =&gt;</span> v % <span class="number">2</span> === <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+
+
+        </div>
+      </div>
     </div>
   </div>
-</div>
-<!-- Pagination -->
-<div class="container">
-  <div class="row">
-    <div class="col-lg-10 col-md-10 col-md-offset-1">
-      <ul class="pagination">
-          
-              <li class="previous">
-                <a href="/archives/2020/08/page/2/">
-                  <span class="symbol-left">&lt;</span>
-                  <span>上一页</span>
-                </a>
-              </li>
-          
-          
-      </ul>
-    </div>
-  </div>
-</div>
+</article>
 
 
 
