@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="BigFaceMaster">
   <!-- Open Graph Data -->
-  <meta property="og:title" content="Daily-Algorithm-2020-06-13"/>
+  <meta property="og:title" content="Daily-Algorithm-2020-08-28"/>
   <meta property="og:description" content="一个前端的探索之路，不局限于技术：web前端，移动端，小程序，后端数据库，算法，等等" />
   <meta property="og:site_name" content="🤡大花脸🤡"/>
   <meta property="og:type" content="article" />
@@ -57,7 +57,7 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="page-title with-background-image">
-          <p class="title">Daily-Algorithm-2020-06-13</p>
+          <p class="title">Daily-Algorithm-2020-08-28</p>
           <p class="subtitle"></p>
         </div>
         <div class="site-menu with-background-image">
@@ -113,7 +113,7 @@
           
           <!-- Date -->
           <span class="date-time info">On
-            <span class="date">2020-06-14</span>
+            <span class="date">2020-08-28</span>
             <span class="time">10:48:52</span>
           </span>
           
@@ -136,11 +136,16 @@
         
         <!-- Post Main Content -->
         <div class="post-content">
-          <h1 id="整数反转"><a href="#整数反转" class="headerlink" title="整数反转"></a><a href="https://leetcode-cn.com/problems/reverse-integer/" target="_blank" rel="noopener">整数反转</a></h1><h2 id="Desc"><a href="#Desc" class="headerlink" title="Desc"></a>Desc</h2><p>给出一个 32 位的有符号整数，你需要将这个整数中每位上的数字进行反转。</p>
-<p>注意:</p>
-<p>假设我们的环境只能存储得下 32 位的有符号整数，则其数值范围为 [−231,  231 − 1]。请根据这个假设，如果反转后整数溢出那么就返回 0。</p>
-<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/detect-capital" target="_blank" rel="noopener">https://leetcode-cn.com/problems/detect-capital</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
-<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> reverse = <span class="function"><span class="keyword">function</span>(<span class="params">x</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> result = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">if</span> (-<span class="built_in">Math</span>.pow(<span class="number">2</span>, <span class="number">31</span>)  &lt;= x &amp;&amp; x &lt;= (<span class="built_in">Math</span>.pow(<span class="number">2</span>, <span class="number">31</span>) - <span class="number">1</span>) ) &#123;</span><br><span class="line">    <span class="keyword">if</span>(x &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">      result = <span class="built_in">Number</span>((x).toString().split(<span class="string">''</span>).reverse().join(<span class="string">''</span>));</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      result = -<span class="built_in">Number</span>((-x).toString().split(<span class="string">''</span>).reverse().join(<span class="string">''</span>));</span><br><span class="line">    &#125;</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    result = <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span>( -<span class="built_in">Math</span>.pow(<span class="number">2</span>, <span class="number">31</span>)  &lt;= result &amp;&amp; result &lt;= (<span class="built_in">Math</span>.pow(<span class="number">2</span>, <span class="number">31</span>) - <span class="number">1</span>)) &#123;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">  &#125; <span class="keyword">else</span>  &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+          <h1 id="Fizz-Buzz"><a href="#Fizz-Buzz" class="headerlink" title="Fizz Buzz"></a><a href="https://leetcode-cn.com/problems/fizz-buzz/" target="_blank" rel="noopener">Fizz Buzz</a></h1><h2 id="Desc"><a href="#Desc" class="headerlink" title="Desc"></a>Desc</h2><p>写一个程序，输出从 1 到 n 数字的字符串表示。</p>
+<ol>
+<li><p>如果 n 是3的倍数，输出“Fizz”；</p>
+</li>
+<li><p>如果 n 是5的倍数，输出“Buzz”；</p>
+</li>
+</ol>
+<p>3.如果 n 同时是3和5的倍数，输出 “FizzBuzz”。</p>
+<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/fizz-buzz" target="_blank" rel="noopener">https://leetcode-cn.com/problems/fizz-buzz</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fizzBuzz = <span class="function"><span class="keyword">function</span>(<span class="params">n</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> result = [];</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span>(three(i) &amp;&amp; five(i)) &#123;</span><br><span class="line">      result.push(<span class="string">'FizzBuzz'</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span>(three(i) &amp;&amp; !five(i)) &#123;</span><br><span class="line">      result.push(<span class="string">'Fizz'</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span>(!three(i) &amp;&amp; five(i)) &#123;</span><br><span class="line">      result.push(<span class="string">'Buzz'</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      result.push(<span class="string">`<span class="subst">$&#123;i&#125;</span>`</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> result;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> three = <span class="function"><span class="params">v</span> =&gt;</span> v % <span class="number">3</span> === <span class="number">0</span>;</span><br><span class="line"><span class="keyword">const</span> five = <span class="function"><span class="params">v</span> =&gt;</span> v % <span class="number">5</span> === <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
 
 
         </div>
