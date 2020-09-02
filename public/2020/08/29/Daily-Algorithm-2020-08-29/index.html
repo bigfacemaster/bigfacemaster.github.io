@@ -114,15 +114,37 @@
           <!-- Date -->
           <span class="date-time info">On
             <span class="date">2020-08-29</span>
-            <span class="time">14:37:29</span>
+            <span class="time">20:10:08</span>
           </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
+
+<a href="/categories/Algorithm/">Algorithm</a> / <a href="/categories/Algorithm/%E7%AE%97%E6%B3%95/">算法</a>
+</span>
           
         </div>
         <!-- Tags -->
         
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/Algorithm/">#Algorithm</a> <a class="tag" href="/tags/%E7%AE%97%E6%B3%95/">#算法</a>
+
+
+          </div>
+        
         <!-- Post Main Content -->
         <div class="post-content">
-          
+          <h1 id="键盘行"><a href="#键盘行" class="headerlink" title="键盘行"></a><a href="https://leetcode-cn.com/problems/keyboard-row/" target="_blank" rel="noopener">键盘行</a></h1><h2 id="Desc"><a href="#Desc" class="headerlink" title="Desc"></a>Desc</h2><p>给定一个单词列表，只返回可以使用在键盘同一行的字母打印出来的单词。键盘如下图所示。</p>
+<p><strong>注意：</strong></p>
+<ol>
+<li>你可以重复使用键盘上同一字符。</li>
+<li>你可以假设输入的字符串将只包含字母。</li>
+</ol>
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> findWords = <span class="function"><span class="keyword">function</span>(<span class="params">words</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> words.filter(<span class="function"><span class="params">x</span> =&gt;</span> <span class="regexp">/(^[qwertyuiop]+$)|(^[asdfghjkl]+$)|(^[zxcvbnm]+$)/i</span>.test(x));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
         </div>
       </div>
     </div>
