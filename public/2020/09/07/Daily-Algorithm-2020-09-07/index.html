@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="BigFaceMaster">
   <!-- Open Graph Data -->
-  <meta property="og:title" content="Daily-Algorithm-2020-09-02"/>
+  <meta property="og:title" content="Daily-Algorithm-2020-09-07"/>
   <meta property="og:description" content="一个前端的探索之路，不局限于技术：web前端，移动端，小程序，后端数据库，算法，等等" />
   <meta property="og:site_name" content="🤡大花脸🤡"/>
   <meta property="og:type" content="article" />
@@ -57,7 +57,7 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="page-title with-background-image">
-          <p class="title">Daily-Algorithm-2020-09-02</p>
+          <p class="title">Daily-Algorithm-2020-09-07</p>
           <p class="subtitle"></p>
         </div>
         <div class="site-menu with-background-image">
@@ -113,7 +113,7 @@
           
           <!-- Date -->
           <span class="date-time info">On
-            <span class="date">2020-09-02</span>
+            <span class="date">2020-09-07</span>
             <span class="time">10:11:43</span>
           </span>
           
@@ -136,12 +136,10 @@
         
         <!-- Post Main Content -->
         <div class="post-content">
-          <h1 id="玩筹码"><a href="#玩筹码" class="headerlink" title="玩筹码"></a><a href="https://leetcode-cn.com/problems/minimum-cost-to-move-chips-to-the-same-position/" target="_blank" rel="noopener">玩筹码</a></h1><h2 id="Desc"><a href="#Desc" class="headerlink" title="Desc"></a>Desc</h2><p>数轴上放置了一些筹码，每个筹码的位置存在数组 chips 当中。</p>
-<p>你可以对 任何筹码 执行下面两种操作之一（不限操作次数，0 次也可以）：</p>
-<p>将第 i 个筹码向左或者右移动 2 个单位，代价为 0。<br>将第 i 个筹码向左或者右移动 1 个单位，代价为 1。<br>最开始的时候，同一位置上也可能放着两个或者更多的筹码。</p>
-<p>返回将所有筹码移动到同一位置（任意位置）上所需要的最小代价。</p>
-<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/minimum-cost-to-move-chips-to-the-same-position" target="_blank" rel="noopener">https://leetcode-cn.com/problems/minimum-cost-to-move-chips-to-the-same-position</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
-<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> minCostToMoveChips = <span class="function"><span class="keyword">function</span>(<span class="params">chips</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">Math</span>.min(chips.filter(<span class="function"><span class="params">item</span> =&gt;</span> item % <span class="number">2</span> === <span class="number">1</span>).length, chips.filter(<span class="function"><span class="params">item</span> =&gt;</span> item % <span class="number">2</span> === <span class="number">0</span>).length);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+          <h1 id="比较含退格的字符串"><a href="#比较含退格的字符串" class="headerlink" title=" 比较含退格的字符串"></a><a href="https://leetcode-cn.com/problems/backspace-string-compare/" target="_blank" rel="noopener"> 比较含退格的字符串</a></h1><h2 id="Desc"><a href="#Desc" class="headerlink" title="Desc"></a>Desc</h2><p>给定 S 和 T 两个字符串，当它们分别被输入到空白的文本编辑器后，判断二者是否相等，并返回结果。 # 代表退格字符。</p>
+<p>注意：如果对空文本输入退格字符，文本继续为空。</p>
+<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/backspace-string-compare" target="_blank" rel="noopener">https://leetcode-cn.com/problems/backspace-string-compare</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> backspaceCompare = <span class="function"><span class="keyword">function</span>(<span class="params">S, T</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> arrS = S.split(<span class="string">''</span>);</span><br><span class="line">    <span class="keyword">const</span> arrT = T.split(<span class="string">''</span>);</span><br><span class="line">    <span class="keyword">const</span> result1 = [];</span><br><span class="line">    <span class="keyword">const</span> result2 = [];</span><br><span class="line">    arrS.forEach(<span class="function"><span class="params">v</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">if</span>(v === <span class="string">'#'</span> ) &#123;</span><br><span class="line">        result1.pop();</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        result1.push(v);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">    arrT.forEach(<span class="function"><span class="params">v</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">if</span>(v === <span class="string">'#'</span> ) &#123;</span><br><span class="line">        result2.pop();</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        result2.push(v);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> result1.join() === result2.join();</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
 
         </div>
