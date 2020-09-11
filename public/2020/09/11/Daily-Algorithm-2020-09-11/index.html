@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="BigFaceMaster">
   <!-- Open Graph Data -->
-  <meta property="og:title" content="Daily-Algorithm-2020-07-27"/>
+  <meta property="og:title" content="Daily-Algorithm-2020-09-11"/>
   <meta property="og:description" content="一个前端的探索之路，不局限于技术：web前端，移动端，小程序，后端数据库，算法，等等" />
   <meta property="og:site_name" content="🤡大花脸🤡"/>
   <meta property="og:type" content="article" />
@@ -57,7 +57,7 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="page-title with-background-image">
-          <p class="title">Daily-Algorithm-2020-07-27</p>
+          <p class="title">Daily-Algorithm-2020-09-11</p>
           <p class="subtitle"></p>
         </div>
         <div class="site-menu with-background-image">
@@ -113,7 +113,7 @@
           
           <!-- Date -->
           <span class="date-time info">On
-            <span class="date">2020-07-27</span>
+            <span class="date">2020-09-11</span>
             <span class="time">21:49:51</span>
           </span>
           
@@ -126,19 +126,14 @@
         </div>
         <!-- Tags -->
         
-          <div class="post-tags text-muted">
-            Tags: 
-
-<a class="tag" href="/tags/Algorithm/">#Algorithm</a> <a class="tag" href="/tags/%E7%AE%97%E6%B3%95/">#算法</a>
-
-
-          </div>
-        
         <!-- Post Main Content -->
         <div class="post-content">
-          <h1 id="最小绝对差"><a href="#最小绝对差" class="headerlink" title="最小绝对差"></a><a href="https://leetcode-cn.com/problems/minimum-absolute-difference/" target="_blank" rel="noopener">最小绝对差</a></h1><h2 id="Desc"><a href="#Desc" class="headerlink" title="Desc"></a>Desc</h2><p>给你个整数数组 <code>arr</code>，其中每个元素都 <strong>不相同</strong>。</p>
-<p>请你找到所有具有最小绝对差的元素对，并且按升序的顺序返回。</p>
-<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> minimumAbsDifference = <span class="function"><span class="keyword">function</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> sortedArr = arr.sort(<span class="function">(<span class="params">a, b</span>) =&gt;</span> a - b);</span><br><span class="line">  <span class="keyword">let</span> min = <span class="literal">Infinity</span>;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">1</span>; i &lt; sortedArr.length; i++) &#123;</span><br><span class="line">    <span class="keyword">const</span> differ = sortedArr[i] - sortedArr[i<span class="number">-1</span>];</span><br><span class="line">    <span class="keyword">if</span>(differ &lt; min) &#123;</span><br><span class="line">      min = differ;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> result = [];</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">1</span>; i &lt; sortedArr.length; i++) &#123;</span><br><span class="line">    <span class="keyword">const</span> differ = sortedArr[i] - sortedArr[i<span class="number">-1</span>];</span><br><span class="line">    <span class="keyword">if</span>(differ === min) &#123;</span><br><span class="line">      result.push([sortedArr[i<span class="number">-1</span>], sortedArr[i]])</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> result;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+          <h2 id="Desc"><a href="#Desc" class="headerlink" title="Desc"></a>Desc</h2><p>给你一个 n 行 m 列的矩阵，最开始的时候，每个单元格中的值都是 0。</p>
+<p>另有一个索引数组 indices，indices[i] = [ri, ci] 中的 ri 和 ci 分别表示指定的行和列（从 0 开始编号）。</p>
+<p>你需要将每对 [ri, ci] 指定的行和列上的所有单元格的值加 1。</p>
+<p>请你在执行完所有 indices 指定的增量操作后，返回矩阵中 「奇数值单元格」 的数目。</p>
+<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/cells-with-odd-values-in-a-matrix" target="_blank" rel="noopener">https://leetcode-cn.com/problems/cells-with-odd-values-in-a-matrix</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> oddCells = <span class="function"><span class="keyword">function</span>(<span class="params">n, m, indices</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> arr = <span class="built_in">Array</span>.apply(<span class="literal">null</span>, <span class="built_in">Array</span>(n)).map(<span class="function"><span class="params">t</span> =&gt;</span> <span class="built_in">Array</span>(m).fill(<span class="number">0</span>))</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> n <span class="keyword">of</span> indices)&#123;</span><br><span class="line">    <span class="keyword">let</span> [i, j] = n</span><br><span class="line">    arr[i] = arr[i].map(<span class="function"><span class="params">t</span> =&gt;</span> ++t)</span><br><span class="line">    arr.forEach(<span class="function"><span class="params">r</span> =&gt;</span> r[j]++) </span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">let</span> res = <span class="number">0</span></span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> item <span class="keyword">of</span> arr)&#123;</span><br><span class="line">    res += item.filter(<span class="function"><span class="params">t</span> =&gt;</span> t % <span class="number">2</span> === <span class="number">1</span>).length</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> res;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
 
         </div>
