@@ -1,8 +1,8 @@
 ---
 title: Daily-Algorithm-2020-09-12
 date: 2020-09-12 16:26:10
-tags:tags: [Algorithm, 算法]
-category: [Algorithm, 算法]:
+tags: [Algorithm, 算法]
+category: [Algorithm, 算法]
 ---
 
 # [检查整数及其两倍数是否存在](https://leetcode-cn.com/problems/check-if-n-and-its-double-exist/)
