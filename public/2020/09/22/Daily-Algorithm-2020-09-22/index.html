@@ -114,15 +114,36 @@
           <!-- Date -->
           <span class="date-time info">On
             <span class="date">2020-09-22</span>
-            <span class="time">22:07:31</span>
+            <span class="time">22:05:10</span>
           </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
+
+<a href="/categories/Algorithm/">Algorithm</a> / <a href="/categories/Algorithm/%E7%AE%97%E6%B3%95/">算法</a>
+</span>
           
         </div>
         <!-- Tags -->
         
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/Algorithm/">#Algorithm</a> <a class="tag" href="/tags/%E7%AE%97%E6%B3%95/">#算法</a>
+
+
+          </div>
+        
         <!-- Post Main Content -->
         <div class="post-content">
-          
+          <h1 id="最长特殊序列-Ⅰ"><a href="#最长特殊序列-Ⅰ" class="headerlink" title="最长特殊序列 Ⅰ"></a><a href="https://leetcode-cn.com/problems/longest-uncommon-subsequence-i/" target="_blank" rel="noopener">最长特殊序列 Ⅰ</a></h1><h2 id="Desc"><a href="#Desc" class="headerlink" title="Desc"></a>Desc</h2><p>给你两个字符串，请你从这两个字符串中找出最长的特殊序列。</p>
+<p>「最长特殊序列」定义如下：该序列为某字符串独有的最长子序列（即不能是其他字符串的子序列）。</p>
+<p>子序列 可以通过删去字符串中的某些字符实现，但不能改变剩余字符的相对顺序。空序列为所有字符串的子序列，任何字符串为其自身的子序列。</p>
+<p>输入为两个字符串，输出最长特殊序列的长度。如果不存在，则返回 -1。</p>
+<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/longest-uncommon-subsequence-i" target="_blank" rel="noopener">https://leetcode-cn.com/problems/longest-uncommon-subsequence-i</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">var</span> findLUSlength = <span class="function"><span class="keyword">function</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(a == b) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Math</span>.max(a.length, b.length);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
         </div>
       </div>
     </div>

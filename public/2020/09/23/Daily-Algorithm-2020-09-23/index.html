@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="BigFaceMaster">
   <!-- Open Graph Data -->
-  <meta property="og:title" content="Daily-Algorithm-2020-09-13"/>
+  <meta property="og:title" content="Daily-Algorithm-2020-09-23"/>
   <meta property="og:description" content="一个前端的探索之路，不局限于技术：web前端，移动端，小程序，后端数据库，算法，等等" />
   <meta property="og:site_name" content="🤡大花脸🤡"/>
   <meta property="og:type" content="article" />
@@ -57,7 +57,7 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="page-title with-background-image">
-          <p class="title">Daily-Algorithm-2020-09-13</p>
+          <p class="title">Daily-Algorithm-2020-09-23</p>
           <p class="subtitle"></p>
         </div>
         <div class="site-menu with-background-image">
@@ -113,7 +113,7 @@
           
           <!-- Date -->
           <span class="date-time info">On
-            <span class="date">2020-09-13</span>
+            <span class="date">2020-09-23</span>
             <span class="time">22:05:10</span>
           </span>
           
@@ -136,11 +136,8 @@
         
         <!-- Post Main Content -->
         <div class="post-content">
-          <h1 id="密钥格式化"><a href="#密钥格式化" class="headerlink" title="密钥格式化"></a><a href="https://leetcode-cn.com/problems/license-key-formatting/" target="_blank" rel="noopener">密钥格式化</a></h1><h2 id="Desc"><a href="#Desc" class="headerlink" title="Desc"></a>Desc</h2><p>有一个密钥字符串 S ，只包含字母，数字以及 ‘-‘（破折号）。其中， N 个 ‘-‘ 将字符串分成了 N+1 组。</p>
-<p>给你一个数字 K，请你重新格式化字符串，除了第一个分组以外，每个分组要包含 K 个字符；而第一个分组中，至少要包含 1 个字符。两个分组之间需要用 ‘-‘（破折号）隔开，并且将所有的小写字母转换为大写字母。</p>
-<p>给定非空字符串 S 和数字 K，按照上面描述的规则进行格式化。</p>
-<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/license-key-formatting" target="_blank" rel="noopener">https://leetcode-cn.com/problems/license-key-formatting</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
-<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> licenseKeyFormatting = <span class="function"><span class="keyword">function</span>(<span class="params">S, K</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> arr = S.replace(<span class="regexp">/-/g</span>,<span class="string">''</span>).toUpperCase().split(<span class="string">''</span>);</span><br><span class="line">    <span class="keyword">let</span> temp = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i = arr.length - <span class="number">1</span>; i &gt; <span class="number">0</span>; i--)&#123;</span><br><span class="line">        ++temp;</span><br><span class="line">        <span class="keyword">if</span>(temp===K)&#123;</span><br><span class="line">            arr.splice(i,<span class="number">0</span>,<span class="string">'-'</span>);</span><br><span class="line">            temp = <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> arr.join(<span class="string">''</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <h1 id="二叉搜索树的最小绝对差"><a href="#二叉搜索树的最小绝对差" class="headerlink" title="二叉搜索树的最小绝对差"></a><a href="https://leetcode-cn.com/problems/minimum-absolute-difference-in-bst/" target="_blank" rel="noopener">二叉搜索树的最小绝对差</a></h1><h2 id="Desc"><a href="#Desc" class="headerlink" title="Desc"></a>Desc</h2><p>给你一棵所有节点为非负值的二叉搜索树，请你计算树中任意两节点的差的绝对值的最小值。</p>
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> getMinimumDifference = <span class="function"><span class="keyword">function</span>(<span class="params">root</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> arr = [];</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> inorder = <span class="function">(<span class="params">node</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (node)&#123;</span><br><span class="line">        inorder(node.left);</span><br><span class="line">        arr.push(node.val);</span><br><span class="line">        inorder(node.right);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  inorder(root);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">let</span> minDiffValue = <span class="built_in">Number</span>.MAX_SAFE_INTEGER;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; arr.length - <span class="number">1</span>; i++)&#123;</span><br><span class="line">      minDiffValue = <span class="built_in">Math</span>.min(minDiffValue, arr[i + <span class="number">1</span>] - arr[i]);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> minDiffValue;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
 
         </div>
