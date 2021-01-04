@@ -44,3 +44,4 @@ functions/mock
 screenshot
 yarn.lock
 docker-compose.yml
+./public
