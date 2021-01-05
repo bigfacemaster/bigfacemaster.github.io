@@ -41,7 +41,11 @@ var fib = function(n) {
 
 > 阅读并点评至少一篇英文技术文章：为了学习英文
 
+[Why you should choose useState instead of useReducer](https://medium.com/free-code-camp/why-you-should-choose-usestate-instead-of-usereducer-ffc80057f815)
 
+作者从**useState**扩展到**useReducer**，最后到**redux**，简单实用**useState**，复杂使用**useReducer**，实现了一个简单的**redux**。
+
+具体的应用场景还需要具体的分析，页面简单级使用**useState**的效率更高，随着复杂度的提高使用**useReducer**更能统一管理，与全局的调用（**redux**），最后感叹一句：**万物皆可 [hooks](https://reactjs.org/docs/hooks-intro.html) **
 
 
 
