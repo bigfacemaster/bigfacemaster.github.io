@@ -55,9 +55,19 @@ var fib = function(n) {
 
 > 学习至少一个技术技巧：为了总结和归纳在日常工作中遇到的知识点
 
+**React useReducer**
+
+基本上没有注意过这个**hooks**，今天在做review的时候，仔细看了一下。
+
+```tsx
+const [state, dispatch] = useReducer(reducer, initialArg, init);
+```
 
 
 
+从我的理解来说，如同一个简易版的**redux**来完成一些复杂的**useState**功能，便于全局性的使用。
+
+我个人来说还是更加倾向于使用**useState**
 
 
 
