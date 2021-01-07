@@ -9,7 +9,7 @@ tags: [antd]
 
 ## ant design 的升级
 
-根据[官方文档](https://ant.design/docs/react/migration-v4-cn)采用官方推荐的命令与工具进行一键升级
+根据 [官方文档](https://ant.design/docs/react/migration-v4-cn) 采用官方推荐的命令与工具进行一键升级
 
 ```shell
 # 通过 npx 直接运行
@@ -29,13 +29,16 @@ antd4-codemod src
 
 完成之后，运行项目，会发现一些工具无法修改到的地方，逐步修改。
 
+> 在项目升级的过程中，遇到的一个比较容易忽略的问题就是，Table 的 dataIndex 的多层级引用，从 `xxx.yyy` 变更为了 `['xxx', 'yyy']`
+
 End, commit and push.
 
-
+## umi 升级
+同样是根据 [官方文档](https://umijs.org/docs/upgrade-to-umi-3) 可以快速升级
 
 ## jsx to tsx
 
- 其实最初想要升级成`tsx`的主要原因是在`github trending`中看到[Airbnb ts-migrate](https://github.com/airbnb/ts-migrate)工具，其介绍为：**A tool to help migrate JavaScript code quickly and conveniently to TypeScript**。啊？这不是我刚好想要的么？
+ 其实最初想要升级成`tsx`的主要原因是在`github trending`中看到 [Airbnb ts-migrate](https://github.com/airbnb/ts-migrate) 工具，其介绍为：**A tool to help migrate JavaScript code quickly and conveniently to TypeScript**。啊？这不是我刚好想要的么？
 
 于是根据官方文档进行了升级，整个升级过程非常丝滑，最后按照自己的**lint**规则处理一下就能够满足大致的需求，剩下的就是进行新业务的开发以及相关功能的逐步重构。
 

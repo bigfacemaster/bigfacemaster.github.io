@@ -63,8 +63,8 @@ index_generator:
 
 # Category & Tag
 default_category: uncategorized
-category_map:
-tag_map:
+category_map: [ARTS, Algorithm, Review, Tip, Share, 算法, 阅读， 技巧， 分享, JS, Thinking, Tools]
+tag_map: [ARTS, Algorithm, Review, Tip, Share, 算法, 阅读， 技巧， 分享, JS, Thinking, Tools]
 
 # Metadata elements
 ## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta

@@ -75,4 +75,4 @@ const [state, dispatch] = useReducer(reducer, initialArg, init);
 
 > 分享一篇有观点和思考的技术文章：为了建立影响力，能够输入价值观
 
-[ant-design-upgrade && jsx to tsx]()
+[ant-design-upgrade && jsx to tsx](https://mp.weixin.qq.com/s/tyGTAOBTWs4YuMYzrY0QLA)
