@@ -50,7 +50,9 @@ const generater = (numRows) => {
 
 > 阅读并点评至少一篇英文技术文章：为了学习英文
 
+[Top 5 In-Demand JavaScript Frameworks for Front-End Development in 2020](https://medium.com/javascript-in-plain-english/top-5-in-demand-javascript-frameworks-for-front-end-development-in-2020-a59c4340d082)
 
+在以前使用过**angular**，做过简单开发，后续公司技术栈全部切换到**react**，现在也是使用**react**最新17，react越来越强大，还是有不少问题，但是在稳健发展，尤其是近期更新的**hooks**,**suspense**,以及未来的 **react server component**都是一个从 **web、 mobile、desktop、back-end**不断发展的。框架大体上都是相通的，所以主要还是取决于公司技术栈、业务发展等因素。
 
 # Tip
 
