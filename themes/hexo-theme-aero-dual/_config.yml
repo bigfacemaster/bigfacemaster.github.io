@@ -1,7 +1,7 @@
 # Header Menu
 menu:
   Home: /
-  Archives: /archives
+  ARTS: /tags/ARTS/
   # change github and email values to your own addresses
   Github: https://github.com/BigFaceMaster
   Email: mailto:bigfacemaster@gmail.com
