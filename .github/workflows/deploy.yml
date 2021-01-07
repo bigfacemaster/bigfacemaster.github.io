@@ -48,6 +48,10 @@ jobs:
           git config --global user.name $GIT_USER
           git config --global user.email $GIT_EMAIL
 
+      - name: Install dependencies
+        run: |
+          npm install
+
       - name: Deploy hexo
         run: |
           npm run deploy
