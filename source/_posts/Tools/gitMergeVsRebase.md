@@ -11,7 +11,7 @@ category: [ARTS]
 
 > 背景：在git pull会显示如下
 >
-> ![get](http://bigfacemaster.test.upcdn.net/uPic/sZVajS.png)
+> ![git merge vs rebase](http://bigfacemaster.test.upcdn.net/uPic/sZVajS.png)
 >
 > 于是产生了想要弄清楚他们三个的区别。
 
@@ -47,4 +47,4 @@ category: [ARTS]
 
 
 
-所以我个人是比较喜欢使用**git merge** ，更加的熟悉与得心应手。亦可看到每个的具体分支，方便以后直接从某个分支记录切出分支来进行二次开发。
+所以我个人是比较喜欢使用**git merge** ，更加的熟悉与得心应手。亦可看到每个的具体分支，方便以后直接从某个分支记录切出分
