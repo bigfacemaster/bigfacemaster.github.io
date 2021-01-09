@@ -2,9 +2,10 @@
 title: Markdown语法
 date: 2017-06-09 23:24:59
 tags: [Markdown]
-category: code
+category: [code]
 ---
 # Markdown的基本语法
+
 1. 分段： 两个回车
 
 2. 换行 两个空格 + 回车
