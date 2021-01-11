@@ -1,8 +1,8 @@
 ---
 title: ARTS-2020-week-02.md
 date: 2021-01-03 17:56:22
-tags: [ARTS]
-category: [ARTS]
+tags: [ARTS, Algorithm, Review, Tip, Share, 算法, 阅读， 技巧， 分享]
+category: [ARTS, Algorithm, Review, Tip, Share, 算法, 阅读， 技巧， 分享]
 ---
 
 # Algorithm
@@ -105,11 +105,7 @@ const MeasureExample = () => {
 
 > 分享一篇有观点和思考的技术文章：为了建立影响力，能够输入价值观
 
-git merge vs rebase
+[git merge vs rebase](https://bigfacemaster.cn/2021/01/09/Tools/gitMergeVsRebase/)
 
 
-
-
-
-![get](http://bigfacemaster.test.upcdn.net/uPic/sZVajS.png)
 
