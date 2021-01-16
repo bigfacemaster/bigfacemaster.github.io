@@ -91,3 +91,5 @@ const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);
 # Share
 
 > 分享一篇有观点和思考的技术文章：为了建立影响力，能够输入价值观
+
+[封装[ECharts Next For React]](https://mp.weixin.qq.com/s/PNFE0FEnqIL59oE9-A5yOQ)
