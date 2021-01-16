@@ -1,5 +1,5 @@
 ---
-title: EChartsForReact
+title: ECharts For React
 date: 2021-01-16 19:21:17
 tags: [ARTS, Share, React, ECharts, React-for-ECharts]
 category: [ARTS, Tools]
