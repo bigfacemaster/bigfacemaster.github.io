@@ -1,4 +1,5 @@
 ---
+
 title: ARTS-2020-week-03.md
 tags: [ARTS, Algorithm, Review, Tip, Share, 算法, 阅读， 技巧， 分享]
 category: [ARTS, Algorithm, Review, Tip, Share, 算法, 阅读， 技巧， 分享]
@@ -70,6 +71,22 @@ once you understand Math then you can look at the problem and see whether it a p
 > 学习至少一个技术技巧：为了总结和归纳在日常工作中遇到的知识点
 
 > useMemo
+
+该**API**属于**React Hooks**
+
+```tsx
+const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);
+```
+
+返回值为一个**memoized**的值；
+
+传入依赖数组，如果依赖数组有变化，将会触发函数。
+
+`memo`是在`DOM`更新前触发的
+
+类比生命周期就是[shouldComponentUpdate](https://links.jianshu.com/go?to=https%3A%2F%2Fzh-hans.reactjs.org%2Fdocs%2Fhooks-faq.html%23how-do-lifecycle-methods-correspond-to-hooks)
+
+
 
 # Share
 
