@@ -33,6 +33,38 @@ const strStr = (haystack, needle) {
 
 > 阅读并点评至少一篇英文技术文章：为了学习英文
 
+[How much math you need for programming](https://lispmachine.wordpress.com/2014/12/05/how-much-math-you-need-for-programming/)
+
+其中有一句比较喜欢：As computer programmers, we write programs, but why? We write programs to solve problems of this world. That is what computer programmers do, they solve problems. 程序所做的事情就是为了解决问题。
+
+how tho world solved its problems in beginning:
+
+![problem](https://lispmachine.files.wordpress.com/2014/12/math-1.jpg)
+
+Then came Math and this is what most mathematicians did:
+
+![https://lispmachine.files.wordpress.com/2014/12/math-2.jpg](https://lispmachine.files.wordpress.com/2014/12/math-2.jpg)
+
+And this what almost all computer-programmers/software-engineers/developers do:
+
+![https://lispmachine.files.wordpress.com/2014/12/math-3.jpg](https://lispmachine.files.wordpress.com/2014/12/math-3.jpg)
+
+
+
+![https://lispmachine.files.wordpress.com/2014/12/math-4.jpg](https://lispmachine.files.wordpress.com/2014/12/math-4.jpg)
+
+程序员的主要目的就是为了写出更好的代码，找到更好方式来创建软件，所以需要学好设计模式
+
+Math is the most widely used vehicle to understand the nature and solve problems of this world. We can learn more ways of solving problems by learning mathematical methods.
+
+once you understand Math then you can look at the problem and see whether it a probability problem, calculus problem or statistical problem etc. Math is related to the nature of the problem, not nature of software, software has its own methods and tools of solving problems, keep that in mind.
+
+数学在各方面都有存在。
+
+数学可以训练思维，更快更直接的解决程序问题。
+
+所以数学很重要，不管怎么样都需要学好数学，尤其是其思维模式。我还记得有一句话说的是：很多学科的尽头就是物理，物理的尽头是数学，数学的尽头是哲学。
+
 # Tip
 
 > 学习至少一个技术技巧：为了总结和归纳在日常工作中遇到的知识点
