@@ -39,7 +39,17 @@ const addToArrayForm = (A: number[], K:number) => {
 
 > 阅读并点评至少一篇英文技术文章：为了学习英文
 
+[Why Tailwind Isn't for Me](https://dev.to/jaredcwhite/why-tailwind-isn-t-for-me-5c90)
 
+作者从几个方面说明了为什么Tailwind不适合他
+
+1.  Tailwind promotes ugly-ass HTML.：这个是实话，让 **HTML** 没有那么优雅了。
+2.  `@apply` is fundamentally incompatible and non-standard (and largely unnecessary).：不兼容和不标准是致命的问题。
+3. Tailwind's focus on design systems and tokens could mostly be replaced by CSS Custom Properties (aka variables)—which IS a standard.：自定义程度不够
+4. Tailwind forgets that web components exist. 现在[MDN](https://developer.mozilla.org/zh-CN/docs/Web/Web_Components)已经给出了标准的web component规范了。
+5.  Finally, Tailwind encourages div/span-tag soup: Tailwind大量依赖 **div span**,限制了自定义**tag**的创建和使用。
+
+这是一个百花齐放的互联网，会有各种各样的框架，没有最好的，只有最适合自己和业务的。同时 **React ** 也在开始尝试 **原子化 CSS** 或许未来会有更适合现代 **CSS** 以及现代前端、现代互联网的框架和技术。
 
 # Tip
 
