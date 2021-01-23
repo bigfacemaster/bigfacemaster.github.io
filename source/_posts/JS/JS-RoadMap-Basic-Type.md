@@ -1,6 +1,6 @@
 ---
 
-title: JS-RoadMap-Basic-Type
+title: JS 知识图谱之基本上类型
 date: 2021-01-22 18:18:57
 tags: [JS]
 ---
