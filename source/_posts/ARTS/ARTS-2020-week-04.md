@@ -74,3 +74,5 @@ try {
 # Share
 
 > 分享一篇有观点和思考的技术文章：为了建立影响力，能够输入价值观
+
+[JS 知识图谱之基本类型](https://bigfacemaster.cn/2021/01/22/JS/JS-RoadMap-Basic-Type/)
