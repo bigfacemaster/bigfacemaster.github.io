@@ -59,6 +59,14 @@ const pivotIndex = (nums) => {
 
 > 阅读并点评至少一篇英文技术文章：为了学习英文
 
+[How We Build Micro Frontends](https://blog.bitsrc.io/how-we-build-micro-front-ends-d3eeeac0acfc)
+
+主要介绍了[bit](https://bit.dev/) 的微前端技术方案。
+
+微前端的话采用过的是[umi/qiankun](https://qiankun.umijs.org/) 这个技术方案。因为我们采用的是**React + antd + umi **整套体系，所以实现起来很方便。文档还是蛮全的，而且实现上基本上属于无缝衔接。
+
+如果技术栈是这么一套体系的，真的推荐[umi/qiankun](https://qiankun.umijs.org/) 。
+
 
 # Tip
 
