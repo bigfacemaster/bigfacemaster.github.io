@@ -1,7 +1,7 @@
 ---
 title: ECharts graph 类型的图表绘制
 date: 2021-01-29 14:33:19
-tags: - ECharts
+tags: [ECharts]
 
 ---
 
@@ -21,7 +21,7 @@ tags: - ECharts
 
 >nodes主要是来显示各个点的名称、位置、*id*等其他信息
 
-> links主要用来连接各个点: **{ soure: ‘0’, target: ‘1’ }[]**
+> links主要用来连接各个点: **{ source: ‘0’, target: ‘1’ }[]**
 
 > categories主要就是用来对点的分类了。
 
