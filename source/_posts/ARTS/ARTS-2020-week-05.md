@@ -72,10 +72,27 @@ const pivotIndex = (nums) => {
 
 > 学习至少一个技术技巧：为了总结和归纳在日常工作中遇到的知识点
 
-## ECharts graph 类型的图表绘制
+## [react-use](https://github.com/streamich/react-use)
 
-最近在项目中，由于需要绘制树形图，
+在使用**react-use useAsyncFn**的时候，发现了这样一个问题。
+
+![image-20210129154523325](http://bigfacemaster.test.upcdn.net/uPic/image-20210129154523325.png)
+
+其原因是，接口反馈过慢，在反复切换页面的时候发现了此问题。
+
+解决的方式就是在**useAsyncFn**中加入**deps**来控制。
+
+```tsx
+const [{ loading, value: data }, fetchData] = useAsyncFn(async() => {
+  const { result } = await fetchServerData(params: any);
+  return result ?? {};
+}, [window.location.pathname])
+```
+
+
 
 # Share
 
 > 分享一篇有观点和思考的技术文章：为了建立影响力，能够输入价值观
+
+[ECharts graph 类型的图表绘制](https://bigfacemaster.cn/2021/01/29/Tools/EChartsGraph/)
