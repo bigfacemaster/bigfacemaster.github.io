@@ -67,7 +67,6 @@ const pivotIndex = (nums) => {
 
 如果技术栈是这么一套体系的，真的推荐[umi/qiankun](https://qiankun.umijs.org/) 。
 
-
 # Tip
 
 > 学习至少一个技术技巧：为了总结和归纳在日常工作中遇到的知识点
