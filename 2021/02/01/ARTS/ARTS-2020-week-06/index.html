@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="BigFaceMaster">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="ARTS-2020-week-06"/>
+  <meta property="og:description" content="一个前端的探索之路，不局限于技术：web前端，移动端，小程序，后端数据库，算法，等等" />
+  <meta property="og:site_name" content="🤡大花脸🤡"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="http://example.com"/>
+  
+    <link rel="alternate" href="/atom.xml" title="🤡大花脸🤡" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="🤡">
+  
+
+  <!-- Site Title -->
+  <title>🤡大花脸🤡</title>
+
+  <!-- Bootstrap CSS -->
+  
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  
+  
+<link rel="stylesheet" href="/css/style.dark.css">
+
+
+  <!-- Google Analytics -->
+  
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-154123333-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/stars.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">ARTS-2020-week-06</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/tags/ARTS/">
+                  
+                  ARTS
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a target="_blank" rel="noopener" href="https://github.com/BigFaceMaster">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="mailto:bigfacemaster@gmail.com">
+                  
+                  Email
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By BigFaceMaster</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2021-02-01</span>
+            <span class="time">19:20:38</span>
+          </span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/ARTS/">#ARTS</a> <a class="tag" href="/tags/Algorithm/">#Algorithm</a> <a class="tag" href="/tags/Review/">#Review</a> <a class="tag" href="/tags/Tip/">#Tip</a> <a class="tag" href="/tags/Share/">#Share</a> <a class="tag" href="/tags/%E7%AE%97%E6%B3%95/">#算法</a> <a class="tag" href="/tags/%E9%98%85%E8%AF%BB/">#阅读</a> <a class="tag" href="/tags/%E6%8A%80%E5%B7%A7/">#技巧</a> <a class="tag" href="/tags/%E5%88%86%E4%BA%AB/">#分享</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <h1 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h1><blockquote>
+<p>每周一个算法题：为了编程训练和学习</p>
+</blockquote>
+<h4 id="剑指-Offer-03-数组中重复的数字"><a href="#剑指-Offer-03-数组中重复的数字" class="headerlink" title="剑指 Offer 03. 数组中重复的数字"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/shu-zu-zhong-zhong-fu-de-shu-zi-lcof/">剑指 Offer 03. 数组中重复的数字</a></h4><p>找出数组中重复的数字。</p>
+<p>在一个长度为 n 的数组 nums 里的所有数字都在 0～n-1 的范围内。数组中某些数字是重复的，但不知道有几个数字重复了，也不知道每个数字重复了几次。请找出数组中任意一个重复的数字。</p>
+<p>来源：力扣（LeetCode）<br>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/shu-zu-zhong-zhong-fu-de-shu-zi-lcof">https://leetcode-cn.com/problems/shu-zu-zhong-zhong-fu-de-shu-zi-lcof</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">const findRepeatNumber &#x3D; (nums) &#x3D;&gt; &#123;</span><br><span class="line">  const uniqArr &#x3D; [...new Set(nums)];</span><br><span class="line">  let result &#x3D; [];</span><br><span class="line">  uniqArr.forEach(v &#x3D;&gt; &#123;</span><br><span class="line">    const temp &#x3D; nums.filter(i &#x3D;&gt; i &#x3D;&#x3D;&#x3D; v);</span><br><span class="line">    if(temp.length &gt; result.length) &#123;</span><br><span class="line">      result &#x3D; temp;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">  return result[0];</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h1><blockquote>
+<p>阅读并点评至少一篇英文技术文章：为了学习英文</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://css-tricks.com/styling-web-components/">styling-web-components</a></p>
+<p>大致介绍了<a target="_blank" rel="noopener" href="https://github.com/nolanlawson/emoji-picker-element">emoji-picker-element</a> 的设计思想以及如何创建一个类似的组件来满足日常的使用。</p>
+<h1 id="Tip"><a href="#Tip" class="headerlink" title="Tip"></a>Tip</h1><blockquote>
+<p>学习至少一个技术技巧：为了总结和归纳在日常工作中遇到的知识点</p>
+</blockquote>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce">Array.prototype.reduce()</a></p>
+</blockquote>
+<p>以前一直没有怎么使用<strong>reduce</strong> ，最近发现使用 他来作为求和啊之类的很方便</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br></pre></td><td class="code"><pre><span class="line">[1, 2, 3, 4, 5].reduce((a, b) &#x3D;&gt; a + b);</span><br><span class="line">&#x2F;&#x2F; 10</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">let flattened &#x3D; [[0, 1], [2, 3], [4, 5]].reduce(</span><br><span class="line">  function(accumulator, currentValue) &#123;</span><br><span class="line">    return accumulator.concat(currentValue)</span><br><span class="line">  &#125;,</span><br><span class="line">  []</span><br><span class="line">)</span><br><span class="line">&#x2F;&#x2F; flattened is [0, 1, 2, 3, 4, 5] &#x2F;&#x2F; [[0, 1], [2, 3], [4, 5]].flat()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">let names &#x3D; [&#39;Alice&#39;, &#39;Bob&#39;, &#39;Tiff&#39;, &#39;Bruce&#39;, &#39;Alice&#39;]</span><br><span class="line"></span><br><span class="line">let countedNames &#x3D; names.reduce(function (allNames, name) &#123;</span><br><span class="line">  if (name in allNames) &#123;</span><br><span class="line">    allNames[name]++</span><br><span class="line">  &#125;</span><br><span class="line">  else &#123;</span><br><span class="line">    allNames[name] &#x3D; 1</span><br><span class="line">  &#125;</span><br><span class="line">  return allNames</span><br><span class="line">&#125;, &#123;&#125;)</span><br><span class="line">&#x2F;&#x2F; countedNames is:</span><br><span class="line">&#x2F;&#x2F; &#123; &#39;Alice&#39;: 2, &#39;Bob&#39;: 1, &#39;Tiff&#39;: 1, &#39;Bruce&#39;: 1 &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">let people &#x3D; [</span><br><span class="line">  &#123; name: &#39;Alice&#39;, age: 21 &#125;,</span><br><span class="line">  &#123; name: &#39;Max&#39;, age: 20 &#125;,</span><br><span class="line">  &#123; name: &#39;Jane&#39;, age: 20 &#125;</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line">function groupBy(objectArray, property) &#123;</span><br><span class="line">  return objectArray.reduce(function (acc, obj) &#123;</span><br><span class="line">    let key &#x3D; obj[property]</span><br><span class="line">    if (!acc[key]) &#123;</span><br><span class="line">      acc[key] &#x3D; []</span><br><span class="line">    &#125;</span><br><span class="line">    acc[key].push(obj)</span><br><span class="line">    return acc</span><br><span class="line">  &#125;, &#123;&#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">let groupedPeople &#x3D; groupBy(people, &#39;age&#39;)</span><br><span class="line">&#x2F;&#x2F; groupedPeople is:</span><br><span class="line">&#x2F;&#x2F; &#123;</span><br><span class="line">&#x2F;&#x2F;   20: [</span><br><span class="line">&#x2F;&#x2F;     &#123; name: &#39;Max&#39;, age: 20 &#125;,</span><br><span class="line">&#x2F;&#x2F;     &#123; name: &#39;Jane&#39;, age: 20 &#125;</span><br><span class="line">&#x2F;&#x2F;   ],</span><br><span class="line">&#x2F;&#x2F;   21: [&#123; name: &#39;Alice&#39;, age: 21 &#125;]</span><br><span class="line">&#x2F;&#x2F; &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; friends - an array of objects</span><br><span class="line">&#x2F;&#x2F; where object field &quot;books&quot; is a list of favorite books</span><br><span class="line">let friends &#x3D; [&#123;</span><br><span class="line">  name: &#39;Anna&#39;,</span><br><span class="line">  books: [&#39;Bible&#39;, &#39;Harry Potter&#39;],</span><br><span class="line">  age: 21</span><br><span class="line">&#125;, &#123;</span><br><span class="line">  name: &#39;Bob&#39;,</span><br><span class="line">  books: [&#39;War and peace&#39;, &#39;Romeo and Juliet&#39;],</span><br><span class="line">  age: 26</span><br><span class="line">&#125;, &#123;</span><br><span class="line">  name: &#39;Alice&#39;,</span><br><span class="line">  books: [&#39;The Lord of the Rings&#39;, &#39;The Shining&#39;],</span><br><span class="line">  age: 18</span><br><span class="line">&#125;]</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; allbooks - list which will contain all friends&#39; books +</span><br><span class="line">&#x2F;&#x2F; additional list contained in initialValue</span><br><span class="line">let allbooks &#x3D; friends.reduce(function(accumulator, currentValue) &#123;</span><br><span class="line">  return [...accumulator, ...currentValue.books]</span><br><span class="line">&#125;, [&#39;Alphabet&#39;])</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; allbooks &#x3D; [</span><br><span class="line">&#x2F;&#x2F;   &#39;Bible&#39;, &#39;Harry Potter&#39;, &#39;War and peace&#39;,</span><br><span class="line">&#x2F;&#x2F;   &#39;Romeo and Juliet&#39;, &#39;The Lord of the Rings&#39;,</span><br><span class="line">&#x2F;&#x2F;   &#39;The Shining&#39;</span><br><span class="line">&#x2F;&#x2F; ]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; Remove duplicate items in an array</span><br><span class="line">let myArray &#x3D; [&#39;a&#39;, &#39;b&#39;, &#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;e&#39;, &#39;e&#39;, &#39;c&#39;, &#39;d&#39;, &#39;d&#39;, &#39;d&#39;, &#39;d&#39;]</span><br><span class="line">let myOrderedArray &#x3D; myArray.reduce(function (accumulator, currentValue) &#123;</span><br><span class="line">  if (accumulator.indexOf(currentValue) &#x3D;&#x3D;&#x3D; -1) &#123;</span><br><span class="line">    accumulator.push(currentValue)</span><br><span class="line">  &#125;</span><br><span class="line">  return accumulator</span><br><span class="line">&#125;, [])</span><br><span class="line"></span><br><span class="line">console.log(myOrderedArray)</span><br><span class="line">&#x2F;&#x2F; [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;e&quot;, &quot;d&quot;]</span><br><span class="line">&#x2F;&#x2F; [...new Set(myOrderedArray)]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; Replace .filter().map() with .reduce()</span><br><span class="line">const numbers &#x3D; [-5, 6, 2, 0,];</span><br><span class="line"></span><br><span class="line">const doubledPositiveNumbers &#x3D; numbers.reduce((accumulator, currentValue) &#x3D;&gt; &#123;</span><br><span class="line">  if (currentValue &gt; 0) &#123;</span><br><span class="line">    const doubled &#x3D; currentValue * 2;</span><br><span class="line">    accumulator.push(doubled);</span><br><span class="line">  &#125;</span><br><span class="line">  return accumulator;</span><br><span class="line">&#125;, []);</span><br><span class="line"></span><br><span class="line">console.log(doubledPositiveNumbers); &#x2F;&#x2F; [12, 4]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; Running Promises in Sequence</span><br><span class="line">&#x2F;**</span><br><span class="line"> * Runs promises from array of functions that can return promises</span><br><span class="line"> * in chained manner</span><br><span class="line"> *</span><br><span class="line"> * @param &#123;array&#125; arr - promise arr</span><br><span class="line"> * @return &#123;Object&#125; promise object</span><br><span class="line"> *&#x2F;</span><br><span class="line">function runPromiseInSequence(arr, input) &#123;</span><br><span class="line">  return arr.reduce(</span><br><span class="line">    (promiseChain, currentFunction) &#x3D;&gt; promiseChain.then(currentFunction),</span><br><span class="line">    Promise.resolve(input)</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; promise function 1</span><br><span class="line">function p1(a) &#123;</span><br><span class="line">  return new Promise((resolve, reject) &#x3D;&gt; &#123;</span><br><span class="line">    resolve(a * 5)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; promise function 2</span><br><span class="line">function p2(a) &#123;</span><br><span class="line">  return new Promise((resolve, reject) &#x3D;&gt; &#123;</span><br><span class="line">    resolve(a * 2)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; function 3  - will be wrapped in a resolved promise by .then()</span><br><span class="line">function f3(a) &#123;</span><br><span class="line"> return a * 3</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; promise function 4</span><br><span class="line">function p4(a) &#123;</span><br><span class="line">  return new Promise((resolve, reject) &#x3D;&gt; &#123;</span><br><span class="line">    resolve(a * 4)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const promiseArr &#x3D; [p1, p2, f3, p4]</span><br><span class="line">runPromiseInSequence(promiseArr, 10)</span><br><span class="line">  .then(console.log)   &#x2F;&#x2F; 1200</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; Function composition enabling piping</span><br><span class="line">&#x2F;&#x2F; Building-blocks to use for composition</span><br><span class="line">const double &#x3D; x &#x3D;&gt; x + x</span><br><span class="line">const triple &#x3D; x &#x3D;&gt; 3 * x</span><br><span class="line">const quadruple &#x3D; x &#x3D;&gt; 4 * x</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; Function composition enabling pipe functionality</span><br><span class="line">const pipe &#x3D; (...functions) &#x3D;&gt; input &#x3D;&gt; functions.reduce(</span><br><span class="line">    (acc, fn) &#x3D;&gt; fn(acc),</span><br><span class="line">    input</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; Composed functions for multiplication of specific values</span><br><span class="line">const multiply6 &#x3D; pipe(double, triple)</span><br><span class="line">const multiply9 &#x3D; pipe(triple, triple)</span><br><span class="line">const multiply16 &#x3D; pipe(quadruple, quadruple)</span><br><span class="line">const multiply24 &#x3D; pipe(double, triple, quadruple)</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; Usage</span><br><span class="line">multiply6(6)   &#x2F;&#x2F; 36</span><br><span class="line">multiply9(9)   &#x2F;&#x2F; 81</span><br><span class="line">multiply16(16) &#x2F;&#x2F; 256</span><br><span class="line">multiply24(10) &#x2F;&#x2F; 240</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; Write map using reduce</span><br><span class="line">if (!Array.prototype.mapUsingReduce) &#123;</span><br><span class="line">  Array.prototype.mapUsingReduce &#x3D; function(callback, thisArg) &#123;</span><br><span class="line">    return this.reduce(function(mappedArray, currentValue, index, array) &#123;</span><br><span class="line">      mappedArray[index] &#x3D; callback.call(thisArg, currentValue, index, array)</span><br><span class="line">      return mappedArray</span><br><span class="line">    &#125;, [])</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">[1, 2, , 3].mapUsingReduce(</span><br><span class="line">  (currentValue, index, array) &#x3D;&gt; currentValue + index + array.length</span><br><span class="line">) &#x2F;&#x2F; [5, 7, , 10]</span><br></pre></td></tr></table></figure>
+
+
+<h1 id="Share"><a href="#Share" class="headerlink" title="Share"></a>Share</h1><blockquote>
+<p>分享一篇有观点和思考的技术文章：为了建立影响力，能够输入价值观</p>
+</blockquote>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          <div style="width:300px;margin:0 auto; padding:20px 0;">
+              <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51012202000601" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">川公网安备 51012202000601号</p></a>
+          </div>
+          <p>本网站由<a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank"><img src="./img/upyun.png" width="36"></a> 提供CDN加速/云存储服务</p>
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+
+<script src="/js/highlight.pack.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+
