@@ -114,7 +114,7 @@
           <!-- Date -->
           <span class="date-time info">On
             <span class="date">2021-01-05</span>
-            <span class="time">14:33:06</span>
+            <span class="time">19:20:38</span>
           </span>
           
         </div>
@@ -133,12 +133,16 @@
           <blockquote>
 <p>背景：因新项目的开展，采用antd v4 &amp;&amp; umi v3 &amp;&amp; typescript，而另一个项目采用的是antd v3 &amp;&amp; umi v2 &amp;&amp; jsx。因为要同时兼顾两个项目，方便维护以及快速开发，将其升级到与新项目相同的技术栈与版本。</p>
 </blockquote>
-<h2 id="ant-design-的升级"><a href="#ant-design-的升级" class="headerlink" title="ant design 的升级"></a>ant design 的升级</h2><p>根据<a target="_blank" rel="noopener" href="https://ant.design/docs/react/migration-v4-cn">官方文档</a>采用官方推荐的命令与工具进行一键升级</p>
+<h2 id="ant-design-的升级"><a href="#ant-design-的升级" class="headerlink" title="ant design 的升级"></a>ant design 的升级</h2><p>根据 <a target="_blank" rel="noopener" href="https://ant.design/docs/react/migration-v4-cn">官方文档</a> 采用官方推荐的命令与工具进行一键升级</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 通过 npx 直接运行</span></span><br><span class="line">npx -p @ant-design/codemod-v4 antd4-codemod src</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 或者全局安装</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 使用 npm</span></span><br><span class="line">npm i -g @ant-design/codemod-v4</span><br><span class="line"><span class="meta">#</span><span class="bash"> 或者使用 yarn</span></span><br><span class="line">yarn global add @ant-design/codemod-v4</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 运行</span></span><br><span class="line">antd4-codemod src</span><br></pre></td></tr></table></figure>
 <p>首先根据命令行提示的各种<code>warning</code> &amp;&amp; <code>error</code>进行修改。</p>
 <p>完成之后，运行项目，会发现一些工具无法修改到的地方，逐步修改。</p>
+<blockquote>
+<p>在项目升级的过程中，遇到的一个比较容易忽略的问题就是，Table 的 dataIndex 的多层级引用，从 <code>xxx.yyy</code> 变更为了 <code>[&#39;xxx&#39;, &#39;yyy&#39;]</code></p>
+</blockquote>
 <p>End, commit and push.</p>
-<h2 id="jsx-to-tsx"><a href="#jsx-to-tsx" class="headerlink" title="jsx to tsx"></a>jsx to tsx</h2><p> 其实最初想要升级成<code>tsx</code>的主要原因是在<code>github trending</code>中看到<a target="_blank" rel="noopener" href="https://github.com/airbnb/ts-migrate">Airbnb ts-migrate</a>工具，其介绍为：<strong>A tool to help migrate JavaScript code quickly and conveniently to TypeScript</strong>。啊？这不是我刚好想要的么？</p>
+<h2 id="umi-升级"><a href="#umi-升级" class="headerlink" title="umi 升级"></a>umi 升级</h2><p>同样是根据 <a target="_blank" rel="noopener" href="https://umijs.org/docs/upgrade-to-umi-3">官方文档</a> 可以快速升级</p>
+<h2 id="jsx-to-tsx"><a href="#jsx-to-tsx" class="headerlink" title="jsx to tsx"></a>jsx to tsx</h2><p> 其实最初想要升级成<code>tsx</code>的主要原因是在<code>github trending</code>中看到 <a target="_blank" rel="noopener" href="https://github.com/airbnb/ts-migrate">Airbnb ts-migrate</a> 工具，其介绍为：<strong>A tool to help migrate JavaScript code quickly and conveniently to TypeScript</strong>。啊？这不是我刚好想要的么？</p>
 <p>于是根据官方文档进行了升级，整个升级过程非常丝滑，最后按照自己的<strong>lint</strong>规则处理一下就能够满足大致的需求，剩下的就是进行新业务的开发以及相关功能的逐步重构。</p>
 
         </div>

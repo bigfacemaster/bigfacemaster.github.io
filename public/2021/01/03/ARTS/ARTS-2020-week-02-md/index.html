@@ -114,14 +114,8 @@
           <!-- Date -->
           <span class="date-time info">On
             <span class="date">2021-01-03</span>
-            <span class="time">14:33:06</span>
+            <span class="time">19:20:38</span>
           </span>
-          
-          <!--  Categories  -->
-            <span class="categories info">Under 
-
-<a href="/categories/ARTS/">ARTS</a>
-</span>
           
         </div>
         <!-- Tags -->
@@ -129,7 +123,7 @@
           <div class="post-tags text-muted">
             Tags: 
 
-<a class="tag" href="/tags/ARTS/">#ARTS</a>
+<a class="tag" href="/tags/ARTS/">#ARTS</a> <a class="tag" href="/tags/Algorithm/">#Algorithm</a> <a class="tag" href="/tags/Review/">#Review</a> <a class="tag" href="/tags/Tip/">#Tip</a> <a class="tag" href="/tags/Share/">#Share</a> <a class="tag" href="/tags/%E7%AE%97%E6%B3%95/">#算法</a> <a class="tag" href="/tags/%E9%98%85%E8%AF%BB/">#阅读</a> <a class="tag" href="/tags/%E6%8A%80%E5%B7%A7/">#技巧</a> <a class="tag" href="/tags/%E5%88%86%E4%BA%AB/">#分享</a>
 
 
           </div>
@@ -139,17 +133,38 @@
           <h1 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h1><blockquote>
 <p>每周一个算法题：为了编程训练和学习</p>
 </blockquote>
+<h1 id="杨辉三角"><a href="#杨辉三角" class="headerlink" title="杨辉三角"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/pascals-triangle/">杨辉三角</a></h1><p>给定一个非负整数 <em>numRows，</em>生成杨辉三角的前 <em>numRows</em> 行。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> triangle = <span class="function">(<span class="params">pre, line</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> result = [];</span><br><span class="line">  <span class="keyword">const</span> param = pre[pre.length - <span class="number">1</span>];</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; param.length + <span class="number">1</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">const</span> first = <span class="built_in">Number</span>(param[i - <span class="number">1</span>] || <span class="number">0</span>);</span><br><span class="line">    <span class="keyword">const</span> send = <span class="built_in">Number</span>(param[i] || <span class="number">0</span>);</span><br><span class="line">    result.push(first + send); </span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> generater = <span class="function">(<span class="params">numRows</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> result = [];</span><br><span class="line">  <span class="keyword">for</span> (i = <span class="number">1</span>; i &lt; numRows + <span class="number">1</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (i === <span class="number">1</span>) &#123;</span><br><span class="line">      result.push([<span class="number">1</span>]);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (i === <span class="number">2</span>) &#123;</span><br><span class="line">      result.push([<span class="number">1</span>, <span class="number">1</span>]);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (i &gt; <span class="number">2</span>)&#123;</span><br><span class="line">      result.push(triangle(result, i));</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
 <h1 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h1><blockquote>
 <p>阅读并点评至少一篇英文技术文章：为了学习英文</p>
 </blockquote>
+<p><a target="_blank" rel="noopener" href="https://medium.com/javascript-in-plain-english/top-5-in-demand-javascript-frameworks-for-front-end-development-in-2020-a59c4340d082">Top 5 In-Demand JavaScript Frameworks for Front-End Development in 2020</a></p>
+<p>在以前使用过<strong>angular</strong>，做过简单开发，后续公司技术栈全部切换到<strong>react</strong>，现在也是使用<strong>react</strong>最新17，react越来越强大，还是有不少问题，但是在稳健发展，尤其是近期更新的<strong>hooks</strong>,<strong>suspense</strong>,以及未来的 <strong>react server component</strong>都是一个从 <strong>web、 mobile、desktop、back-end</strong>不断发展的。同时国内有强大的<strong>react</strong>组件<strong>ant -design</strong>及其生态链<strong>ant-design + umijs</strong>能够进行快速的业务开发，<strong>umi</strong>团队也提供了完整的<strong>微前端</strong>方案：qiankun。框架大体上都是相通的，所以主要还是取决于公司技术栈、业务发展等因素。</p>
 <h1 id="Tip"><a href="#Tip" class="headerlink" title="Tip"></a>Tip</h1><blockquote>
 <p>学习至少一个技术技巧：为了总结和归纳在日常工作中遇到的知识点</p>
 </blockquote>
+<blockquote>
+<p>useRef</p>
+</blockquote>
+<p>该<strong>API</strong>属于<strong>react hooks</strong></p>
+<p><strong>useRef</strong>返回一个可变的<strong>ref</strong>对象。</p>
+<p>最初的**.current<strong>是在进行初始化的时候传入的值。返回的</strong>ref**对象在组件的的整个生命周期内保持不变。</p>
+<p><strong>useRef</strong>可在**.current<strong>中保存一个可变的盒子，用来保存可变值，</strong>useRef<strong>创建的是一个普通的</strong>js<strong>对象，同时在每一次渲染时回返回同一个</strong>ref**对象。</p>
+<p>如果需要<strong>ref</strong>变化时，来做一些操作。可回调函数来做监控(useCallBack)。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">const refDemo &#x3D; () &#x3D;&gt; &#123;</span><br><span class="line">  const inputEl &#x3D; useRef&lt;HTMLInputElement&gt;(null);</span><br><span class="line">  </span><br><span class="line">  return &lt;input ref&#x3D;&#123;inputEl&#125; type&#x3D;&quot;text&quot;&#x2F;&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> MeasureExample = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> [height, setHeight] = useState(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> measuredRef = useCallback(<span class="function"><span class="params">node</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (node !== <span class="literal">null</span>) &#123;</span><br><span class="line">      setHeight(node.getBoundingClientRect().height);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;, []);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;&gt;</span><br><span class="line">      &lt;h1 ref=&#123;measuredRef&#125;&gt;Hello, world&lt;/h1&gt;</span><br><span class="line">      &lt;h2&gt;The above header is &#123;<span class="built_in">Math</span>.round(height)&#125;px tall&lt;/h2&gt;</span><br><span class="line">    &lt;/&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
 <h1 id="Share"><a href="#Share" class="headerlink" title="Share"></a>Share</h1><blockquote>
 <p>分享一篇有观点和思考的技术文章：为了建立影响力，能够输入价值观</p>
 </blockquote>
-<p>git merge vs rebase</p>
-<p><img src="http://bigfacemaster.test.upcdn.net/uPic/sZVajS.png" alt="get"></p>
+<p><a target="_blank" rel="noopener" href="https://bigfacemaster.cn/2021/01/09/Tools/gitMergeVsRebase/">git merge vs rebase</a></p>
 
         </div>
       </div>
