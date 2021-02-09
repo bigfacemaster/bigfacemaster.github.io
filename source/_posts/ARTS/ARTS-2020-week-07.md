@@ -81,6 +81,8 @@ height + padding-top + padding-bottom + border-top + border-bottom
 
 > 学习至少一个技术技巧：为了总结和归纳在日常工作中遇到的知识点
 
+在绘制 饼状图时，使用**Echarts** 的*pie* 然后发现其中心的文本显示有一些不符合需求，根据查找资料，发现可以根据*graphic* 来完成自定义的一些配置。
+
 # Share
 
 > 分享一篇有观点和思考的技术文章：为了建立影响力，能够输入价值观
