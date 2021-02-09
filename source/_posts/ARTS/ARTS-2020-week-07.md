@@ -62,6 +62,20 @@ const findRepeatNumber = (nums) => {
 
 > 阅读并点评至少一篇英文技术文章：为了学习英文
 
+## [Exploring the Complexities of Width and Height in CSS](https://css-tricks.com/exploring-the-complexities-of-width-and-height-in-css/)
+
+探索了 盒子模型以及能够真实影响到元素宽度的属性。
+
+```css
+/* Width */
+width + padding-left + padding-right + border-left + border-right
+
+/* Height */
+height + padding-top + padding-bottom + border-top + border-bottom
+```
+
+以及**display**属性的值对其的影响。以及动态宽度的计算，来达到想要的真实宽度以及高度等信息。
+
 
 # Tip
 
