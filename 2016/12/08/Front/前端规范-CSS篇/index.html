@@ -114,7 +114,7 @@
           <!-- Date -->
           <span class="date-time info">On
             <span class="date">2016-12-08</span>
-            <span class="time">19:20:38</span>
+            <span class="time">00:09:06</span>
           </span>
           
           <!--  Categories  -->
@@ -144,7 +144,7 @@
 <h2 id="媒体查询-media-query-的位置"><a href="#媒体查询-media-query-的位置" class="headerlink" title="媒体查询(media query)的位置"></a>媒体查询(media query)的位置</h2><p>将媒体查询放在尽可能相关规则的附近，不推荐分开；</p>
 <figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">.element</span> &#123; <span class="string">...</span> &#125;</span><br><span class="line"><span class="string">.element-avatar</span> &#123; <span class="string">...</span> &#125;</span><br><span class="line"><span class="string">.element-selected</span> &#123; <span class="string">...</span> &#125;</span><br><span class="line">@media <span class="params">(max-width: 768px)</span> &#123;</span><br><span class="line"><span class="string">.element</span> &#123; <span class="string">...</span>&#125;</span><br><span class="line"><span class="string">.element-avatar</span> &#123; <span class="string">...</span> &#125;</span><br><span class="line"><span class="string">.element-selected</span> &#123; <span class="string">...</span> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="避免使用-import"><a href="#避免使用-import" class="headerlink" title="避免使用@import"></a>避免使用@import</h2><p>@import 速度较慢, 且会增加额外的请求数，还会导致不可预测的为题； <br/><br>替换：<br/><br>A、 使用多个元素；<br/><br>B、 通过Sass或者Less类似的CSS预处理将多个CSS文件编译为一个文件； <br/><br>C、 其他CSS文件合并工具；</p>
-<h2 id="链接样式顺序"><a href="#链接样式顺序" class="headerlink" title="链接样式顺序"></a>链接样式顺序</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">a</span>:link -&gt; <span class="selector-tag">a</span>:visited -&gt; <span class="selector-tag">a</span>:hover -&gt; <span class="selector-tag">a</span>:active(LoVeHAte)</span><br></pre></td></tr></table></figure>
+<h2 id="链接样式顺序"><a href="#链接样式顺序" class="headerlink" title="链接样式顺序"></a>链接样式顺序</h2><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:link</span> <span class="selector-tag">-</span>&gt; <span class="selector-tag">a</span><span class="selector-pseudo">:visited</span> <span class="selector-tag">-</span>&gt; <span class="selector-tag">a</span><span class="selector-pseudo">:hover</span> <span class="selector-tag">-</span>&gt; <span class="selector-tag">a</span><span class="selector-pseudo">:active</span>(LoVeHAte)</span><br></pre></td></tr></table></figure>
 <h2 id="无需添加浏览器厂商前缀"><a href="#无需添加浏览器厂商前缀" class="headerlink" title="无需添加浏览器厂商前缀"></a>无需添加浏览器厂商前缀</h2><p>使用Autoprefixer自动添加浏览器厂商前缀，编写CSS时 不需要添加浏览器前缀，直接使用标准的CSS编写;</p>
 <h1 id="模块组织"><a href="#模块组织" class="headerlink" title="模块组织"></a>模块组织</h1><p>组件化的目的在于有效的维护CSS；<br/></p>
 <h3 id="components-组件"><a href="#components-组件" class="headerlink" title="components(组件)"></a>components(组件)</h3><p>将每一个块功能都可以分割为一个独立的组件(components)</p>

@@ -114,7 +114,7 @@
           <!-- Date -->
           <span class="date-time info">On
             <span class="date">2021-01-22</span>
-            <span class="time">19:20:38</span>
+            <span class="time">00:09:06</span>
           </span>
           
         </div>
@@ -168,11 +168,11 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Object.prototype.toString(&#123;&#125;)       &#x2F;&#x2F; &quot;[object Object]&quot;</span><br><span class="line">Object.prototype.toString.call(&#123;&#125;)  &#x2F;&#x2F; &quot;[object Object]&quot;</span><br><span class="line">Object.prototype.toString.call(1)    &#x2F;&#x2F; &quot;[object Number]&quot;</span><br><span class="line">Object.prototype.toString.call(&#39;1&#39;)  &#x2F;&#x2F; &quot;[object String]&quot;</span><br><span class="line">Object.prototype.toString.call(true)  &#x2F;&#x2F; &quot;[object Boolean]&quot;</span><br><span class="line">Object.prototype.toString.call(function()&#123;&#125;)  &#x2F;&#x2F; &quot;[object Function]&quot;</span><br><span class="line">Object.prototype.toString.call(null)   &#x2F;&#x2F;&quot;[object Null]&quot;</span><br><span class="line">Object.prototype.toString.call(undefined) &#x2F;&#x2F;&quot;[object Undefined]&quot;</span><br><span class="line">Object.prototype.toString.call(&#x2F;123&#x2F;g)    &#x2F;&#x2F;&quot;[object RegExp]&quot;</span><br><span class="line">Object.prototype.toString.call(new Date()) &#x2F;&#x2F;&quot;[object Date]&quot;</span><br><span class="line">Object.prototype.toString.call([])       &#x2F;&#x2F;&quot;[object Array]&quot;</span><br><span class="line">Object.prototype.toString.call(document)  &#x2F;&#x2F;&quot;[object HTMLDocument]&quot;</span><br><span class="line">Object.prototype.toString.call(window)   &#x2F;&#x2F;&quot;[object Window]&quot;</span><br></pre></td></tr></table></figure>
 
 
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">const getType &#x3D; (val) &#x3D;&gt; &#123;</span><br><span class="line">  if(typeof val !&#x3D;&#x3D; &#39;object&#39;) &#123;</span><br><span class="line">    return typeof val;</span><br><span class="line">  &#125;</span><br><span class="line">  return Object.prototype.toString.call(val).replace(&#x2F;^\[object (\S+)\]$&#x2F;, &#39;$1&#39;).toLowerCase();</span><br><span class="line">&#125;</span><br><span class="line">console.log(getType([]));</span><br><span class="line">console.log(getType(123));</span><br><span class="line">console.log(getType(window))</span><br></pre></td></tr></table></figure>
+
+
 </li>
 </ol>
-   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">const getType &#x3D; (val) &#x3D;&gt; &#123;</span><br><span class="line">  if(typeof val !&#x3D;&#x3D; &#39;object&#39;) &#123;</span><br><span class="line">    return typeof val;</span><br><span class="line">  &#125;</span><br><span class="line">  return Object.prototype.toString.call(val).replace(&#x2F;^\[object (\S+)\]$&#x2F;, &#39;$1&#39;).toLowerCase();</span><br><span class="line">&#125;</span><br><span class="line">console.log(getType([]));</span><br><span class="line">console.log(getType(123));</span><br><span class="line">console.log(getType(window))</span><br></pre></td></tr></table></figure>
-
-
 <h1 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h1><h2 id="强制类型转换"><a href="#强制类型转换" class="headerlink" title="强制类型转换"></a>强制类型转换</h2><p> Number()、parseInt()、parseFloat()、toString()、String()、Boolean()</p>
 <ol>
 <li><p>Number()</p>
@@ -198,9 +198,9 @@
 <blockquote>
 <p>除了 undefined、 null、 false、 ‘’、 0（包括 +0，-0）、 NaN 转换出来是 false，其他都是 true。</p>
 </blockquote>
-</li>
+<h1 id="隐式类型转换"><a href="#隐式类型转换" class="headerlink" title="隐式类型转换"></a>隐式类型转换</h1></li>
 </ol>
-<h1 id="隐式类型转换"><a href="#隐式类型转换" class="headerlink" title="隐式类型转换"></a>隐式类型转换</h1><blockquote>
+<blockquote>
 <p>凡是通过逻辑运算符 (&amp;&amp;、 ||、 !)、运算符 (+、-、*、/)、关系操作符 (&gt;、 &lt;、 &lt;= 、&gt;=)、相等运算符 (==) 或者 if/while 条件的操作，如果遇到两个数据类型不一样的情况，都会出现隐式类型转换。</p>
 </blockquote>
 <h2 id="‘-’-的隐式类型转换规则"><a href="#‘-’-的隐式类型转换规则" class="headerlink" title="‘==’ 的隐式类型转换规则"></a>‘==’ 的隐式类型转换规则</h2><blockquote>
