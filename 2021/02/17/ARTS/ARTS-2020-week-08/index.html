@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="BigFaceMaster">
   <!-- Open Graph Data -->
-  <meta property="og:title" content="Daily-Algorithm-2020-08-29"/>
+  <meta property="og:title" content="ARTS-2020-week-08"/>
   <meta property="og:description" content="一个前端的探索之路，不局限于技术：web前端，移动端，小程序，后端数据库，算法，等等" />
   <meta property="og:site_name" content="🤡大花脸🤡"/>
   <meta property="og:type" content="article" />
@@ -57,7 +57,7 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="page-title with-background-image">
-          <p class="title">Daily-Algorithm-2020-08-29</p>
+          <p class="title">ARTS-2020-week-08</p>
           <p class="subtitle"></p>
         </div>
         <div class="site-menu with-background-image">
@@ -113,15 +113,9 @@
           
           <!-- Date -->
           <span class="date-time info">On
-            <span class="date">2020-08-29</span>
+            <span class="date">2021-02-17</span>
             <span class="time">10:27:44</span>
           </span>
-          
-          <!--  Categories  -->
-            <span class="categories info">Under 
-
-<a href="/categories/Algorithm/">Algorithm</a> / <a href="/categories/Algorithm/%E7%AE%97%E6%B3%95/">算法</a>
-</span>
           
         </div>
         <!-- Tags -->
@@ -129,20 +123,30 @@
           <div class="post-tags text-muted">
             Tags: 
 
-<a class="tag" href="/tags/Algorithm/">#Algorithm</a> <a class="tag" href="/tags/%E7%AE%97%E6%B3%95/">#算法</a>
+<a class="tag" href="/tags/ARTS/">#ARTS</a> <a class="tag" href="/tags/Algorithm/">#Algorithm</a> <a class="tag" href="/tags/Review/">#Review</a> <a class="tag" href="/tags/Tip/">#Tip</a> <a class="tag" href="/tags/Share/">#Share</a> <a class="tag" href="/tags/%E7%AE%97%E6%B3%95/">#算法</a> <a class="tag" href="/tags/%E9%98%85%E8%AF%BB/">#阅读</a> <a class="tag" href="/tags/%E6%8A%80%E5%B7%A7/">#技巧</a> <a class="tag" href="/tags/%E5%88%86%E4%BA%AB/">#分享</a>
 
 
           </div>
         
         <!-- Post Main Content -->
         <div class="post-content">
-          <h1 id="键盘行"><a href="#键盘行" class="headerlink" title="键盘行"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/keyboard-row/">键盘行</a></h1><h2 id="Desc"><a href="#Desc" class="headerlink" title="Desc"></a>Desc</h2><p>给定一个单词列表，只返回可以使用在键盘同一行的字母打印出来的单词。键盘如下图所示。</p>
-<p><strong>注意：</strong></p>
-<ol>
-<li>你可以重复使用键盘上同一字符。</li>
-<li>你可以假设输入的字符串将只包含字母。</li>
-</ol>
-<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> findWords = <span class="function"><span class="keyword">function</span>(<span class="params">words</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> words.filter(<span class="function"><span class="params">x</span> =&gt;</span> <span class="regexp">/(^[qwertyuiop]+$)|(^[asdfghjkl]+$)|(^[zxcvbnm]+$)/i</span>.test(x));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <h1 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h1><blockquote>
+<p>每周一个算法题：为了编程训练和学习</p>
+</blockquote>
+<h2 id="剑指-Offer-17-打印从1到最大的n位数"><a href="#剑指-Offer-17-打印从1到最大的n位数" class="headerlink" title="剑指 Offer 17. 打印从1到最大的n位数"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/da-yin-cong-1dao-zui-da-de-nwei-shu-lcof/">剑指 Offer 17. 打印从1到最大的n位数</a></h2><p>输入数字 <code>n</code>，按顺序打印出从 1 到最大的 n 位十进制数。比如输入 3，则打印出 1、2、3 一直到最大的 3 位数 999。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> printNumbers = <span class="function"><span class="keyword">function</span>(<span class="params">n</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> last = <span class="built_in">Math</span>.pow(<span class="number">10</span>, n);</span><br><span class="line">  <span class="keyword">const</span> res = [];</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">1</span>; i &lt; last; i++) &#123;</span><br><span class="line">    res.push(i);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> res;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h1><blockquote>
+<p>阅读并点评至少一篇英文技术文章：为了学习英文</p>
+</blockquote>
+<h1 id="Tip"><a href="#Tip" class="headerlink" title="Tip"></a>Tip</h1><blockquote>
+<p>学习至少一个技术技巧：为了总结和归纳在日常工作中遇到的知识点</p>
+</blockquote>
+<h1 id="Share"><a href="#Share" class="headerlink" title="Share"></a>Share</h1><blockquote>
+<p>分享一篇有观点和思考的技术文章：为了建立影响力，能够输入价值观</p>
+</blockquote>
 
         </div>
       </div>
