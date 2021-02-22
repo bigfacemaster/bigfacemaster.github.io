@@ -46,7 +46,7 @@
     </script>
 
 
-<meta name="generator" content="Hexo 5.3.0"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
   <body>
     <!-- Page Header -->
@@ -114,7 +114,7 @@
           <!-- Date -->
           <span class="date-time info">On
             <span class="date">2020-09-15</span>
-            <span class="time">16:15:26</span>
+            <span class="time">09:21:00</span>
           </span>
           
           <!--  Categories  -->
@@ -139,6 +139,7 @@
           <h1 id="第-k-个缺失的正整数"><a href="#第-k-个缺失的正整数" class="headerlink" title="第 k 个缺失的正整数"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/kth-missing-positive-number/">第 k 个缺失的正整数</a></h1><h2 id="Desc"><a href="#Desc" class="headerlink" title="Desc"></a>Desc</h2><p>给你一个 <strong>严格升序排列</strong> 的正整数数组 <code>arr</code> 和一个整数 <code>k</code> 。</p>
 <p>请你找到这个数组里第 <code>k</code> 个缺失的正整数。</p>
 <h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> findKthPositive = <span class="function"><span class="keyword">function</span>(<span class="params">arr, k</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> result = <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">while</span> (k &gt; <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span>(arr.indexOf(result) == -<span class="number">1</span>) &#123;</span><br><span class="line">      k--;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(k != <span class="number">0</span>) &#123;</span><br><span class="line">      result++;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> result;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
 
         </div>
       </div>

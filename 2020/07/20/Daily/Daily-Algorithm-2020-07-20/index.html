@@ -46,7 +46,7 @@
     </script>
 
 
-<meta name="generator" content="Hexo 5.3.0"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
   <body>
     <!-- Page Header -->
@@ -114,7 +114,7 @@
           <!-- Date -->
           <span class="date-time info">On
             <span class="date">2020-07-20</span>
-            <span class="time">16:15:26</span>
+            <span class="time">09:21:00</span>
           </span>
           
           <!--  Categories  -->
@@ -139,6 +139,7 @@
           <h1 id="三角形的最大周长"><a href="#三角形的最大周长" class="headerlink" title="三角形的最大周长"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/largest-perimeter-triangle/">三角形的最大周长</a></h1><h2 id="Desc"><a href="#Desc" class="headerlink" title="Desc"></a>Desc</h2><p>给定由一些正数（代表长度）组成的数组 <code>A</code>，返回由其中三个长度组成的、<strong>面积不为零</strong>的三角形的最大周长。</p>
 <p>如果不能形成任何面积不为零的三角形，返回 <code>0</code>。</p>
 <h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> largestPerimeter = <span class="function"><span class="keyword">function</span>(<span class="params">A</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> sortedA = A.sort(<span class="function">(<span class="params">a, b</span>) =&gt;</span> a - b);</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = sortedA.length - <span class="number">3</span>; i &gt;= <span class="number">0</span>; --i) &#123;</span><br><span class="line">    <span class="keyword">if</span> (sortedA[i] + sortedA[i+<span class="number">1</span>] &gt; sortedA[i+<span class="number">2</span>]) &#123;</span><br><span class="line">      <span class="keyword">return</span> sortedA[i] + sortedA[i+<span class="number">1</span>] + sortedA[i+<span class="number">2</span>];</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
 
         </div>
       </div>

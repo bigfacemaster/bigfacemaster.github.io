@@ -46,7 +46,7 @@
     </script>
 
 
-<meta name="generator" content="Hexo 5.3.0"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
   <body>
     <!-- Page Header -->
@@ -114,7 +114,7 @@
           <!-- Date -->
           <span class="date-time info">On
             <span class="date">2020-08-12</span>
-            <span class="time">16:15:26</span>
+            <span class="time">09:21:00</span>
           </span>
           
           <!--  Categories  -->
@@ -138,6 +138,7 @@
         <div class="post-content">
           <h1 id="平方数之和"><a href="#平方数之和" class="headerlink" title="平方数之和"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/sum-of-square-numbers/">平方数之和</a></h1><h2 id="Desc"><a href="#Desc" class="headerlink" title="Desc"></a>Desc</h2><p>给定一个非负整数 <code>c</code> ，你要判断是否存在两个整数 <code>a</code> 和 <code>b</code>，使得 a2 + b2 = c。</p>
 <h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> judgeSquareSum = <span class="function"><span class="keyword">function</span>(<span class="params">c</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i * i &lt;= c; i++) &#123;</span><br><span class="line">    <span class="keyword">let</span> other = <span class="built_in">Math</span>.sqrt(c - i * i);</span><br><span class="line">    <span class="keyword">if</span>( other % <span class="number">1</span> === <span class="number">0</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
 
         </div>
       </div>

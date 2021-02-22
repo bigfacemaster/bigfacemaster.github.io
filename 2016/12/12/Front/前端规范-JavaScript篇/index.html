@@ -46,7 +46,7 @@
     </script>
 
 
-<meta name="generator" content="Hexo 5.3.0"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
   <body>
     <!-- Page Header -->
@@ -114,7 +114,7 @@
           <!-- Date -->
           <span class="date-time info">On
             <span class="date">2016-12-12</span>
-            <span class="time">16:15:26</span>
+            <span class="time">09:21:00</span>
           </span>
           
           <!--  Categories  -->
@@ -151,9 +151,10 @@
 <li>尽量写完全，不要采用缩写；<h3 id="True-amp-amp-False-布尔表达式"><a href="#True-amp-amp-False-布尔表达式" class="headerlink" title="True &amp;&amp; False 布尔表达式"></a>True &amp;&amp; False 布尔表达式</h3>类型检测优先使用 typeof,对象类型检测使用instanceof。<h3 id="不要在Array上使用-for-in-循环"><a href="#不要在Array上使用-for-in-循环" class="headerlink" title="不要在Array上使用 for-in 循环"></a>不要在Array上使用 for-in 循环</h3>for-in 循环只用于 <code>object/map/hash/</code> 的遍历，对 <code>Array</code> 用for-in循环有时会出错，并不是从0 —- length - 1；进行遍历，而是所有出现在对象及其原型链的键值；<h3 id="二元和三元操作符"><a href="#二元和三元操作符" class="headerlink" title="二元和三元操作符"></a>二元和三元操作符</h3>操作符始终写在前一行，以免分号的隐式插入产生预想不到的问题；<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">var x</span> = a ? b : c;</span><br><span class="line"><span class="attribute">var test</span> = test1 ?</span><br><span class="line">           test2 : test3;</span><br></pre></td></tr></table></figure>
 <h3 id="条件-三元-操作符"><a href="#条件-三元-操作符" class="headerlink" title="条件(三元)操作符 (?:)"></a>条件(三元)操作符 (?:)</h3>三元操作符用于替代if条件判断语句。<figure class="highlight ceylon"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> var ? <span class="keyword">function</span><span class="number">1</span>() : <span class="keyword">function</span><span class="number">2</span>();</span><br></pre></td></tr></table></figure>
 <h3 id="amp-amp-和"><a href="#amp-amp-和" class="headerlink" title="&amp;&amp; 和 ||"></a>&amp;&amp; 和 ||</h3>二元布尔操作符是可以短路的，只有在必要时才会计算到最后一项；<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"> param</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> params = param || <span class="built_in">window</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="jQuery-规范"><a href="#jQuery-规范" class="headerlink" title="jQuery 规范"></a>jQuery 规范</h2><h3 id="jQuery-Variables"><a href="#jQuery-Variables" class="headerlink" title="jQuery Variables"></a>jQuery Variables</h3></li>
+
+</li>
 </ol>
-<ul>
+<h2 id="jQuery-规范"><a href="#jQuery-规范" class="headerlink" title="jQuery 规范"></a>jQuery 规范</h2><h3 id="jQuery-Variables"><a href="#jQuery-Variables" class="headerlink" title="jQuery Variables"></a>jQuery Variables</h3><ul>
 <li>存放jQuery对象的变量以<code>$</code>开头；</li>
 </ul>
 <ol start="2">

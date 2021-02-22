@@ -46,7 +46,7 @@
     </script>
 
 
-<meta name="generator" content="Hexo 5.3.0"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
   <body>
     <!-- Page Header -->
@@ -114,7 +114,7 @@
           <!-- Date -->
           <span class="date-time info">On
             <span class="date">2020-09-17</span>
-            <span class="time">16:15:26</span>
+            <span class="time">09:21:00</span>
           </span>
           
           <!--  Categories  -->
@@ -139,6 +139,7 @@
           <h1 id="矩阵对角线元素的和"><a href="#矩阵对角线元素的和" class="headerlink" title="矩阵对角线元素的和"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/matrix-diagonal-sum/">矩阵对角线元素的和</a></h1><h2 id="Desc"><a href="#Desc" class="headerlink" title="Desc"></a>Desc</h2><p>给你一个正方形矩阵 <code>mat</code>，请你返回矩阵对角线元素的和。</p>
 <p>请你返回在矩阵主对角线上的元素和副对角线上且不在主对角线上元素的和。</p>
 <h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">var</span> diagonalSum = <span class="function"><span class="keyword">function</span>(<span class="params">mat</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(mat.length === <span class="number">1</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> mat[<span class="number">0</span>][<span class="number">0</span>];</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> mat.reduce(<span class="function">(<span class="params">count, v, i</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span>(i === (v.length - <span class="number">1</span> - i)) &#123;</span><br><span class="line">      <span class="keyword">return</span> count + v[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> count + (v[i] + v[v.length - <span class="number">1</span> - i]);</span><br><span class="line">  &#125;, <span class="number">0</span>);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
 
         </div>
       </div>

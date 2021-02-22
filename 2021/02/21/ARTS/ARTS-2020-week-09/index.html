@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="BigFaceMaster">
   <!-- Open Graph Data -->
-  <meta property="og:title" content="Daily-Algorithm-2020-09-19"/>
+  <meta property="og:title" content="ARTS-2020-week-09"/>
   <meta property="og:description" content="一个前端的探索之路，不局限于技术：web前端，移动端，小程序，后端数据库，算法，等等" />
   <meta property="og:site_name" content="🤡大花脸🤡"/>
   <meta property="og:type" content="article" />
@@ -57,7 +57,7 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="page-title with-background-image">
-          <p class="title">Daily-Algorithm-2020-09-19</p>
+          <p class="title">ARTS-2020-week-09</p>
           <p class="subtitle"></p>
         </div>
         <div class="site-menu with-background-image">
@@ -113,15 +113,9 @@
           
           <!-- Date -->
           <span class="date-time info">On
-            <span class="date">2020-09-20</span>
+            <span class="date">2021-02-21</span>
             <span class="time">09:21:00</span>
           </span>
-          
-          <!--  Categories  -->
-            <span class="categories info">Under 
-
-<a href="/categories/Algorithm/">Algorithm</a> / <a href="/categories/Algorithm/%E7%AE%97%E6%B3%95/">算法</a>
-</span>
           
         </div>
         <!-- Tags -->
@@ -129,18 +123,30 @@
           <div class="post-tags text-muted">
             Tags: 
 
-<a class="tag" href="/tags/Algorithm/">#Algorithm</a> <a class="tag" href="/tags/%E7%AE%97%E6%B3%95/">#算法</a>
+<a class="tag" href="/tags/ARTS/">#ARTS</a> <a class="tag" href="/tags/Algorithm/">#Algorithm</a> <a class="tag" href="/tags/Review/">#Review</a> <a class="tag" href="/tags/Tip/">#Tip</a> <a class="tag" href="/tags/Share/">#Share</a> <a class="tag" href="/tags/%E7%AE%97%E6%B3%95/">#算法</a> <a class="tag" href="/tags/%E9%98%85%E8%AF%BB/">#阅读</a> <a class="tag" href="/tags/%E6%8A%80%E5%B7%A7/">#技巧</a> <a class="tag" href="/tags/%E5%88%86%E4%BA%AB/">#分享</a>
 
 
           </div>
         
         <!-- Post Main Content -->
         <div class="post-content">
-          <h1 id="旋转字符串"><a href="#旋转字符串" class="headerlink" title="旋转字符串"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/rotate-string/">旋转字符串</a></h1><h2 id="Desc"><a href="#Desc" class="headerlink" title="Desc"></a>Desc</h2><p>给定两个字符串, A 和 B。</p>
-<p>A 的旋转操作就是将 A 最左边的字符移动到最右边。 例如, 若 A = ‘abcde’，在移动一次之后结果就是’bcdea’ 。如果在若干次旋转操作之后，A 能变成B，那么返回True。</p>
-<p>来源：力扣（LeetCode）<br>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/rotate-string">https://leetcode-cn.com/problems/rotate-string</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
-<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> rotateString = <span class="function"><span class="keyword">function</span>(<span class="params">A, B</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> A.length &lt;= B.length &amp;&amp; (A + A).includes(B);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+          <h1 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h1><blockquote>
+<p>每周一个算法题：为了编程训练和学习</p>
+</blockquote>
+<h4 id="程序员面试宝典-面试题-01-01-判定字符是否唯一"><a href="#程序员面试宝典-面试题-01-01-判定字符是否唯一" class="headerlink" title="程序员面试宝典 面试题 01.01. 判定字符是否唯一"></a>程序员面试宝典 <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/is-unique-lcci/">面试题 01.01. 判定字符是否唯一</a></h4><p>实现一个算法，确定一个字符串 <code>s</code> 的所有字符是否全都不同。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> isUnique = <span class="function"><span class="keyword">function</span>(<span class="params">astr</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(astr &amp;&amp; astr.length &gt; <span class="number">26</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> uniqArr = <span class="built_in">Array</span>.from(<span class="keyword">new</span> <span class="built_in">Set</span>(astr.split(<span class="string">&#x27;&#x27;</span>)));</span><br><span class="line">    <span class="keyword">return</span> uniqArr.length === astr.length;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
+
+
+<h1 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h1><blockquote>
+<p>阅读并点评至少一篇英文技术文章：为了学习英文</p>
+</blockquote>
+<h1 id="Tip"><a href="#Tip" class="headerlink" title="Tip"></a>Tip</h1><blockquote>
+<p>学习至少一个技术技巧：为了总结和归纳在日常工作中遇到的知识点</p>
+</blockquote>
+<h1 id="Share"><a href="#Share" class="headerlink" title="Share"></a>Share</h1><blockquote>
+<p>分享一篇有观点和思考的技术文章：为了建立影响力，能够输入价值观</p>
+</blockquote>
 
         </div>
       </div>

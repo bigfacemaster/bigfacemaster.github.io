@@ -46,7 +46,7 @@
     </script>
 
 
-<meta name="generator" content="Hexo 5.3.0"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
   <body>
     <!-- Page Header -->
@@ -114,7 +114,7 @@
           <!-- Date -->
           <span class="date-time info">On
             <span class="date">2020-07-19</span>
-            <span class="time">16:15:26</span>
+            <span class="time">09:21:00</span>
           </span>
           
           <!--  Categories  -->
@@ -141,6 +141,7 @@
 <p>如果 x == y，那么两块石头都会被完全粉碎；<br>如果 x != y，那么重量为 x 的石头将会完全粉碎，而重量为 y 的石头新重量为 y-x。<br>最后，最多只会剩下一块石头。返回此石头的重量。如果没有石头剩下，就返回 0。</p>
 <p>来源：力扣（LeetCode）<br>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/last-stone-weight">https://leetcode-cn.com/problems/last-stone-weight</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
 <h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> lastStoneWeight = <span class="function"><span class="keyword">function</span>(<span class="params">stones</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> sorted = stones.sort(<span class="function">(<span class="params">a, b</span>) =&gt;</span> b - a);</span><br><span class="line">  <span class="keyword">if</span>(sorted.length &gt; <span class="number">1</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> difference = sorted[<span class="number">0</span>] - sorted[<span class="number">1</span>];</span><br><span class="line">    <span class="keyword">const</span> temp = sorted.slice(<span class="number">2</span>) || [<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">if</span>(difference) &#123;</span><br><span class="line">      temp.push(difference);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> lastStoneWeight(temp);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> sorted[<span class="number">0</span>] || <span class="number">0</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
 
         </div>
       </div>

@@ -46,7 +46,7 @@
     </script>
 
 
-<meta name="generator" content="Hexo 5.3.0"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
   <body>
     <!-- Page Header -->
@@ -114,7 +114,7 @@
           <!-- Date -->
           <span class="date-time info">On
             <span class="date">2021-01-03</span>
-            <span class="time">16:15:26</span>
+            <span class="time">09:21:00</span>
           </span>
           
         </div>
@@ -139,6 +139,7 @@
 
 
 
+
 <h1 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h1><blockquote>
 <p>阅读并点评至少一篇英文技术文章：为了学习英文</p>
 </blockquote>
@@ -158,7 +159,9 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">const refDemo &#x3D; () &#x3D;&gt; &#123;</span><br><span class="line">  const inputEl &#x3D; useRef&lt;HTMLInputElement&gt;(null);</span><br><span class="line">  </span><br><span class="line">  return &lt;input ref&#x3D;&#123;inputEl&#125; type&#x3D;&quot;text&quot;&#x2F;&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
+
 <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> MeasureExample = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> [height, setHeight] = useState(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> measuredRef = useCallback(<span class="function"><span class="params">node</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (node !== <span class="literal">null</span>) &#123;</span><br><span class="line">      setHeight(node.getBoundingClientRect().height);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;, []);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;&gt;</span><br><span class="line">      &lt;h1 ref=&#123;measuredRef&#125;&gt;Hello, world&lt;/h1&gt;</span><br><span class="line">      &lt;h2&gt;The above header is &#123;<span class="built_in">Math</span>.round(height)&#125;px tall&lt;/h2&gt;</span><br><span class="line">    &lt;/&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
 
 <h1 id="Share"><a href="#Share" class="headerlink" title="Share"></a>Share</h1><blockquote>

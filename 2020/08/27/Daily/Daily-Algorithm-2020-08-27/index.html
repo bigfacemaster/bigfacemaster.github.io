@@ -46,7 +46,7 @@
     </script>
 
 
-<meta name="generator" content="Hexo 5.3.0"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
   <body>
     <!-- Page Header -->
@@ -114,7 +114,7 @@
           <!-- Date -->
           <span class="date-time info">On
             <span class="date">2020-08-27</span>
-            <span class="time">16:15:26</span>
+            <span class="time">09:21:00</span>
           </span>
           
           <!--  Categories  -->
@@ -139,6 +139,7 @@
           <h1 id="日期之间隔几天"><a href="#日期之间隔几天" class="headerlink" title="日期之间隔几天"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/number-of-days-between-two-dates/">日期之间隔几天</a></h1><h2 id="Desc"><a href="#Desc" class="headerlink" title="Desc"></a>Desc</h2><p>请你编写一个程序来计算两个日期之间隔了多少天。</p>
 <p>日期以字符串形式给出，格式为 <code>YYYY-MM-DD</code>，如示例所示。</p>
 <h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> daysBetweenDates = <span class="function"><span class="keyword">function</span>(<span class="params">date1, date2</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> standard = <span class="number">24</span> * <span class="number">60</span> * <span class="number">60</span> * <span class="number">1000</span>;</span><br><span class="line">  <span class="keyword">const</span> differ = <span class="built_in">Math</span>.abs( (<span class="keyword">new</span> <span class="built_in">Date</span>(date1).valueOf()) - (<span class="keyword">new</span> <span class="built_in">Date</span>(date2).valueOf()) );</span><br><span class="line">  <span class="keyword">return</span> differ / standard;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
 
         </div>
       </div>

@@ -46,7 +46,7 @@
     </script>
 
 
-<meta name="generator" content="Hexo 5.3.0"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
   <body>
     <!-- Page Header -->
@@ -114,7 +114,7 @@
           <!-- Date -->
           <span class="date-time info">On
             <span class="date">2020-09-28</span>
-            <span class="time">16:15:26</span>
+            <span class="time">09:21:00</span>
           </span>
           
           <!--  Categories  -->
@@ -139,6 +139,7 @@
           <h1 id="有序数组中出现次数超过25-的元素"><a href="#有序数组中出现次数超过25-的元素" class="headerlink" title="有序数组中出现次数超过25%的元素"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/element-appearing-more-than-25-in-sorted-array/">有序数组中出现次数超过25%的元素</a></h1><h2 id="Desc"><a href="#Desc" class="headerlink" title="Desc"></a>Desc</h2><p>给你一个非递减的 <strong>有序</strong> 整数数组，已知这个数组中恰好有一个整数，它的出现次数超过数组元素总数的 25%。</p>
 <p>请你找到并返回这个整数</p>
 <h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> findSpecialInteger = <span class="function"><span class="keyword">function</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> arr.length&lt;<span class="number">2</span> ? arr[<span class="number">0</span>] : arr.filter(<span class="function"><span class="params">n</span> =&gt;</span> ((arr.lastIndexOf(n) - arr.indexOf(n)+<span class="number">1</span>) / (arr.length+<span class="number">1</span>) &gt;= <span class="number">0.25</span>))[<span class="number">0</span>];</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
 
         </div>
       </div>
