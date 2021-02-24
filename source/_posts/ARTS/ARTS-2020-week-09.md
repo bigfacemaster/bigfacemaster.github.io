@@ -38,6 +38,8 @@ var isUnique = function(astr) {
 
 > 阅读并点评至少一篇英文技术文章：为了学习英文
 
+[ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/)
+
 
 # Tip
 

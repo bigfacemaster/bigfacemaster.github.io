@@ -17,23 +17,3 @@ desc：字符串压缩。利用字符重复出现的次数，编写一种方法�
 
 
 ```js
-const compressString = function(S) {
-  let res = '';
-  let counter = 1;
-  for(let i = 0; i < S.length;i++) {
-    if(S[i] === S[i+1]) {
-      counter += 1;
-    } else {
-      res += `${S[i]}${counter}`;
-      counter = 1;
-    }
-  };
-
-  if(res.length < S.length) {
-    return res;
-  } else {
-    return S;
-  }
-};
-```
-
