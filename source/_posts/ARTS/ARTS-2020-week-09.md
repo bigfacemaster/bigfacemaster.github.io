@@ -38,12 +38,26 @@ var isUnique = function(astr) {
 
 > 阅读并点评至少一篇英文技术文章：为了学习英文
 
-[ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/)
+[JavaScript performance beyond bundle size](https://nolanlawson.com/2021/02/23/javascript-performance-beyond-bundle-size/)
+
+三个问题：how big are your dependencies? Could you use a smaller one? Could you lazy-load it?
+
+关键因数 
+
+- Parse/compile time
+- Execution time
+- Power usage
+- Memory usage
+- Disk usage
+
+使用*webpack bundle analyzer*/ rollup plugin analyzer 等分析工具以及Chrome 控制栏的各种工具来完成分析优化工作。
 
 
 # Tip
 
 > 学习至少一个技术技巧：为了总结和归纳在日常工作中遇到的知识点
+
+在使用**dependencies/devDependencies**要考虑依赖包之间的依赖包的兼容性，比如项目使用的是**react v16.8**而所需要的组件包是**react v17**那么就是需要作包兼容性处理**”react”: “~16.8”**
 
 # Share
 
