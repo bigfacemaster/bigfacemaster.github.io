@@ -114,7 +114,7 @@
           <!-- Date -->
           <span class="date-time info">On
             <span class="date">2021-02-21</span>
-            <span class="time">18:09:49</span>
+            <span class="time">23:04:09</span>
           </span>
           
         </div>
@@ -141,10 +141,21 @@
 <h1 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h1><blockquote>
 <p>阅读并点评至少一篇英文技术文章：为了学习英文</p>
 </blockquote>
-<p><a target="_blank" rel="noopener" href="https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/">ES modules: A cartoon deep-dive</a></p>
+<p><a target="_blank" rel="noopener" href="https://nolanlawson.com/2021/02/23/javascript-performance-beyond-bundle-size/">JavaScript performance beyond bundle size</a></p>
+<p>三个问题：how big are your dependencies? Could you use a smaller one? Could you lazy-load it?</p>
+<p>关键因数 </p>
+<ul>
+<li>Parse/compile time</li>
+<li>Execution time</li>
+<li>Power usage</li>
+<li>Memory usage</li>
+<li>Disk usage</li>
+</ul>
+<p>使用<em>webpack bundle analyzer</em>/ rollup plugin analyzer 等分析工具以及Chrome 控制栏的各种工具来完成分析优化工作。</p>
 <h1 id="Tip"><a href="#Tip" class="headerlink" title="Tip"></a>Tip</h1><blockquote>
 <p>学习至少一个技术技巧：为了总结和归纳在日常工作中遇到的知识点</p>
 </blockquote>
+<p>在使用<strong>dependencies/devDependencies</strong>要考虑依赖包之间的依赖包的兼容性，比如项目使用的是<strong>react v16.8</strong>而所需要的组件包是<strong>react v17</strong>那么就是需要作包兼容性处理<strong>”react”: “~16.8”</strong></p>
 <h1 id="Share"><a href="#Share" class="headerlink" title="Share"></a>Share</h1><blockquote>
 <p>分享一篇有观点和思考的技术文章：为了建立影响力，能够输入价值观</p>
 </blockquote>
