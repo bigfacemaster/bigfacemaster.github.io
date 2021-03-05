@@ -38,6 +38,16 @@ const exchange = function(nums) {
 
 > 阅读并点评至少一篇英文技术文章：为了学习英文
 
+[Why is esbuild fast?](https://esbuild.github.io/faq/#why-is-esbuild-fast)
+
+原因:
+
+> * 使用Go语言编写，而不是js(It's written in [Go](https://golang.org/) and compiles to native code.)：go 并行处理任务，js单线程。go线程共享内存，js线程序列化。垃圾回收机制，go堆栈共享，js单独回收。
+> * 大量使用并行(Parallelism is used heavily.)：充分使用cpu资源
+> * 一切从头编写(Everything in esbuild is written from scratch.)：不依赖于第三方库，可以从头设计并考虑性能。
+> * 内存使用效率(Memory is used efficiently.)：最大时间复杂度：O(n);充分利用CPU和内存。
+
+构建速度快；
 
 # Tip
 
