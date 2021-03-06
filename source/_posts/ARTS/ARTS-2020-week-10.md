@@ -123,3 +123,4 @@ const exchange = function(nums) {
 
 > 分享一篇有观点和思考的技术文章：为了建立影响力，能够输入价值观
 
+[关于读书](https://bigfacemaster.cn/2021/03/06/Thinking/About-Reading/)
