@@ -1,4 +1,5 @@
 ---
+
 title: ARTS-2020-week-10
 tags:
   - ARTS
@@ -52,6 +53,71 @@ const exchange = function(nums) {
 # Tip
 
 > 学习至少一个技术技巧：为了总结和归纳在日常工作中遇到的知识点
+
+## Array.prototype.flat() && Array.prototype.flatMap() && Array.prototype.flatEach()
+
+1. Array.prototype.flat()
+
+   `**flat([depth])**` 方法会按照一个可指定的深度递归遍历数组，并将所有元素与遍历到的子数组中的元素合并为一个新数组返回。depth: 可选，指定要提取嵌套数组的结构深度，默认值为 1。一个包含将数组与子数组中所有元素的**新数组**。
+
+   ```
+   使用 Infinity，可展开任意深度的嵌套数组
+   ```
+
+   ```js
+   const arr1 = [0, 1, 2, [3, 4]];
+   
+   console.log(arr1.flat());
+   // expected output: [0, 1, 2, 3, 4]
+   
+   const arr2 = [0, 1, 2, [[[3, 4]]]];
+   
+   console.log(arr2.flat(2));
+   // expected output: [0, 1, 2, [3, 4]]
+   ```
+
+   
+
+2. Array.prototype.flatMap()
+
+   `**flatMap()**` 方法首先使用映射函数映射每个元素，然后将结果压缩成一个**新数组**。它与 [map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) 连着深度值为1的 [flat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat) 几乎相同，但 `flatMap` 通常在合并成一种方法的效率稍微高一些。返回**新数组**。
+
+   ```
+   var new_array = arr.flatMap(function callback(currentValue[, index[, array]]) {
+       // return element for new_array
+   }[, thisArg])
+   callback
+   可以生成一个新数组中的元素的函数，可以传入三个参数：
+   currentValue
+   当前正在数组中处理的元素
+   index可选
+   可选的。数组中正在处理的当前元素的索引。
+   array可选
+   可选的。被调用的 map 数组
+   thisArg可选
+   可选的。执行 callback 函数时 使用的this 值。
+   
+   ```
+
+3. Array.prototype.flatEach()
+
+   `**forEach()**` 方法对数组的每个元素执行一次给定的函数。返回**undefined**
+
+   ```
+   arr.forEach(callback(currentValue [, index [, array]])[, thisArg])
+   callback
+   为数组中每个元素执行的函数，该函数接收一至三个参数：
+   currentValue
+   数组中正在处理的当前元素。
+   index 可选
+   数组中正在处理的当前元素的索引。
+   array 可选
+   forEach() 方法正在操作的数组。
+   thisArg 可选
+   可选参数。当执行回调函数 callback 时，用作 this 的值。
+   
+   
+   ```
 
 # Share
 
