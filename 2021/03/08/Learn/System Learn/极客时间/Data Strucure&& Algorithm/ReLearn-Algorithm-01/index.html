@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="BigFaceMaster">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="重学算法第三期-60天攻克数据结构与算法-01"/>
+  <meta property="og:description" content="一个前端的探索之路，不局限于技术：web前端，移动端，小程序，后端数据库，算法，等等" />
+  <meta property="og:site_name" content="🤡大花脸🤡"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="http://example.com"/>
+  
+    <link rel="alternate" href="/atom.xml" title="🤡大花脸🤡" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="🤡">
+  
+
+  <!-- Site Title -->
+  <title>🤡大花脸🤡</title>
+
+  <!-- Bootstrap CSS -->
+  
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  
+  
+<link rel="stylesheet" href="/css/style.dark.css">
+
+
+  <!-- Google Analytics -->
+  
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-154123333-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/stars.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">重学算法第三期-60天攻克数据结构与算法-01</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/tags/ARTS/">
+                  
+                  ARTS
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a target="_blank" rel="noopener" href="https://github.com/BigFaceMaster">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="mailto:bigfacemaster@gmail.com">
+                  
+                  Email
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By BigFaceMaster</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2021-03-08</span>
+            <span class="time">17:31:49</span>
+          </span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/Algorithm/">#Algorithm</a> <a class="tag" href="/tags/%E7%AE%97%E6%B3%95/">#算法</a> <a class="tag" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">#数据结构</a> <a class="tag" href="/tags/Data-Structure/">#Data Structure</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <blockquote>
+<p><a target="_blank" rel="noopener" href="https://time.geekbang.org/column/intro/126">数据结构与算法之美</a></p>
+</blockquote>
+<h1 id="03-复杂度分析（上）：如何分析、统计算法的执行效率和资源消耗？"><a href="#03-复杂度分析（上）：如何分析、统计算法的执行效率和资源消耗？" class="headerlink" title="03 | 复杂度分析（上）：如何分析、统计算法的执行效率和资源消耗？"></a>03 | 复杂度分析（上）：如何分析、统计算法的执行效率和资源消耗？</h1><h1 id="Pre"><a href="#Pre" class="headerlink" title="Pre"></a>Pre</h1><p><img src="http://bigfacemaster.test.upcdn.net/uPic/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E7%8E%8B%E4%BA%89.jpeg" alt="数据结构与算法-王争"></p>
+<p>RoadMap</p>
+<p><img src="https://static001.geekbang.org/resource/image/91/a7/913e0ababe43a2d57267df5c5f0832a7.jpg" alt="img"></p>
+<h1 id="学习内容"><a href="#学习内容" class="headerlink" title="学习内容 :"></a>学习内容 :</h1><p>03丨复杂度分析（上）：如何分析、统计算法的执行效率和资源消耗？</p>
+<p>执行效率：时间、空间复杂度分析；</p>
+<p>复杂度分析是整个算法学习的精髓，只要掌握了它，数据结构和算法的内容基本上就掌握了一半。</p>
+<p>事后统计法：测试结果非常依赖测试环境；测试结果受数据规模的影响很大；</p>
+<p>所以我们需要不依赖测试数据来测试，就可以粗略的来估计算法的执行效率(最好&amp;&amp;最坏的情况)。</p>
+<h2 id="大-O-复杂度表示法"><a href="#大-O-复杂度表示法" class="headerlink" title="大 O 复杂度表示法"></a>大 O 复杂度表示法</h2><p>代码执行：读数据 -&gt; 运算 -&gt; 写数据</p>
+<blockquote>
+<p>所有代码的执行时间 T(n) 与每行代码的执行次数 f(n) 成正比: </p>
+<blockquote>
+<p><strong>T(n) = O(f(n))</strong></p>
+</blockquote>
+<p>T(n)：代码执行的时间；</p>
+<p>n：数据规模的大小；</p>
+<p>f(n)：每行代码执行的次数总和；</p>
+<p>因为这是一个公式，所以用 f(n) 来表示。公式中的 O，表示代码的执行时间 T(n) 与 f(n) 表达式成正比。</p>
+</blockquote>
+<p><strong>剔除常数的运算</strong></p>
+<blockquote>
+<p>这就是大 O 时间复杂度表示法。大 O 时间复杂度实际上并不具体表示代码真正的执行时间，而是表示代码执行时间随数据规模增长的<strong>变化趋势</strong>，所以，也叫作渐进时间复杂度（asymptotic time complexity），简称时间复杂度。</p>
+</blockquote>
+<h2 id="时间复杂度分析"><a href="#时间复杂度分析" class="headerlink" title="时间复杂度分析"></a>时间复杂度分析</h2><ol>
+<li>只关注循环执行次数最多的一段代码；</li>
+<li>加法法则：总复杂度等于量级最大的那段代码的复杂度；</li>
+<li>乘法法则：嵌套函数的复杂度等于嵌套内外代码复杂度的乘积；</li>
+</ol>
+<h3 id="几种常见时间复杂度实例分析"><a href="#几种常见时间复杂度实例分析" class="headerlink" title="几种常见时间复杂度实例分析"></a>几种常见时间复杂度实例分析</h3><ul>
+<li>常量阶： O(1)</li>
+<li>对数阶：O(log n)</li>
+<li>线性阶：O(n)</li>
+<li>线性对数阶：O(n log n)</li>
+<li>平方阶：O(n^2^)、O(n^3^)、….O(n^k^)</li>
+<li>指数阶：O(2^n^)</li>
+<li>阶乘阶：O(n!)</li>
+</ul>
+<p>多项式量级 &amp;&amp; 非多项式量级（只有O(2^2^) 和 O(n!)）</p>
+<blockquote>
+<p>把时间复杂度为非多项式量级的算法问题叫作 NP（Non-Deterministic Polynomial，非确定多项式）问题。</p>
+<p>效率太低了</p>
+</blockquote>
+<h3 id="O-1"><a href="#O-1" class="headerlink" title="O(1)"></a>O(1)</h3><p>O(1) 只是常量级时间复杂度的一种表示方法，并不是指只执行了一行代码。</p>
+<p>一般情况下，只要算法中不存在循环语句、递归语句，即使有成千上万行的代码，其时间复杂度也是Ο(1)。</p>
+<p>代码执行次数为常量；</p>
+<h3 id="O-log-n-、O-n-log-n"><a href="#O-log-n-、O-n-log-n" class="headerlink" title="O(log n)、O(n log n)"></a>O(log n)、O(n log n)</h3><p>不管是以 2 为底、以 3 为底，还是以 10 为底，我们可以把所有对数阶的时间复杂度都记为 O(logn)。</p>
+<p>对数之间是可以互相转换的，log<del>3</del>n 就等于 log<del>3</del>2 * log<del>2</del>n，所以 O(log<del>3</del>n) = O(C * log<del>2</del>n)，其中 C=log<del>3</del>2 是一个常量。基于我们前面的一个理论：在采用大 O 标记复杂度的时候，可以忽略系数，即 O(Cf(n)) = O(f(n))。所以，O(log<del>2</del>n) 就等于 O(log<del>3</del>n)。因此，在对数阶时间复杂度的表示方法里，我们忽略对数的“底”，统一表示为 O(logn)。</p>
+<p>如果一段代码的时间复杂度是 O(logn)，我们循环执行 n 遍，时间复杂度就是 O(nlogn) 了。而且，O(nlogn) 也是一种非常常见的算法时间复杂度。比如，归并排序、快速排序的时间复杂度都是 O(nlogn)。</p>
+<h3 id="O-m-n-、O-m-n"><a href="#O-m-n-、O-m-n" class="headerlink" title="O(m + n)、O(m * n)"></a>O(m + n)、O(m * n)</h3><p>代码的复杂度由两个数据的规模来决定。</p>
+<p>m 和 n 是表示两个数据规模。我们无法事先评估 m 和 n 谁的量级大，所以我们在表示复杂度的时候，就不能简单地利用加法法则，省略掉其中一个。所以，上面代码的时间复杂度就是 O(m+n)。</p>
+<p>嵌套循环： O(m * n)</p>
+<h2 id="空间复杂度分析"><a href="#空间复杂度分析" class="headerlink" title="空间复杂度分析"></a>空间复杂度分析</h2><p>时间复杂度的全称是渐进时间复杂度，表示算法的执行时间与数据规模之间的增长关系。类比一下，空间复杂度全称就是渐进空间复杂度（asymptotic space complexity），表示算法的存储空间与数据规模之间的增长关系。</p>
+<p>常见的空间复杂度就是O(1)、 O(2)、 O(n^2^)</p>
+<blockquote>
+<p>越高阶复杂度的算法，执行效率越低。常见的复杂度并不多，从低阶到高阶有：O(1)、O(logn)、O(n)、O(nlogn)、O(n^2^ )。</p>
+</blockquote>
+<p><img src="https://static001.geekbang.org/resource/image/49/04/497a3f120b7debee07dc0d03984faf04.jpg" alt="img"></p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          <div style="width:300px;margin:0 auto; padding:20px 0;">
+              <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51012202000601" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">川公网安备 51012202000601号</p></a>
+          </div>
+          <p>本网站由<a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank"><img src="./img/upyun.png" width="36"></a> 提供CDN加速/云存储服务</p>
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+
+<script src="/js/highlight.pack.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+
