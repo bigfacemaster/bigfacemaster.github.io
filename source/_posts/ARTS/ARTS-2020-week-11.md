@@ -79,3 +79,5 @@ var missingNumber = function(nums) {
 # Share
 
 > 分享一篇有观点和思考的技术文章：为了建立影响力，能够输入价值观
+
+[重学数据结构与算法](https://bigfacemaster.cn/2021/03/13/Thinking/Relearn-Data-Structure-and-Algorithm/)
