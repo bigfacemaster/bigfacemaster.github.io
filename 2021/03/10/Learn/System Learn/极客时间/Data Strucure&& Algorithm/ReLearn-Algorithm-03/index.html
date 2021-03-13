@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="BigFaceMaster">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="重学算法第三期-60天攻克数据结构与算法-03"/>
+  <meta property="og:description" content="一个前端的探索之路，不局限于技术：web前端，移动端，小程序，后端数据库，算法，等等" />
+  <meta property="og:site_name" content="🤡大花脸🤡"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="http://example.com"/>
+  
+    <link rel="alternate" href="/atom.xml" title="🤡大花脸🤡" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="🤡">
+  
+
+  <!-- Site Title -->
+  <title>🤡大花脸🤡</title>
+
+  <!-- Bootstrap CSS -->
+  
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  
+  
+<link rel="stylesheet" href="/css/style.dark.css">
+
+
+  <!-- Google Analytics -->
+  
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-154123333-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/stars.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">重学算法第三期-60天攻克数据结构与算法-03</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/tags/ARTS/">
+                  
+                  ARTS
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a target="_blank" rel="noopener" href="https://github.com/BigFaceMaster">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="mailto:bigfacemaster@gmail.com">
+                  
+                  Email
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By BigFaceMaster</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2021-03-10</span>
+            <span class="time">21:41:26</span>
+          </span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/Algorithm/">#Algorithm</a> <a class="tag" href="/tags/%E7%AE%97%E6%B3%95/">#算法</a> <a class="tag" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">#数据结构</a> <a class="tag" href="/tags/Data-Structure/">#Data Structure</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <blockquote>
+<p><a target="_blank" rel="noopener" href="https://time.geekbang.org/column/intro/126">数据结构与算法之美</a></p>
+</blockquote>
+<h1 id="05-数组：为什么很多编程语言中数组都从0开始编号？"><a href="#05-数组：为什么很多编程语言中数组都从0开始编号？" class="headerlink" title="05 | 数组：为什么很多编程语言中数组都从0开始编号？"></a>05 | 数组：为什么很多编程语言中数组都从0开始编号？</h1><h2 id="如何实现随机访问？"><a href="#如何实现随机访问？" class="headerlink" title="如何实现随机访问？"></a>如何实现随机访问？</h2><p>数组(Array)：一种<strong>线性表</strong>数据结构。它用一组<strong>连续的内存空间</strong>，来存储一组具有相同类型的数据。</p>
+<p>第一是线性表（Linear List）。顾名思义，线性表就是数据排成像一条线一样的结构。每个线性表上的数据最多只有前和后两个方向。其实除了数组，链表、队列、栈等也是线性表结构。</p>
+<p><img src="https://static001.geekbang.org/resource/image/b6/77/b6b71ec46935130dff5c4b62cf273477.jpg" alt="img"></p>
+<p>而与它相对立的概念是非线性表，比如二叉树、堆、图等。之所以叫非线性，是因为，在非线性表中，数据之间并不是简单的前后关系。</p>
+<p><img src="https://static001.geekbang.org/resource/image/6e/69/6ebf42641b5f98f912d36f6bf86f6569.jpg" alt="img"></p>
+<p>第二个是连续的内存空间和相同类型的数据。正是因为这两个限制，它才有了一个堪称“杀手锏”的特性：“随机访问”。</p>
+<p>计算机会给每个内存单元分配一个地址，计算机通过地址来访问内存中的数据。</p>
+<p>数组支持随机访问，根据下标随机访问的时间复杂度为 O(1)。</p>
+<p>寻址公式，计算出该元素存储的内存地址：a[i]_address = base_address + i * data_type_size (其中 data_type_size 表示数组中每个元素的大小。)</p>
+<h2 id="低效的“插入”和“删除”"><a href="#低效的“插入”和“删除”" class="headerlink" title="低效的“插入”和“删除”"></a>低效的“插入”和“删除”</h2><h3 id="插入操作"><a href="#插入操作" class="headerlink" title="插入操作"></a>插入操作</h3><h3 id="删除操作"><a href="#删除操作" class="headerlink" title="删除操作"></a>删除操作</h3><p>为了避免 d，e，f，g，h 这几个数据会被搬移三次，我们可以先记录下已经删除的数据。每次的删除操作并不是真正地搬移数据，只是记录数据已经被删除。当数组没有更多空间存储数据时，我们再触发执行一次真正的删除操作，这样就大大减少了删除操作导致的数据搬移。</p>
+<p>很多时候我们并不是要去死记硬背某个数据结构或者算法，而是要学习它背后的思想和处理技巧，这些东西才是最有价值的。</p>
+<h3 id="警惕数组的访问越界问题"><a href="#警惕数组的访问越界问题" class="headerlink" title="警惕数组的访问越界问题"></a>警惕数组的访问越界问题</h3><p>访问数组的本质就是访问一段连续内存，只要数组通过偏移计算得到的内存地址是可用的，那么程序就可能不会报任何错误。</p>
+<h2 id="容器能否完全替代数组？"><a href="#容器能否完全替代数组？" class="headerlink" title="容器能否完全替代数组？"></a>容器能否完全替代数组？</h2><p>数组本身在定义的时候需要预先指定大小，因为需要分配连续的内存空间。如果我们申请了大小为 10 的数组，当第 11 个数据需要存储到数组中时，我们就需要重新分配一块更大的空间，将原来的数据复制过去，然后再将新的数据插入。</p>
+<p>事先指定数据大小可以省掉很多次内存申请和数据搬移操作。</p>
+<h2 id="为什么大多数编程语言中，数组要从-0-开始编号，而不是从-1-开始呢？"><a href="#为什么大多数编程语言中，数组要从-0-开始编号，而不是从-1-开始呢？" class="headerlink" title="为什么大多数编程语言中，数组要从 0 开始编号，而不是从 1 开始呢？"></a>为什么大多数编程语言中，数组要从 0 开始编号，而不是从 1 开始呢？</h2><p>从数组存储的内存模型上来看，“下标”最确切的定义应该是“偏移（offset）”。</p>
+<p>前面也讲到，如果用 a 来表示数组的首地址，a[0]就是偏移为 0 的位置，也就是首地址，a[k]就表示偏移 k 个 type_size 的位置，所以计算 a[k]的内存地址只需要用这个公式：a[k]_address = base_address + k * type_size;</p>
+<p>如果数组从 1 开始计数，那我们计算数组元素 a[k]的内存地址就会变为：a[k]_address = base_address + (k-1)*type_size;</p>
+<p>从 1 开始编号，每次随机访问数组元素都多了一次减法运算，对于 CPU 来说，就是多了一次减法指令。</p>
+<p>数组作为非常基础的数据结构，通过下标随机访问数组元素又是其非常基础的编程操作，效率的优化就要尽可能做到极致。所以为了减少一次减法操作，数组选择了从 0 开始编号，而不是从 1 开始。（主要原始历史原因，C语言从0开始，其他语言开始模仿。）</p>
+<blockquote>
+<p>数组用一块连续的内存空间，来存储相同类型的一组数据，最大的特点就是支持随机访问，但插入、删除操作也因此变得比较低效，平均情况时间复杂度为 O(n)。在平时的业务开发中，我们可以直接使用编程语言提供的容器类，但是，如果是特别底层的开发，直接使用数组可能会更合适。</p>
+</blockquote>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          <div style="width:300px;margin:0 auto; padding:20px 0;">
+              <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51012202000601" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">川公网安备 51012202000601号</p></a>
+          </div>
+          <p>本网站由<a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank"><img src="./img/upyun.png" width="36"></a> 提供CDN加速/云存储服务</p>
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+
+<script src="/js/highlight.pack.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+

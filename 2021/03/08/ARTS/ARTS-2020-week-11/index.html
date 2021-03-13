@@ -114,7 +114,7 @@
           <!-- Date -->
           <span class="date-time info">On
             <span class="date">2021-03-08</span>
-            <span class="time">17:31:49</span>
+            <span class="time">21:41:26</span>
           </span>
           
         </div>
@@ -133,12 +133,38 @@
           <h1 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h1><blockquote>
 <p>每周一个算法题：为了编程训练和学习</p>
 </blockquote>
+<h4 id="剑指-Offer-53-II-0～n-1中缺失的数字"><a href="#剑指-Offer-53-II-0～n-1中缺失的数字" class="headerlink" title="剑指 Offer 53 - II. 0～n-1中缺失的数字"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/que-shi-de-shu-zi-lcof/">剑指 Offer 53 - II. 0～n-1中缺失的数字</a></h4><p>一个长度为n-1的递增排序数组中的所有数字都是唯一的，并且每个数字都在范围0～n-1之内。在范围0～n-1内的n个数字中有且只有一个数字不在该数组中，请找出这个数字。</p>
+<p>来源：力扣（LeetCode）<br>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/que-shi-de-shu-zi-lcof">https://leetcode-cn.com/problems/que-shi-de-shu-zi-lcof</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> missingNumber = <span class="function"><span class="keyword">function</span>(<span class="params">nums</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> sum1 = nums.reduce(<span class="function">(<span class="params">a, b</span>) =&gt;</span> a + b);</span><br><span class="line">  <span class="keyword">const</span> sum2 = (nums.length + <span class="number">1</span>) * nums.length / <span class="number">2</span>;</span><br><span class="line">  <span class="keyword">return</span> sum2 - sum1;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+
 <h1 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h1><blockquote>
 <p>阅读并点评至少一篇英文技术文章：为了学习英文</p>
 </blockquote>
+<p><a target="_blank" rel="noopener" href="https://2ality.com/2020/09/ecmascript-2021.html">ECMAScript 2021: the final feature set</a></p>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="https://exploringjs.com/impatient-js/ch_regexps.html#replace-replaceAll"><code>String.prototype.replaceAll</code></a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://exploringjs.com/impatient-js/ch_promises.html#Promise.any"><code>Promise.any()</code></a> </p>
+</li>
+<li><p>WeakRefs</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://exploringjs.com/impatient-js/ch_operators.html#logical-assignment-operators">Logical assignment operators</a></p>
+</li>
+<li><p>Underscores (<code>_</code>) as separators in <a target="_blank" rel="noopener" href="https://exploringjs.com/impatient-js/ch_numbers.html#numeric-separator-number-literals">number literals</a> and <a target="_blank" rel="noopener" href="https://exploringjs.com/impatient-js/ch_bigints.html#numeric-separator-bigint-literals">bigint literals</a></p>
+</li>
+</ul>
 <h1 id="Tip"><a href="#Tip" class="headerlink" title="Tip"></a>Tip</h1><blockquote>
 <p>学习至少一个技术技巧：为了总结和归纳在日常工作中遇到的知识点</p>
 </blockquote>
+<blockquote>
+<p>‘<picture>‘：picture 元素</p>
+<p><strong>HTML <code>&lt;picture&gt;</code> 元素</strong>通过包含零或多个 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/source">``source</a> 元素和一个 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/img">img``</a> 元素来为不同的显示/设备场景提供图像版本。浏览器会选择最匹配的子 <code>&lt;source&gt;</code> 元素，如果没有匹配的，就选择 <code>&lt;img&gt;</code> 元素的 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/img#attr-src"><code>src</code></a> 属性中的URL。然后，所选图像呈现在<img>元素占据的空间中。</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">picture</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">source</span> <span class="attr">srcset</span>=<span class="string">&quot;/media/cc0-images/surfer-240-200.jpg&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">media</span>=<span class="string">&quot;(min-width: 800px)&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;/media/cc0-images/painted-hand-298-332.jpg&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">picture</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>要决定加载哪个URL，<a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Glossary/User_agent">user agent</a> 检查每个 <code>&lt;source&gt;</code> 的 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/source#attr-srcset"><code>srcset</code></a>、<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/source#attr-media"><code>media</code></a> 和 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/source#attr-type"><code>type</code></a> 属性，来选择最匹配页面当前布局、显示设备特征等的兼容图像。</p>
 <h1 id="Share"><a href="#Share" class="headerlink" title="Share"></a>Share</h1><blockquote>
 <p>分享一篇有观点和思考的技术文章：为了建立影响力，能够输入价值观</p>
 </blockquote>

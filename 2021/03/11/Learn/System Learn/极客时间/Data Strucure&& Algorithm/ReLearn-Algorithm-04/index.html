@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="BigFaceMaster">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="重学算法第三期-60天攻克数据结构与算法-04"/>
+  <meta property="og:description" content="一个前端的探索之路，不局限于技术：web前端，移动端，小程序，后端数据库，算法，等等" />
+  <meta property="og:site_name" content="🤡大花脸🤡"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="http://example.com"/>
+  
+    <link rel="alternate" href="/atom.xml" title="🤡大花脸🤡" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="🤡">
+  
+
+  <!-- Site Title -->
+  <title>🤡大花脸🤡</title>
+
+  <!-- Bootstrap CSS -->
+  
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  
+  
+<link rel="stylesheet" href="/css/style.dark.css">
+
+
+  <!-- Google Analytics -->
+  
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-154123333-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/stars.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">重学算法第三期-60天攻克数据结构与算法-04</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/tags/ARTS/">
+                  
+                  ARTS
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a target="_blank" rel="noopener" href="https://github.com/BigFaceMaster">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="mailto:bigfacemaster@gmail.com">
+                  
+                  Email
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By BigFaceMaster</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2021-03-11</span>
+            <span class="time">21:41:26</span>
+          </span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/Algorithm/">#Algorithm</a> <a class="tag" href="/tags/%E7%AE%97%E6%B3%95/">#算法</a> <a class="tag" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">#数据结构</a> <a class="tag" href="/tags/Data-Structure/">#Data Structure</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <blockquote>
+<p><a target="_blank" rel="noopener" href="https://time.geekbang.org/column/intro/126">数据结构与算法之美</a></p>
+</blockquote>
+<h1 id="学习内容-链表（上）：如何实现LRU缓存淘汰算法"><a href="#学习内容-链表（上）：如何实现LRU缓存淘汰算法" class="headerlink" title="学习内容 :链表（上）：如何实现LRU缓存淘汰算法?"></a>学习内容 :链表（上）：如何实现LRU缓存淘汰算法?</h1><p>缓存是一种提高数据读取性能的技术</p>
+<p>缓存淘汰策略：常见的策略有三种：先进先出策略 FIFO（First In，First Out）、最少使用策略 LFU（Least Frequently Used）、最近最少使用策略 LRU（Least Recently Used）。</p>
+<h2 id="链表结构"><a href="#链表结构" class="headerlink" title="链表结构"></a>链表结构</h2><h3 id="底层的存储结构"><a href="#底层的存储结构" class="headerlink" title="底层的存储结构"></a>底层的存储结构</h3><p>数组需要一块<strong>连续的内存空间</strong>来存储，对内存的要求比较高。</p>
+<p>链表恰恰相反，它并不需要一块连续的内存空间，它通过<strong>“指针”将一组零散的内存块串联起来使用</strong></p>
+<p><img src="https://static001.geekbang.org/resource/image/d5/cd/d5d5bee4be28326ba3c28373808a62cd.jpg" alt="img"></p>
+<h3 id="单链表"><a href="#单链表" class="headerlink" title="单链表"></a>单链表</h3><p>链表通过指针将一组零散的内存块串联在一起。其中，我们把内存块称为链表的“结点”。为了将所有的结点串起来，每个链表的结点除了存储数据之外，还需要记录链上的下一个结点的地址。如图所示，我们把这个记录下个结点地址的指针叫作后继指针 next。</p>
+<p><img src="https://static001.geekbang.org/resource/image/b9/eb/b93e7ade9bb927baad1348d9a806ddeb.jpg" alt="img"></p>
+<p>头结点： 第一个结点；用来记录链表的基地址</p>
+<p>尾结点：最后一个结点；指针不是指向下一个结点，而是指向一个空地址 NULL，表示这是链表上最后一个结点。</p>
+<p>链表也支持数据的查找、插入和删除操作。</p>
+<p>链表操作数据不需要为了保持内存的连续性而搬移结点，因为链表的存储空间本来就不是连续的。</p>
+<p>时间复杂度为O(1)</p>
+<p><img src="https://static001.geekbang.org/resource/image/45/17/452e943788bdeea462d364389bd08a17.jpg" alt="img"></p>
+<p>链表要想随机访问第 k 个元素，就没有数组那么高效了。因为链表中的数据并非连续存储的，所以无法像数组那样，根据首地址和下标，通过寻址公式就能直接计算出对应的内存地址，而是需要根据指针一个结点一个结点地依次遍历，直到找到相应的结点。</p>
+<p>链表随机访问的性能没有数组好，需要 O(n) 的时间复杂度。</p>
+<h3 id="循环链表"><a href="#循环链表" class="headerlink" title="循环链表"></a>循环链表</h3><p>循环链表是一种特殊的单链表。实际上，循环链表也很简单。它跟单链表唯一的区别就在尾结点。</p>
+<p>而循环链表的尾结点指针是指向链表的头结点。</p>
+<p><img src="https://static001.geekbang.org/resource/image/86/55/86cb7dc331ea958b0a108b911f38d155.jpg" alt="img"></p>
+<p>循环链表的优点是从链尾到链头比较方便。当要处理的数据具有环型结构特点时，就特别适合采用循环链表。</p>
+<h3 id="双链表"><a href="#双链表" class="headerlink" title="双链表"></a>双链表</h3><p>支持两个方向，每个结点不止有一个后继指针 next 指向后面的结点，还有一个前驱指针 prev 指向前面的结点。</p>
+<p><img src="https://static001.geekbang.org/resource/image/cb/0b/cbc8ab20276e2f9312030c313a9ef70b.jpg" alt="img"></p>
+<p>从结构上来看，双向链表可以支持 O(1) 时间复杂度的情况下找到前驱结点，正是这样的特点，也使双向链表在某些情况下的插入、删除等操作都要比单链表简单、高效。</p>
+<p><strong>删除操作</strong></p>
+<p>从链表中删除一个数据无外乎这两种情况：</p>
+<ul>
+<li>删除结点中“值等于某个给定值”的结点；</li>
+<li>删除给定指针指向的结点。</li>
+</ul>
+<p>对于第一种情况，不管是单链表还是双向链表，为了查找到值等于给定值的结点，都需要从头结点开始一个一个依次遍历对比，直到找到值等于给定值的结点，然后再通过我前面讲的指针操作将其删除。</p>
+<p>尽管单纯的删除操作时间复杂度是 O(1)，但遍历查找的时间是主要的耗时点，对应的时间复杂度为 O(n)。根据时间复杂度分析中的加法法则，删除值等于给定值的结点对应的链表操作的总时间复杂度为 O(n)。</p>
+<p>对于第二种情况，我们已经找到了要删除的结点，但是删除某个结点 q 需要知道其前驱结点，而单链表并不支持直接获取前驱结点，所以，为了找到前驱结点，我们还是要从头结点开始遍历链表，直到 p-&gt;next=q，说明 p 是 q 的前驱结点。</p>
+<p>针对第二种情况，单链表删除操作需要 O(n) 的时间复杂度，而双向链表只需要在 O(1) 的时间复杂度内就搞定了！</p>
+<p>如果我们希望在链表的某个指定结点前面插入一个结点，双向链表比单链表有很大的优势。双向链表可以在 O(1) 时间复杂度搞定，而单向链表需要 O(n) 的时间复杂度。</p>
+<p>用空间换时间的设计思想</p>
+<p>对于执行较慢的程序，可以通过消耗更多的内存（空间换时间）来进行优化；而消耗过多内存的程序，可以通过消耗更多的时间（时间换空间）来降低内存的消耗。</p>
+<h3 id="双向循环链表"><a href="#双向循环链表" class="headerlink" title="双向循环链表"></a>双向循环链表</h3><p>循环链表和双向链表，如果把这两种链表整合在一起就是一个新的版本：双向循环链表。</p>
+<p><img src="https://static001.geekbang.org/resource/image/d1/91/d1665043b283ecdf79b157cfc9e5ed91.jpg" alt="img"></p>
+<h2 id="链表-VS-数组性能"><a href="#链表-VS-数组性能" class="headerlink" title="链表 VS 数组性能"></a>链表 VS 数组性能</h2><p>数组和链表是两种截然不同的内存组织方式。正是因为内存存储的区别，它们插入、删除、随机访问操作的时间复杂度正好相反。</p>
+<p><img src="https://static001.geekbang.org/resource/image/4f/68/4f63e92598ec2551069a0eef69db7168.jpg" alt="img"></p>
+<p>数组简单易用，在实现上使用的是连续的内存空间，可以借助 CPU 的缓存机制，预读数组中的数据，所以访问效率更高。而链表在内存中并不是连续存储，所以对 CPU 缓存不友好，没办法有效预读。</p>
+<p>数组的缺点是大小固定，一经声明就要占用整块连续内存空间。如果声明的数组过大，系统可能没有足够的连续内存空间分配给它，导致“内存不足（out of memory）”。如果声明的数组过小，则可能出现不够用的情况。这时只能再申请一个更大的内存空间，把原数组拷贝进去，非常费时。链表本身没有大小的限制，天然地支持动态扩容，我觉得这也是它与数组最大的区别。</p>
+<h2 id="实现LRU缓存淘汰算法"><a href="#实现LRU缓存淘汰算法" class="headerlink" title="实现LRU缓存淘汰算法"></a>实现LRU缓存淘汰算法</h2><p>我们维护一个有序单链表，越靠近链表尾部的结点是越早之前访问的。当有一个新的数据被访问时，我们从链表头开始顺序遍历链表。</p>
+<ol>
+<li><p>如果此数据之前已经被缓存在链表中了，我们遍历得到这个数据对应的结点，并将其从原来的位置删除，然后再插入到链表的头部。</p>
+</li>
+<li><p>如果此数据没有在缓存链表中，又可以分为两种情况：</p>
+<ul>
+<li><p>如果此时缓存未满，则将此结点直接插入到链表的头部；</p>
+</li>
+<li><p>如果此时缓存已满，则链表尾结点删除，将新的数据结点插入链表的头部。</p>
+<p>缓存访问的时间复杂度为 O(n)。</p>
+<p>散列表（Hash table）来记录每个数据的位置，将缓存访问的时间复杂度降到 O(1)</p>
+</li>
+</ul>
+</li>
+</ol>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          <div style="width:300px;margin:0 auto; padding:20px 0;">
+              <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51012202000601" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">川公网安备 51012202000601号</p></a>
+          </div>
+          <p>本网站由<a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank"><img src="./img/upyun.png" width="36"></a> 提供CDN加速/云存储服务</p>
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+
+<script src="/js/highlight.pack.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+
