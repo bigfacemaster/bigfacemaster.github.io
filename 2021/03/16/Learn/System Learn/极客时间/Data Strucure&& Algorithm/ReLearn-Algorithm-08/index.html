@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="BigFaceMaster">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="重学算法第三期-60天攻克数据结构与算法-08"/>
+  <meta property="og:description" content="一个前端的探索之路，不局限于技术：web前端，移动端，小程序，后端数据库，算法，等等" />
+  <meta property="og:site_name" content="🤡大花脸🤡"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="http://example.com"/>
+  
+    <link rel="alternate" href="/atom.xml" title="🤡大花脸🤡" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="🤡">
+  
+
+  <!-- Site Title -->
+  <title>🤡大花脸🤡</title>
+
+  <!-- Bootstrap CSS -->
+  
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  
+  
+<link rel="stylesheet" href="/css/style.dark.css">
+
+
+  <!-- Google Analytics -->
+  
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-154123333-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/stars.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">重学算法第三期-60天攻克数据结构与算法-08</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/tags/ARTS/">
+                  
+                  ARTS
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a target="_blank" rel="noopener" href="https://github.com/BigFaceMaster">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="mailto:bigfacemaster@gmail.com">
+                  
+                  Email
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By BigFaceMaster</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2021-03-16</span>
+            <span class="time">16:00:35</span>
+          </span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/Algorithm/">#Algorithm</a> <a class="tag" href="/tags/%E7%AE%97%E6%B3%95/">#算法</a> <a class="tag" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">#数据结构</a> <a class="tag" href="/tags/Data-Structure/">#Data Structure</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <blockquote>
+<p><a target="_blank" rel="noopener" href="https://time.geekbang.org/column/intro/126">数据结构与算法之美</a></p>
+</blockquote>
+<h1 id="学习内容-递归：如何用三行代码找到“最终推荐人”？"><a href="#学习内容-递归：如何用三行代码找到“最终推荐人”？" class="headerlink" title="学习内容 :递归：如何用三行代码找到“最终推荐人”？"></a>学习内容 :递归：如何用三行代码找到“最终推荐人”？</h1><blockquote>
+<p>递归（Recursion）(DFS深度优先搜索，前中后序二叉树遍历)</p>
+</blockquote>
+<p>这就是一个非常标准的递归求解问题的分解过程，去的过程叫“递”，回来的过程叫“归”。基本上，所有的递归问题都可以用递推公式来表示。</p>
+<h2 id="递归需要满足的三个条件"><a href="#递归需要满足的三个条件" class="headerlink" title="递归需要满足的三个条件"></a>递归需要满足的三个条件</h2><ol>
+<li>一个问题的解可以分解为几个子问题的解；</li>
+<li>这个问题与分解之后的子问题，除了数据规模不同，求解思路完全一样；</li>
+<li>存在递归终止条件。</li>
+</ol>
+<h2 id="如何编写递归代码？"><a href="#如何编写递归代码？" class="headerlink" title="如何编写递归代码？"></a>如何编写递归代码？</h2><blockquote>
+<p>写出递推公式，找到终止条件，转换成代码。</p>
+</blockquote>
+<p><strong>写递归代码的关键就是找到如何将大问题分解为小问题的规律，并且基于此写出递推公式，然后再推敲终止条件，最后将递推公式和终止条件翻译成代码。</strong></p>
+<p><strong>编写递归代码的关键是，只要遇到递归，我们就把它抽象成一个递推公式，不用想一层层的调用关系，不要试图用人脑去分解递归的每个步骤。</strong></p>
+<h2 id="递归代码要警惕堆栈溢出"><a href="#递归代码要警惕堆栈溢出" class="headerlink" title="递归代码要警惕堆栈溢出"></a>递归代码要警惕堆栈溢出</h2><p>如果递归求解的数据规模很大，调用层次很深，一直压入栈，就会有堆栈溢出的风险。</p>
+<p>递归调用超过一定深度（比如 1000）之后，我们就不继续往下再递归了，直接返回报错。</p>
+<h2 id="递归代码要警惕重复计算"><a href="#递归代码要警惕重复计算" class="headerlink" title="递归代码要警惕重复计算"></a>递归代码要警惕重复计算</h2><p>为了避免重复计算，我们可以通过一个数据结构（比如散列表）来保存已经求解过的 f(k)。</p>
+<p>在空间复杂度上，因为递归调用一次就会在内存栈中保存一次现场数据，所以在分析递归代码空间复杂度时，需要额外考虑这部分的开销。</p>
+<h2 id="怎么将递归代码改写为非递归代码？"><a href="#怎么将递归代码改写为非递归代码？" class="headerlink" title="怎么将递归代码改写为非递归代码？"></a>怎么将递归代码改写为非递归代码？</h2><p>递归有利有弊，利是递归代码的表达力很强，写起来非常简洁；而弊就是空间复杂度高、有堆栈溢出的风险、存在重复计算、过多的函数调用会耗时较多等问题。</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          <div style="width:300px;margin:0 auto; padding:20px 0;">
+              <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51012202000601" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">川公网安备 51012202000601号</p></a>
+          </div>
+          <p>本网站由<a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank"><img src="./img/upyun.png" width="36"></a> 提供CDN加速/云存储服务</p>
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+
+<script src="/js/highlight.pack.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+
