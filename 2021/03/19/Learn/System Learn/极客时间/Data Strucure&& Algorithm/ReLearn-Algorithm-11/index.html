@@ -114,7 +114,7 @@
           <!-- Date -->
           <span class="date-time info">On
             <span class="date">2021-03-19</span>
-            <span class="time">16:00:35</span>
+            <span class="time">21:45:54</span>
           </span>
           
         </div>
@@ -133,7 +133,22 @@
           <blockquote>
 <p><a target="_blank" rel="noopener" href="https://time.geekbang.org/column/intro/126">数据结构与算法之美</a></p>
 </blockquote>
-<h1 id="学习内容-如何根据年龄给100万用户数据排序？"><a href="#学习内容-如何根据年龄给100万用户数据排序？" class="headerlink" title="学习内容 :如何根据年龄给100万用户数据排序？"></a>学习内容 :如何根据年龄给100万用户数据排序？</h1>
+<h1 id="学习内容-如何根据年龄给100万用户数据排序？"><a href="#学习内容-如何根据年龄给100万用户数据排序？" class="headerlink" title="学习内容 :如何根据年龄给100万用户数据排序？"></a>学习内容 :如何根据年龄给100万用户数据排序？</h1><p>时间复杂度是 O(n) 的排序算法：桶排序、计数排序、基数排序。</p>
+<p>因为这些排序算法的时间复杂度是线性的，所以我们把这类排序算法叫作线性排序（Linear sort）.</p>
+<p>这三个算法是非基于比较的排序算法，都不涉及元素之间的比较操作。</p>
+<h2 id="桶排序（Bucket-Sort）"><a href="#桶排序（Bucket-Sort）" class="headerlink" title="桶排序（Bucket Sort）"></a>桶排序（Bucket Sort）</h2><p>核心思想就是将要排序的数据分到几个有序的桶里，每个桶里的数据再单独进行排序，桶内排完序之后，再吧每个桶里面的数据按照书序依次取出，组成的序列就是有序的了。</p>
+<p><img src="https://static001.geekbang.org/resource/image/98/ae/987564607b864255f81686829503abae.jpg" alt="img"></p>
+<p>桶排序对要排序数据的要求是非常苛刻的：首先：要排序的数据需要很容易就能划分成 m 个桶，并且，桶与桶之间有着天然的大小顺序。这样每个桶内的数据都排序完之后，桶与桶之间的数据不需要再进行排序。其次，数据在各个桶之间的分布是比较均匀的。</p>
+<p>桶排序比较适合用在外部排序中。</p>
+<h2 id="计数排序（Counting-sort）"><a href="#计数排序（Counting-sort）" class="headerlink" title="计数排序（Counting sort）"></a>计数排序（Counting sort）</h2><p>计数排序其实是桶排序的一种特殊情况。</p>
+<p>当要排序的 n 个数据，所处的范围并不大的时候，比如最大值是 k，我们就可以把数据划分成 k 个桶。每个桶内的数据值都是相同的，省掉了桶内排序的时间。</p>
+<p>计数排序只能用在数据范围不大的场景中，如果数据范围 k 比要排序的数据 n 大很多，就不适合用计数排序了。而且，计数排序只能给非负整数排序，如果要排序的数据是其他类型的，要将其在不改变相对大小的情况下，转化为非负整数。</p>
+<h2 id="基数排序（Radix-sort）"><a href="#基数排序（Radix-sort）" class="headerlink" title="基数排序（Radix sort）"></a>基数排序（Radix sort）</h2><p>先按照最后一位来排序手机号码，然后，再按照倒数第二位重新排序，以此类推，最后按照第一位重新排序。经过 11 次排序之后，手机号码就都有序了</p>
+<p><img src="https://static001.geekbang.org/resource/image/df/0c/df0cdbb73bd19a2d69a52c54d8b9fc0c.jpg" alt="img"></p>
+<p><strong>这里按照每位来排序的排序算法要是稳定的，否则这个实现思路就是不正确的</strong></p>
+<p>我们可以把所有的单词补齐到相同长度，位数不够的可以在后面补“0”</p>
+<p><strong>基数排序对要排序的数据是有要求的，需要可以分割出独立的“位”来比较，而且位之间有递进的关系，如果 a 数据的高位比 b 数据大，那剩下的低位就不用比较了。除此之外，每一位的数据范围不能太大，要可以用线性排序算法来排序，否则，基数排序的时间复杂度就无法做到 O(n) 了。</strong></p>
+
         </div>
       </div>
     </div>
